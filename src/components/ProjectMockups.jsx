@@ -33,23 +33,23 @@ export const RentRideMockup = () => {
       </div>
 
       {/* Search & Filter Bar */}
-      <div className="mt-3 p-2.5 rounded-xl bg-slate-900/90 border border-white/5 grid grid-cols-3 gap-2 text-[11px] font-mono">
+      <div className="mt-3 p-2.5 rounded-xl bg-slate-900/90 border border-white/5 grid grid-cols-1 sm:grid-cols-3 gap-2 text-[11px] font-mono">
         <div className="flex items-center gap-1.5 text-slate-400">
-          <Search className="w-3.5 h-3.5 text-cyan-400" />
+          <Search className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
           <span className="text-white truncate">All SUVs &amp; Sedans</span>
         </div>
         <div className="flex items-center gap-1.5 text-slate-400">
-          <MapPin className="w-3.5 h-3.5 text-cyan-400" />
+          <MapPin className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
           <span className="text-white truncate">Phagwara / Jalandhar</span>
         </div>
         <div className="flex items-center gap-1.5 text-slate-400">
-          <Calendar className="w-3.5 h-3.5 text-cyan-400" />
+          <Calendar className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
           <span className="text-white truncate">Jul 15 – Jul 18</span>
         </div>
       </div>
 
       {/* Main Content Area: Vehicle Card & Checkout Snapshot */}
-      <div className="mt-3 grid grid-cols-1 sm:grid-cols-12 gap-3">
+      <div className="mt-3 grid grid-cols-1 md:grid-cols-12 gap-3">
         
         {/* Featured Vehicle Card */}
         <div className="sm:col-span-7 p-3 rounded-xl bg-slate-900/60 border border-cyan-500/20 space-y-2">
@@ -151,7 +151,7 @@ export const ProctorEdMockup = () => {
       </div>
 
       {/* Main Grid: Exam Question & AI Camera Proctoring Panel */}
-      <div className="mt-3 grid grid-cols-1 sm:grid-cols-12 gap-3">
+      <div className="mt-3 grid grid-cols-1 md:grid-cols-12 gap-3">
         
         {/* Left: Question Sheet */}
         <div className="sm:col-span-7 p-3 rounded-xl bg-slate-900/60 border border-white/5 space-y-2">

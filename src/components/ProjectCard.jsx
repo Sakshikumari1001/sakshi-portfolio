@@ -43,11 +43,11 @@ const ProjectCard = ({ project }) => {
           <span className="text-xs font-mono text-slate-400 uppercase tracking-wider block">
             Core Features:
           </span>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             {project.features.slice(0, 8).map((feature, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-xs text-slate-300">
-                <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
-                <span className="truncate">{feature}</span>
+              <div key={idx} className="flex items-start gap-2 text-xs text-slate-300">
+                <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
+                <span>{feature}</span>
               </div>
             ))}
           </div>

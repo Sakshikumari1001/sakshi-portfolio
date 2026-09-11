@@ -23,14 +23,43 @@ export const heroTechBadges = [
   { name: "MongoDB", category: "Database" }
 ];
 
+export const heroStatsPills = [
+  {
+    icon: "Code2",
+    label: "200+ DSA Problems Solved",
+    sub: "Java & LeetCode",
+    accent: "text-amber-400"
+  },
+  {
+    icon: "GitCommit",
+    label: "500+ GitHub Contributions",
+    sub: "Active Repositories",
+    accent: "text-purple-400"
+  },
+  {
+    icon: "Flame",
+    label: "50-Day LeetCode Streak",
+    sub: "Daily Discipline",
+    accent: "text-emerald-400"
+  },
+  {
+    icon: "GraduationCap",
+    label: "CGPA: 7.40 / 10.0",
+    sub: "Lovely Professional University",
+    accent: "text-cyan-400"
+  }
+];
+
 export const terminalData = {
   command: "sakshi@portfolio:~$ whoami",
   lines: [
     { label: "Name", value: "Sakshi Kumari", color: "text-cyan-400" },
     { label: "Role", value: "Aspiring Full Stack Developer", color: "text-emerald-400" },
-    { label: "Education", value: "B.Tech CSE", color: "text-slate-300" },
-    { label: "Focus", value: "Full-Stack Development", color: "text-indigo-400" },
+    { label: "Education", value: "B.Tech CSE @ LPU (CGPA: 7.40)", color: "text-slate-200" },
+    { label: "Focus", value: "Full-Stack Development & AI RAG", color: "text-indigo-400" },
     { label: "Current Stack", value: "React + Node + Java", color: "text-amber-400" },
+    { label: "LeetCode Solved", value: "200+ Problems (50-Day Streak)", color: "text-amber-300" },
+    { label: "GitHub Commits", value: "500+ Contributions", color: "text-purple-300" },
     { label: "Status", value: "Building & Learning", color: "text-emerald-400" }
   ],
   curlSnippet: "curl -s https://api.sakshi.dev/profile | jq .",
@@ -50,18 +79,18 @@ export const aboutNarrative = {
     },
     {
       title: "Algorithmic Problem Solving",
-      desc: "Consistent Java DSA practitioner with 100+ problems solved on LeetCode and an active 50-day streak badge."
+      desc: "Consistent Java DSA practitioner with 200+ problems solved on LeetCode and an active 50-day streak badge."
     },
     {
       title: "Open Source Collaboration",
-      desc: "Contributor in Social Summer of Code (SSoC) Season 5, contributing through Git/GitHub workflows, pull requests, and peer reviews."
+      desc: "Contributor in Social Summer of Code (SSoC) Season 5, contributing through Git/GitHub workflows, pull requests, and peer reviews with 500+ contributions."
     }
   ],
   quickStats: [
-    { label: "Academic CGPA", value: "7.40", note: "Lovely Professional University" },
-    { label: "DSA Practice", value: "100+", note: "Problems Solved on LeetCode" },
-    { label: "LeetCode Streak", value: "50-Day", note: "Consistency Badge" },
-    { label: "Open Source", value: "SSoC 5", note: "Contributor Milestone" }
+    { label: "LeetCode Solved", value: "200+", note: "DSA Problems" },
+    { label: "GitHub Activity", value: "500+", note: "Contributions" },
+    { label: "Daily Streak", value: "50-Day", note: "LeetCode Badge" },
+    { label: "Academic CGPA", value: "7.40", note: "LPU B.Tech CSE" }
   ]
 };
 
@@ -69,12 +98,12 @@ export const codingProfiles = [
   {
     name: "GitHub",
     handle: "sakshikumari01",
-    metric: "Active Open-Source Projects",
+    metric: "500+ Contributions • Repositories",
     url: "https://github.com/sakshikumari01",
     icon: "github",
     accent: "from-purple-500/20 to-indigo-500/10",
     border: "group-hover:border-purple-500/50",
-    badge: "Verified Profile"
+    badge: "500+ Contributions"
   },
   {
     name: "LinkedIn",
@@ -89,12 +118,12 @@ export const codingProfiles = [
   {
     name: "LeetCode",
     handle: "Problem Solving Practice",
-    metric: "50-Day Streak • 100+ DSA Solved",
+    metric: "200+ Solved • 50-Day Streak",
     url: "https://leetcode.com/",
     icon: "code2",
     accent: "from-amber-500/20 to-orange-500/10",
     border: "group-hover:border-amber-500/50",
-    badge: "50-Day Badge"
+    badge: "200+ Solved"
   },
   {
     name: "GeeksforGeeks",
@@ -210,7 +239,7 @@ export const featuredProjectData = {
     {
       step: 1,
       name: "GitHub Repository",
-      short: "Repo Ingestion",
+      short: "Repo Ingest",
       role: "Source Ingestion",
       tech: "GitHub API / Git Clone",
       input: "Public Repository URL",
@@ -220,7 +249,7 @@ export const featuredProjectData = {
     {
       step: 2,
       name: "Repository Data",
-      short: "Data Extraction",
+      short: "Extract Data",
       role: "Metadata Extractor",
       tech: "Python File Walk",
       input: "Raw repository directories",
@@ -230,7 +259,7 @@ export const featuredProjectData = {
     {
       step: 3,
       name: "Text / Code Processing",
-      short: "Syntax Cleaning",
+      short: "Code Cleaning",
       role: "Sanitization & Normalization",
       tech: "Regex & Language Parsers",
       input: "File buffers with comments",
@@ -240,7 +269,7 @@ export const featuredProjectData = {
     {
       step: 4,
       name: "Chunking",
-      short: "Semantic Chunking",
+      short: "Doc Chunking",
       role: "Document Segmentation",
       tech: "Recursive Character Splitter",
       input: "Continuous text streams",
@@ -250,7 +279,7 @@ export const featuredProjectData = {
     {
       step: 5,
       name: "Vector Embeddings",
-      short: "Dense Vectorization",
+      short: "Embeddings",
       role: "Mathematical Representation",
       tech: "Sentence Transformers / Embedding API",
       input: "Text & code chunk tokens",
@@ -260,7 +289,7 @@ export const featuredProjectData = {
     {
       step: 6,
       name: "ChromaDB",
-      short: "Vector Database",
+      short: "ChromaDB",
       role: "Persistent Vector Store",
       tech: "ChromaDB Embedded Engine",
       input: "Vector arrays + metadata tags",
@@ -270,7 +299,7 @@ export const featuredProjectData = {
     {
       step: 7,
       name: "Semantic Search",
-      short: "Similarity Query",
+      short: "Search Query",
       role: "Vector Retrieval",
       tech: "HNSW Cosine Similarity",
       input: "User natural language query",
@@ -280,7 +309,7 @@ export const featuredProjectData = {
     {
       step: 8,
       name: "Relevant Context",
-      short: "Context Assembly",
+      short: "Context Build",
       role: "Prompt Augmentation",
       tech: "Prompt Engineering Engine",
       input: "Top-k chunks + original user question",
@@ -290,7 +319,7 @@ export const featuredProjectData = {
     {
       step: 9,
       name: "Groq LLM",
-      short: "Inference Engine",
+      short: "Groq LLM",
       role: "Language Synthesis",
       tech: "Groq Llama-3 / Mixtral API",
       input: "Augmented contextual prompt",
@@ -300,7 +329,7 @@ export const featuredProjectData = {
     {
       step: 10,
       name: "Natural Language Answer",
-      short: "User Response",
+      short: "Answer",
       role: "Client Presentation",
       tech: "React Markdown Renderer",
       input: "LLM output text stream",
@@ -397,29 +426,38 @@ export const regularProjectsData = [
 
 export const trackRecordData = [
   {
-    title: "Regular DSA Practice using Java",
+    title: "200+ DSA Problems Solved in Java",
     category: "Algorithmic Problem Solving",
-    highlight: "Java Core & Algorithms",
+    highlight: "LeetCode & Java Problem Solving",
     description:
-      "Consistent problem-solving practice covering Arrays, Strings, Linked Lists, Trees, Stacks, Queues, and dynamic programming in Java.",
+      "Solved 200+ Data Structures & Algorithms problems covering Arrays, Strings, Searching & Sorting, Linked Lists, Binary Trees, Stacks, Queues, and Dynamic Programming.",
     icon: "Code2",
-    badge: "Active Discipline"
+    badge: "200+ Solved"
   },
   {
-    title: "LeetCode Problem-Solving Practice",
-    category: "Competitive Practice",
-    highlight: "50-Day Streak & 100+ Solved",
+    title: "50-Day LeetCode Streak Badge",
+    category: "Coding Discipline",
+    highlight: "Consecutive Problem-Solving Streak",
     description:
-      "Earned official LeetCode 50-Day Streak badge reflecting consistent problem-solving practice and solved 100+ DSA problems strengthening algorithmic thinking.",
+      "Earned the official LeetCode 50-Day Streak badge demonstrating strong coding discipline, analytical persistence, and consistent daily algorithmic practice.",
     icon: "Flame",
-    badge: "50-Day Streak Badge"
+    badge: "50-Day Streak"
+  },
+  {
+    title: "500+ GitHub Contributions",
+    category: "Open Source & Version Control",
+    highlight: "Active Open-Source Projects",
+    description:
+      "Achieved 500+ contributions across full-stack production repositories, collaborative open-source projects, issue tracking, and clean pull request workflows.",
+    icon: "GitPullRequest",
+    badge: "500+ Commits"
   },
   {
     title: "Social Summer of Code Season 5 Contributor",
     category: "Open Source Initiative",
-    highlight: "Jul '26 – Present",
+    highlight: "SSoC Season 5 (Jul '26 – Present)",
     description:
-      "Selected open-source contributor in SSoC Season 5. Actively contributed to open-source codebases via Git/GitHub workflows, issue triage, pull requests, and peer reviews.",
+      "Selected open-source contributor in SSoC Season 5. Contributed to open-source codebases via Git/GitHub workflows, issue triage, pull requests, and peer reviews.",
     icon: "GitPullRequest",
     badge: "SSoC Contributor"
   },
@@ -433,22 +471,13 @@ export const trackRecordData = [
     badge: "Oracle Certified"
   },
   {
-    title: "Infosys Springboard DBMS Part 1",
-    category: "Database Foundations",
-    highlight: "Infosys Springboard Certified",
-    description:
-      "Completed structured training in Database Management Systems covering relational schemas, keys, constraints, normalization, and ACID transaction rules.",
-    icon: "CheckCircle2",
-    badge: "Verified Course"
-  },
-  {
     title: "Advanced Backend Development (Grade A)",
-    category: "University Training",
+    category: "University Training Distinction",
     highlight: "Centre for Professional Enhancement, LPU",
     description:
       "Completed intensive backend training in Node.js, Express.js, MongoDB & RESTful API architecture, building a full-stack MERN capstone with Grade A distinction.",
     icon: "GraduationCap",
-    badge: "Grade A Certified"
+    badge: "Grade A Distinction"
   }
 ];
 
@@ -490,41 +519,20 @@ export const certificationsData = [
   }
 ];
 
+// STRICT REQUIREMENT: Only B.Tech CSE Lovely Professional University (NO 10th or 12th marks!)
 export const educationData = [
   {
     institution: "Lovely Professional University",
-    location: "Phagwara, Punjab",
+    location: "Phagwara, Punjab, India",
     degree: "Bachelor of Technology — Computer Science and Engineering",
     period: "2024 – 2028",
-    score: "CGPA: 7.40",
-    scoreType: "Academic CGPA",
+    score: "7.40",
+    scoreType: "CGPA",
     highlights: [
-      "Core Coursework: Data Structures & Algorithms, Object-Oriented Programming, DBMS, Operating Systems, Computer Networks",
-      "Advanced Backend Development Certification (Grade A) by Centre for Professional Enhancement",
-      "Active contributor in open-source developer initiatives and coding hackathons"
-    ]
-  },
-  {
-    institution: "Sushant Public School",
-    location: "Muzaffarpur, Bihar",
-    degree: "Senior Secondary (Intermediate)",
-    period: "Apr 2023 – Mar 2024",
-    score: "61.2%",
-    scoreType: "Percentage",
-    highlights: [
-      "Science stream with focus on Mathematics, Physics, and Chemistry",
-      "Built strong foundation in analytical logic and problem solving"
-    ]
-  },
-  {
-    institution: "Holy Mission Senior Secondary School",
-    location: "Muzaffarpur, Bihar",
-    degree: "Secondary School (Matriculation)",
-    period: "Apr 2021 – Mar 2022",
-    score: "68.2%",
-    scoreType: "Percentage",
-    highlights: [
-      "Completed standard curriculum with mathematics and science excellence"
+      "Rigorous Core Curriculum: Data Structures & Algorithms, Object-Oriented Programming (Java/C++), Database Management Systems (DBMS), Operating Systems, and Computer Networks.",
+      "Distinction in Advanced Backend Development with Node.js, Express, MongoDB, and RESTful API Design (Grade A by CPE, LPU).",
+      "Active participant in competitive algorithmic coding (200+ LeetCode problems solved) and open-source contributions (SSoC Season 5).",
+      "Qualified and experienced in designing end-to-end full-stack architectures, vector database RAG pipelines, and responsive modern web applications."
     ]
   }
 ];

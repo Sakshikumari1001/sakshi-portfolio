@@ -6,15 +6,8 @@ const Terminal = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    const textToCopy = `sakshi@portfolio:~$ whoami
-Name: Sakshi Kumari
-Role: Aspiring Full Stack Developer
-Education: B.Tech CSE
-Focus: Full-Stack Development
-Current Stack: React + Node + Java
-Status: Building & Learning`;
-
-    navigator.clipboard.writeText(textToCopy);
+    const textToCopy = terminalData.lines.map(l => `${l.label}: ${l.value}`).join('\n');
+    navigator.clipboard.writeText(`sakshi@portfolio:~$ whoami\n${textToCopy}`);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -59,7 +52,7 @@ Status: Building & Learning`;
         <div className="bg-slate-950/60 p-4 rounded-xl border border-white/5 space-y-2 font-mono text-xs">
           {terminalData.lines.map((line, idx) => (
             <div key={idx} className="flex items-start">
-              <span className="text-slate-400 w-32 shrink-0">{line.label}:</span>
+              <span className="text-slate-400 w-36 shrink-0">{line.label}:</span>
               <span className={`${line.color} font-medium`}>{line.value}</span>
             </div>
           ))}

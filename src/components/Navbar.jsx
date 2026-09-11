@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, ArrowUpRight, Terminal, Sparkles } from 'lucide-react';
-import { personalInfo } from '../data/portfolioData';
+import { Menu, X, Sun, Moon, ArrowUpRight } from 'lucide-react';
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,7 +11,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       setIsScrolled(window.scrollY > 20);
 
       const sections = ['hero', 'about', 'profiles', 'skills', 'projects', 'achievements', 'certifications', 'education', 'contact'];
-      const scrollPos = window.scrollY + 100;
+      const scrollPos = window.scrollY + 120;
 
       for (const section of sections) {
         const el = document.getElementById(section);
@@ -27,12 +26,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#hero' },
     { name: 'About', href: '#about' },
     { name: 'Profiles', href: '#profiles' },
     { name: 'Skills', href: '#skills' },
@@ -47,17 +45,17 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-950/80 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20'
-          : 'bg-transparent border-b border-transparent'
+          ? 'bg-slate-950/90 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/30 py-2.5'
+          : 'bg-transparent border-b border-transparent py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between">
           
-          {/* Brand */}
+          {/* Brand Logo with User Photo */}
           <a
             href="#hero"
-            className="flex items-center gap-3 group focus:outline-none"
+            className="flex items-center gap-3 group focus:outline-none shrink-0"
             aria-label="Sakshi Kumari Home"
           >
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-indigo-600 p-[1.5px] shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform overflow-hidden shrink-0">
@@ -68,7 +66,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               />
             </div>
             <div>
-              <div className="font-semibold text-slate-100 tracking-tight text-base group-hover:text-cyan-400 transition-colors">
+              <div className="font-semibold text-slate-100 tracking-tight text-sm sm:text-base group-hover:text-cyan-400 transition-colors">
                 Sakshi <span className="text-cyan-400">Kumari</span>
               </div>
               <div className="text-[11px] font-mono text-slate-400 flex items-center gap-1.5">
@@ -78,15 +76,15 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             </div>
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1 bg-slate-900/60 p-1.5 rounded-full border border-white/5 backdrop-blur-md">
+          {/* Desktop Navigation - Responsive & Spacious without overlap */}
+          <nav className="hidden xl:flex items-center gap-1 bg-slate-900/80 px-3 py-1.5 rounded-full border border-white/10 backdrop-blur-md shadow-inner">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className={`px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-200 ${
+                className={`px-3 py-1 text-xs font-medium rounded-full transition-all duration-200 whitespace-nowrap ${
                   activeSection === link.href.replace('#', '')
-                    ? 'text-cyan-400 bg-white/10 shadow-sm'
+                    ? 'text-cyan-400 bg-white/10 shadow-sm font-semibold'
                     : 'text-slate-300 hover:text-white hover:bg-white/5'
                 }`}
               >
@@ -95,8 +93,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             ))}
           </nav>
 
-          {/* Actions & Theme Switcher */}
-          <div className="flex items-center gap-3">
+          {/* Nav Actions */}
+          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 rounded-xl border border-white/10 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/30 transition-colors bg-white/5"
@@ -108,16 +106,16 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
             <a
               href="#contact"
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-xl text-slate-950 bg-gradient-to-r from-cyan-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 shadow-md shadow-cyan-500/10 font-mono transition-all transform hover:-translate-y-0.5"
+              className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium rounded-xl text-slate-950 bg-gradient-to-r from-cyan-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 shadow-md shadow-cyan-500/10 font-mono transition-all transform hover:-translate-y-0.5 whitespace-nowrap"
             >
               <span>Let's Connect</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
 
-            {/* Mobile Menu Toggle Button */}
+            {/* Mobile/Tablet Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-xl border border-white/10 text-slate-300 hover:text-white bg-white/5"
+              className="xl:hidden p-2 rounded-xl border border-white/10 text-slate-300 hover:text-white bg-white/5"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -129,30 +127,30 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       {/* Mobile Drawer Overlay */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-40 lg:hidden"
+          className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-40 xl:hidden"
           onClick={() => setMobileMenuOpen(false)}
         />
       )}
 
       {/* Mobile Drawer Menu */}
       <aside
-        className={`fixed top-0 right-0 bottom-0 w-72 bg-slate-900 border-l border-white/10 p-6 z-50 flex flex-col justify-between transform transition-transform duration-300 ease-in-out lg:hidden ${
+        className={`fixed top-0 right-0 bottom-0 w-72 bg-slate-900 border-l border-white/10 p-6 z-50 flex flex-col justify-between transform transition-transform duration-300 ease-in-out xl:hidden shadow-2xl ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div>
           <div className="flex items-center justify-between pb-6 border-b border-white/10">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-500 to-indigo-600 p-[1.5px] overflow-hidden shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-indigo-600 p-[1.5px] overflow-hidden shrink-0">
                 <img
                   src="/profile.png"
                   alt="Sakshi Kumari"
-                  className="w-full h-full rounded-[6px] object-cover object-top"
+                  className="w-full h-full rounded-[8px] object-cover object-top"
                 />
               </div>
               <div>
                 <div className="font-semibold text-white text-sm">Sakshi Kumari</div>
-                <div className="text-[10px] font-mono text-cyan-400">Full Stack Developer</div>
+                <div className="text-[11px] font-mono text-cyan-400">Full Stack Developer</div>
               </div>
             </div>
             <button
@@ -170,7 +168,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                   activeSection === link.href.replace('#', '')
                     ? 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-semibold'
                     : 'text-slate-300 hover:text-white hover:bg-white/5'

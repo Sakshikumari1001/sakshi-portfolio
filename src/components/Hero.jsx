@@ -1,28 +1,43 @@
 import React from 'react';
-import { ArrowDown, Github, Mail, ExternalLink, Sparkles, Layers, ShieldCheck, FileCode, CheckCircle2 } from 'lucide-react';
-import { personalInfo, heroTechBadges } from '../data/portfolioData';
+import { ArrowDown, Github, Mail, ExternalLink, Code2, GitCommit, Flame, GraduationCap, CheckCircle2 } from 'lucide-react';
+import { personalInfo, heroTechBadges, heroStatsPills } from '../data/portfolioData';
 import Terminal from './Terminal';
 
 const Hero = () => {
+  const getPillIcon = (iconName) => {
+    switch (iconName) {
+      case 'Code2':
+        return <Code2 className="w-4 h-4 text-amber-400 shrink-0" />;
+      case 'GitCommit':
+        return <GitCommit className="w-4 h-4 text-purple-400 shrink-0" />;
+      case 'Flame':
+        return <Flame className="w-4 h-4 text-emerald-400 shrink-0" />;
+      case 'GraduationCap':
+        return <GraduationCap className="w-4 h-4 text-cyan-400 shrink-0" />;
+      default:
+        return <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />;
+    }
+  };
+
   return (
     <section
       id="hero"
-      className="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
+      className="relative pt-32 pb-20 lg:pt-36 lg:pb-28 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
     >
-      {/* Background Decorative Gradients & Grid Pattern */}
+      {/* Background Decorative Gradients & Subtle Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293708_1px,transparent_1px),linear-gradient(to_bottom,#1f293708_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"></div>
       <div className="absolute top-24 left-1/4 -translate-x-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute top-40 right-1/4 translate-x-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           
           {/* Left Hero Content */}
           <div className="lg:col-span-7 space-y-6 text-left">
             
-            {/* Intro Status Pill with Photo */}
+            {/* Intro Status Pill with User Photo */}
             <div className="inline-flex items-center gap-3.5 p-1.5 pr-4 rounded-full bg-slate-900/80 border border-white/10 shadow-inner backdrop-blur-md">
-              <div className="relative">
+              <div className="relative shrink-0">
                 <img
                   src="/profile.png"
                   alt="Sakshi Kumari"
@@ -31,7 +46,7 @@ const Hero = () => {
                 <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-slate-950"></span>
               </div>
               <div className="text-left">
-                <div className="text-xs font-semibold text-white">Sakshi Kumari</div>
+                <div className="text-xs font-semibold text-white">Hi, I'm Sakshi Kumari</div>
                 <div className="text-[11px] font-mono text-cyan-400 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                   Open to Full-Stack &amp; Engineering Roles
@@ -42,10 +57,10 @@ const Hero = () => {
             {/* Main Greeting & Headings */}
             <div className="space-y-2">
               <div className="text-sm sm:text-base font-mono text-cyan-400 font-semibold tracking-wide">
-                Hi, I'm Sakshi Kumari
+                Aspiring Full Stack Developer
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                Aspiring <span className="text-gradient">Full Stack</span> Developer
+                Building Practical <span className="text-gradient">Full-Stack Systems</span>
               </h1>
             </div>
 
@@ -54,12 +69,25 @@ const Hero = () => {
               "{personalInfo.subTagline}"
             </p>
 
+            {/* Verified Stat Badges / Pills (Reference Website Style) */}
+            <div className="flex flex-wrap gap-2.5 pt-2">
+              {heroStatsPills.map((pill, idx) => (
+                <div
+                  key={idx}
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-900/90 border border-white/10 hover:border-cyan-500/30 transition-all shadow-sm font-mono text-xs"
+                >
+                  {getPillIcon(pill.icon)}
+                  <span className="text-slate-200 font-medium">{pill.label}</span>
+                </div>
+              ))}
+            </div>
+
             {/* Tech Badges List */}
-            <div className="space-y-2">
+            <div className="space-y-2 pt-2">
               <div className="text-xs font-mono uppercase tracking-wider text-slate-400">
-                Core Technologies:
+                Core Stack:
               </div>
-              <div className="flex flex-wrap gap-2 pt-1">
+              <div className="flex flex-wrap gap-2 pt-0.5">
                 {heroTechBadges.map((tech) => (
                   <span
                     key={tech.name}
@@ -102,16 +130,10 @@ const Hero = () => {
               </a>
             </div>
 
-            {/* Academic pill */}
-            <div className="pt-2 text-xs font-mono text-slate-400 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>B.Tech CSE • Lovely Professional University (2024 – 2028)</span>
-            </div>
-
           </div>
 
           {/* Right Hero Visual: Terminal Card */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+          <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
             <Terminal />
           </div>
 

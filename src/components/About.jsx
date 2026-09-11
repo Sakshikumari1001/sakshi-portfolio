@@ -93,12 +93,16 @@ const About = () => {
                   <span className="text-cyan-400 font-bold">7.40 / 10.0</span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span className="text-slate-400">Primary Focus:</span>
-                  <span className="text-emerald-400">Full-Stack &amp; DSA</span>
+                  <span className="text-slate-400">DSA Solved:</span>
+                  <span className="text-amber-400 font-bold">200+ (LeetCode 50-Day)</span>
+                </div>
+                <div className="flex justify-between py-1.5 border-b border-white/5">
+                  <span className="text-slate-400">GitHub Activity:</span>
+                  <span className="text-purple-400 font-bold">500+ Contributions</span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-white/5">
                   <span className="text-slate-400">Open Source:</span>
-                  <span className="text-purple-400">SSoC Season 5</span>
+                  <span className="text-cyan-400">SSoC Season 5</span>
                 </div>
                 <div className="flex justify-between py-1.5">
                   <span className="text-slate-400">Status:</span>
