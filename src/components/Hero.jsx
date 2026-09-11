@@ -20,15 +20,23 @@ const Hero = () => {
           {/* Left Hero Content */}
           <div className="lg:col-span-7 space-y-6 text-left">
             
-            {/* Intro Status Pill */}
-            <div className="inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-white/10 shadow-inner backdrop-blur-md">
-              <span className="flex h-2.5 w-2.5 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-              </span>
-              <span className="text-xs font-mono font-medium text-slate-300">
-                Open to Full-Stack & Engineering Roles
-              </span>
+            {/* Intro Status Pill with Photo */}
+            <div className="inline-flex items-center gap-3.5 p-1.5 pr-4 rounded-full bg-slate-900/80 border border-white/10 shadow-inner backdrop-blur-md">
+              <div className="relative">
+                <img
+                  src="/profile.png"
+                  alt="Sakshi Kumari"
+                  className="w-10 h-10 rounded-full object-cover border-2 border-cyan-400/50 shadow-md shadow-cyan-500/20"
+                />
+                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-slate-950"></span>
+              </div>
+              <div className="text-left">
+                <div className="text-xs font-semibold text-white">Sakshi Kumari</div>
+                <div className="text-[11px] font-mono text-cyan-400 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Open to Full-Stack &amp; Engineering Roles
+                </div>
+              </div>
             </div>
 
             {/* Main Greeting & Headings */}

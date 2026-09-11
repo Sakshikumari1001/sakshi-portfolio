@@ -61,13 +61,15 @@ const About = () => {
 
               {/* Avatar / Profile Graphic Header */}
               <div className="flex items-center gap-4 pb-6 border-b border-white/10">
-                <div className="relative">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-purple-600 p-[2px] shadow-lg shadow-cyan-500/20">
-                    <div className="w-full h-full bg-slate-950 rounded-2xl flex items-center justify-center font-mono text-xl font-bold text-cyan-300">
-                      SK
-                    </div>
+                <div className="relative shrink-0">
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-purple-600 p-[2.5px] shadow-xl shadow-cyan-500/25 overflow-hidden">
+                    <img
+                      src="/profile.png"
+                      alt="Sakshi Kumari"
+                      className="w-full h-full rounded-2xl object-cover object-top"
+                    />
                   </div>
-                  <span className="absolute bottom-0 right-0 w-4 h-4 bg-emerald-500 border-2 border-slate-950 rounded-full"></span>
+                  <span className="absolute bottom-0 right-0 w-4 h-4 bg-emerald-500 border-2 border-slate-950 rounded-full shadow-md" title="Active & Available"></span>
                 </div>
 
                 <div>

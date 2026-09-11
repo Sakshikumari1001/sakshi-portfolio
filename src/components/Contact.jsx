@@ -59,8 +59,15 @@ const Contact = () => {
             {/* Quick Profile Card */}
             <div className="p-6 rounded-2xl bg-slate-900/80 border border-white/10 shadow-xl space-y-4">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-indigo-600 flex items-center justify-center font-mono font-extrabold text-slate-950 text-xl shadow-lg shadow-cyan-500/20">
-                  SK
+                <div className="relative shrink-0">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-indigo-600 p-[2px] shadow-lg shadow-cyan-500/20 overflow-hidden">
+                    <img
+                      src="/profile.png"
+                      alt="Sakshi Kumari"
+                      className="w-full h-full rounded-2xl object-cover object-top"
+                    />
+                  </div>
+                  <span className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-slate-900 rounded-full"></span>
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white">{personalInfo.name}</h3>

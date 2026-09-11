@@ -60,8 +60,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             className="flex items-center gap-3 group focus:outline-none"
             aria-label="Sakshi Kumari Home"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-indigo-600 flex items-center justify-center font-mono font-bold text-slate-950 shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform">
-              SK
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-indigo-600 p-[1.5px] shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform overflow-hidden shrink-0">
+              <img
+                src="/profile.png"
+                alt="Sakshi Kumari"
+                className="w-full h-full rounded-[10px] object-cover object-top"
+              />
             </div>
             <div>
               <div className="font-semibold text-slate-100 tracking-tight text-base group-hover:text-cyan-400 transition-colors">
@@ -139,8 +143,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <div>
           <div className="flex items-center justify-between pb-6 border-b border-white/10">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-500 to-indigo-600 flex items-center justify-center font-mono font-bold text-slate-950 text-sm">
-                SK
+              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-500 to-indigo-600 p-[1.5px] overflow-hidden shrink-0">
+                <img
+                  src="/profile.png"
+                  alt="Sakshi Kumari"
+                  className="w-full h-full rounded-[6px] object-cover object-top"
+                />
               </div>
               <div>
                 <div className="font-semibold text-white text-sm">Sakshi Kumari</div>
