@@ -1,8 +1,15 @@
 export const personalInfo = {
   name: "Sakshi Kumari",
   role: "Aspiring Full Stack Developer",
+  headline: "ASPIRING SOFTWARE DEVELOPER & FULL-STACK BUILDER",
   tagline: "Building practical full-stack applications & solving problems through code.",
-  subTagline: "B.Tech CSE student passionate about building practical full-stack applications and solving problems through code.",
+  subTagline: "I’m Sakshi, a Computer Science and Engineering student at Lovely Professional University with a strong interest in building practical software and solving real-world problems through technology.",
+  corePillars: [
+    "Full-Stack Development",
+    "AI & LLM Applications",
+    "Problem Solving",
+    "Continuous Learning"
+  ],
   educationShort: "B.Tech CSE • Lovely Professional University (2024 – 2028)",
   cgpa: "7.40",
   email: "mishra0108sakshi@gmail.com",
@@ -68,9 +75,17 @@ export const terminalData = {
 };
 
 export const aboutNarrative = {
+  headline: "ASPIRING SOFTWARE DEVELOPER & FULL-STACK BUILDER",
+  lead: "I’m Sakshi, a Computer Science and Engineering student at Lovely Professional University with a strong interest in building practical software and solving real-world problems through technology.",
   paragraphs: [
-    "I am a B.Tech Computer Science and Engineering student at Lovely Professional University with a strong interest in Full-Stack Development and problem solving. I enjoy building practical applications and understanding how frontend, backend, databases and APIs work together.",
-    "I am currently strengthening my skills in Java, Data Structures and Algorithms, React.js, Node.js, Python and MongoDB while continuously working on real-world projects."
+    "My experience is focused on full-stack web development and AI-powered applications, where I enjoy taking an idea from concept to a working product. I like exploring how different technologies work together, building meaningful projects, and continuously improving my development and problem-solving skills.",
+    "I’m currently focused on strengthening my foundation in software development, DSA, and modern web technologies while gaining more hands-on experience through projects and continuous learning."
+  ],
+  corePillars: [
+    "Full-Stack Development",
+    "AI & LLM Applications",
+    "Problem Solving",
+    "Continuous Learning"
   ],
   highlights: [
     {
@@ -134,6 +149,121 @@ export const codingProfiles = [
     accent: "from-emerald-500/20 to-teal-500/10",
     border: "group-hover:border-emerald-500/50",
     badge: "Active Practice"
+  }
+];
+
+export const skillBoxesData = [
+  {
+    id: "frontend",
+    title: "Frontend Development",
+    subtitle: "Modern, responsive & interactive client-side interfaces",
+    icon: "Layers",
+    color: "cyan",
+    accent: "from-cyan-500/20 via-blue-500/10 to-transparent",
+    borderColor: "border-cyan-500/30",
+    badgeColor: "bg-cyan-500/10 text-cyan-300 border-cyan-500/20",
+    skills: [
+      { name: "React.js", level: "Hooks, Context & SPA", highlight: true },
+      { name: "Next.js", level: "SSR & App Router", highlight: true },
+      { name: "JavaScript (ES6+)", level: "Async/Await, DOM", highlight: true },
+      { name: "Tailwind CSS", level: "Modern Utility-First UI", highlight: true },
+      { name: "HTML5", level: "Semantic Markup" },
+      { name: "CSS3", level: "Flexbox, Grid & Animations" },
+      { name: "Vite", level: "Next-Gen Frontend Tooling" },
+      { name: "Responsive Design", level: "Mobile-First Layouts" }
+    ]
+  },
+  {
+    id: "backend",
+    title: "Backend & API Engineering",
+    subtitle: "High-performance server runtimes, REST APIs & secure authentication",
+    icon: "Server",
+    color: "emerald",
+    accent: "from-emerald-500/20 via-teal-500/10 to-transparent",
+    borderColor: "border-emerald-500/30",
+    badgeColor: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20",
+    skills: [
+      { name: "Node.js", level: "Event-Driven Runtime", highlight: true },
+      { name: "Express.js", level: "Middleware & Routing", highlight: true },
+      { name: "FastAPI", level: "High-Speed Async Python", highlight: true },
+      { name: "RESTful APIs", level: "CRUD & Endpoint Design", highlight: true },
+      { name: "JWT Authentication", level: "Session Tokens & RBAC", highlight: true },
+      { name: "API Security", level: "CORS, Rate Limiting & Validation" }
+    ]
+  },
+  {
+    id: "databases",
+    title: "Databases & Storage",
+    subtitle: "Relational modeling, document databases & vector stores",
+    icon: "Database",
+    color: "amber",
+    accent: "from-amber-500/20 via-orange-500/10 to-transparent",
+    borderColor: "border-amber-500/30",
+    badgeColor: "bg-amber-500/10 text-amber-300 border-amber-500/20",
+    skills: [
+      { name: "MongoDB", level: "NoSQL, Mongoose & Aggregation", highlight: true },
+      { name: "MySQL / SQL", level: "Queries, Joins & Normalization", highlight: true },
+      { name: "ChromaDB", level: "Vector Store & Persistence", highlight: true },
+      { name: "Schema Design", level: "ACID & Relational Integrity" },
+      { name: "Database Indexing", level: "Performance Optimization" }
+    ]
+  },
+  {
+    id: "ai_rag",
+    title: "AI & Vector Search (RAG)",
+    subtitle: "Codebase semantic retrieval & generative LLM pipelines",
+    icon: "Bot",
+    color: "indigo",
+    accent: "from-indigo-500/20 via-purple-500/10 to-transparent",
+    borderColor: "border-indigo-500/30",
+    badgeColor: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20",
+    skills: [
+      { name: "RAG Architecture", level: "Retrieval-Augmented Gen", highlight: true },
+      { name: "Groq LLM API", level: "Ultra-Fast Inference", highlight: true },
+      { name: "Vector Embeddings", level: "Dense Semantic Code Vectors", highlight: true },
+      { name: "ChromaDB", level: "Vector DB & Similarity Search", highlight: true },
+      { name: "Semantic Search", level: "Cosine Similarity Matching" },
+      { name: "Prompt Engineering", level: "Context Injection & Grounding" }
+    ]
+  },
+  {
+    id: "corecs",
+    title: "Languages & Core Computer Science",
+    subtitle: "Data structures, algorithms & system design fundamentals",
+    icon: "Cpu",
+    color: "purple",
+    accent: "from-purple-500/20 via-fuchsia-500/10 to-transparent",
+    borderColor: "border-purple-500/30",
+    badgeColor: "bg-purple-500/10 text-purple-300 border-purple-500/20",
+    skills: [
+      { name: "Java", level: "200+ LeetCode DSA Problems", highlight: true },
+      { name: "Python", level: "FastAPI, AI & Automation", highlight: true },
+      { name: "C++", level: "Algorithmic Problem Solving" },
+      { name: "Data Structures & Algorithms", level: "Arrays, Trees, Graphs, DP", highlight: true },
+      { name: "OOP Principles", level: "Polymorphism, Abstraction, Clean Code" },
+      { name: "DBMS Concepts", level: "Transactions, Concurrency, Normalization" },
+      { name: "Operating Systems", level: "Process Scheduling & Memory" },
+      { name: "Computer Networks", level: "TCP/IP, HTTP/HTTPS, Sockets" }
+    ]
+  },
+  {
+    id: "tools",
+    title: "DevOps, Tools & Collaboration",
+    subtitle: "Version control, deployment pipelines & developer tools",
+    icon: "Wrench",
+    color: "sky",
+    accent: "from-sky-500/20 via-blue-500/10 to-transparent",
+    borderColor: "border-sky-500/30",
+    badgeColor: "bg-sky-500/10 text-sky-300 border-sky-500/20",
+    skills: [
+      { name: "Git & GitHub", level: "500+ Contributions & PRs", highlight: true },
+      { name: "VS Code", level: "Primary Development IDE" },
+      { name: "Postman", level: "API Testing & Validation" },
+      { name: "Vercel", level: "Frontend CI/CD Deployment", highlight: true },
+      { name: "Render", level: "Cloud Backend Deployment", highlight: true },
+      { name: "MongoDB Atlas", level: "Cloud Database Hosting" },
+      { name: "Open Source (SSoC)", level: "Season 5 Open Source Contributor" }
+    ]
   }
 ];
 

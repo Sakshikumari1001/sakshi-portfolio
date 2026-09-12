@@ -6,146 +6,189 @@ import {
   Database, 
   Cpu, 
   Wrench, 
-  BookOpen, 
+  Bot, 
   Sparkles,
-  Bot,
+  CheckCircle2,
+  Workflow,
   Zap,
-  ShieldCheck,
-  Search,
-  Workflow
+  ArrowRight
 } from 'lucide-react';
-import { skillsData } from '../data/portfolioData';
+import { skillBoxesData } from '../data/portfolioData';
 
 const Skills = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('all');
 
-  const filteredSkills = selectedCategory === 'all'
-    ? skillsData.skills
-    : skillsData.skills.filter(s => s.category === selectedCategory);
-
-  const getCategoryIcon = (id) => {
-    switch (id) {
-      case 'languages': return <Code className="w-4 h-4" />;
-      case 'frontend': return <Layers className="w-4 h-4" />;
-      case 'backend': return <Server className="w-4 h-4" />;
-      case 'databases': return <Database className="w-4 h-4" />;
-      case 'ai': return <Bot className="w-4 h-4" />;
-      case 'tools': return <Wrench className="w-4 h-4" />;
-      case 'corecs': return <Cpu className="w-4 h-4" />;
-      default: return <Sparkles className="w-4 h-4" />;
+  const getCategoryIcon = (iconName) => {
+    switch (iconName) {
+      case 'Layers': return <Layers className="w-5 h-5 text-cyan-400" />;
+      case 'Server': return <Server className="w-5 h-5 text-emerald-400" />;
+      case 'Database': return <Database className="w-5 h-5 text-amber-400" />;
+      case 'Bot': return <Bot className="w-5 h-5 text-indigo-400" />;
+      case 'Cpu': return <Cpu className="w-5 h-5 text-purple-400" />;
+      case 'Wrench': return <Wrench className="w-5 h-5 text-sky-400" />;
+      default: return <Sparkles className="w-5 h-5 text-cyan-400" />;
     }
   };
 
+  const filteredBoxes = activeCategory === 'all'
+    ? skillBoxesData
+    : skillBoxesData.filter(box => box.id === activeCategory);
+
   return (
-    <section id="skills" className="py-20 bg-slate-950 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-24 bg-slate-950 relative overflow-hidden">
+      {/* Background ambient lighting */}
+      <div className="absolute top-1/3 left-10 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-cyan-400 bg-cyan-950/50 border border-cyan-500/20">
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-medium text-cyan-400 bg-cyan-950/50 border border-cyan-500/20">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Technical Proficiencies</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Categorized <span className="text-gradient">Skills</span>
+            Categorized <span className="text-gradient">Skill Domains</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base">
-            Proficient across full-stack web architecture, backend APIs, data pipelines, vector databases, and core computer science.
+          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+            Organized by domain: Frontend client interfaces, backend microservices, vector search &amp; generative AI, databases, and core computer science fundamentals.
           </p>
         </div>
 
-        {/* Interactive Filter Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
-          {skillsData.categories.map((cat) => {
-            const count = cat.id === 'all'
-              ? skillsData.skills.length
-              : skillsData.skills.filter(s => s.category === cat.id).length;
+        {/* Domain Filter Buttons */}
+        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-12">
+          <button
+            onClick={() => setActiveCategory('all')}
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-semibold transition-all duration-200 border ${
+              activeCategory === 'all'
+                ? 'bg-cyan-500/20 text-cyan-200 border-cyan-400 shadow-md shadow-cyan-500/20'
+                : 'bg-slate-900/80 text-slate-400 border-white/10 hover:text-white hover:border-white/20'
+            }`}
+          >
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>All Domains</span>
+            <span className="px-1.5 py-0.5 rounded-md text-[10px] bg-slate-800 text-slate-300">
+              {skillBoxesData.length} Boxes
+            </span>
+          </button>
 
-            const isActive = selectedCategory === cat.id;
-
+          {skillBoxesData.map((box) => {
+            const isActive = activeCategory === box.id;
             return (
               <button
-                key={cat.id}
-                onClick={() => setSelectedCategory(cat.id)}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all duration-200 border ${
+                key={box.id}
+                onClick={() => setActiveCategory(box.id)}
+                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-medium transition-all duration-200 border ${
                   isActive
-                    ? 'bg-cyan-500/10 text-cyan-300 border-cyan-500/40 shadow-sm shadow-cyan-500/20'
-                    : 'bg-slate-900/60 text-slate-400 border-white/5 hover:text-slate-200 hover:border-white/15'
+                    ? 'bg-cyan-500/20 text-cyan-200 border-cyan-400 shadow-md shadow-cyan-500/20'
+                    : 'bg-slate-900/60 text-slate-400 border-white/5 hover:text-white hover:border-white/15'
                 }`}
               >
-                {getCategoryIcon(cat.id)}
-                <span>{cat.label}</span>
-                <span className={`px-1.5 py-0.2 rounded-full text-[10px] ${
-                  isActive ? 'bg-cyan-500/20 text-cyan-200' : 'bg-white/5 text-slate-500'
-                }`}>
-                  {count}
+                <span>{box.title.split(' ')[0]}</span>
+                <span className="text-[10px] px-1.5 py-0.2 rounded-full bg-white/5 text-slate-400">
+                  {box.skills.length}
                 </span>
               </button>
             );
           })}
         </div>
 
-        {/* Skills Cards Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5">
-          {filteredSkills.map((skill, idx) => (
+        {/* Grouped Domain Boxes Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+          {filteredBoxes.map((box) => (
             <div
-              key={`${skill.name}-${idx}`}
-              className="p-4 rounded-xl bg-slate-900/50 hover:bg-slate-900 border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group hover:-translate-y-1 shadow-sm"
+              key={box.id}
+              className={`rounded-3xl bg-slate-900/80 border ${box.borderColor} p-6 sm:p-7 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between backdrop-blur-xl relative overflow-hidden group hover:-translate-y-1`}
             >
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-slate-500 group-hover:text-cyan-400 transition-colors">
-                  {skill.category}
+              {/* Subtle box top glow */}
+              <div className={`absolute top-0 right-0 w-48 h-48 bg-gradient-to-br ${box.accent} rounded-full blur-2xl pointer-events-none group-hover:scale-110 transition-transform duration-500`}></div>
+
+              <div>
+                {/* Box Header */}
+                <div className="flex items-start justify-between gap-3 pb-4 border-b border-white/10">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2.5 rounded-2xl bg-slate-950 border border-white/10 shadow-inner">
+                      {getCategoryIcon(box.icon)}
+                    </div>
+                    <div>
+                      <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">
+                        {box.title}
+                      </h3>
+                      <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1 font-mono">
+                        {box.subtitle}
+                      </p>
+                    </div>
+                  </div>
+
+                  <span className="text-[11px] font-mono font-semibold px-2 py-1 rounded-lg bg-slate-950 text-slate-300 border border-white/10 shrink-0">
+                    {box.skills.length} items
+                  </span>
+                </div>
+
+                {/* Skills Chips / Pills */}
+                <div className="py-5 flex flex-wrap gap-2">
+                  {box.skills.map((skill) => (
+                    <div
+                      key={skill.name}
+                      className={`inline-flex flex-col px-3 py-2 rounded-xl transition-all duration-200 border ${
+                        skill.highlight
+                          ? `${box.badgeColor} hover:bg-slate-800`
+                          : 'bg-slate-950/70 text-slate-300 border-white/5 hover:border-white/20'
+                      }`}
+                    >
+                      <div className="flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                        <span className="text-xs font-semibold text-slate-100 font-mono">
+                          {skill.name}
+                        </span>
+                      </div>
+                      <span className="text-[10px] text-slate-400 mt-0.5 pl-3 font-sans">
+                        {skill.level}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Box Footer Indicator */}
+              <div className="pt-4 mt-2 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span className="flex items-center gap-1 text-emerald-400">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                  Production Ready
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400/40 group-hover:bg-cyan-400 transition-colors"></span>
+                <span className="text-slate-500 uppercase tracking-wider text-[10px]">
+                  {box.id}
+                </span>
               </div>
 
-              <h4 className="text-sm font-semibold text-slate-100 group-hover:text-white transition-colors">
-                {skill.name}
-              </h4>
-
-              <div className="mt-2 text-[11px] font-mono text-slate-400 truncate">
-                {skill.level}
-              </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom Competencies Highlights */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="p-5 rounded-2xl bg-slate-900/30 border border-white/5 flex items-start gap-3.5">
-            <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400 shrink-0">
-              <Layers className="w-5 h-5" />
+        {/* Global Architecture Integration Banner */}
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900 border border-cyan-500/20 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-1 text-center md:text-left">
+            <div className="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 font-semibold">
+              <Zap className="w-4 h-4 text-cyan-400" />
+              INTEGRATED FULL-STACK EXECUTION
             </div>
-            <div>
-              <h4 className="text-sm font-semibold text-white font-mono">Modern Frontend &amp; Full Stack</h4>
-              <p className="text-xs text-slate-400 mt-1 leading-relaxed">
-                Clean component architecture with React, Next.js, and responsive Tailwind layouts backed by RESTful Express and FastAPI services.
-              </p>
-            </div>
+            <h4 className="text-lg font-bold text-white">
+              Bridging Frontend, Scalable Backends, and Vector AI Systems
+            </h4>
+            <p className="text-xs sm:text-sm text-slate-300 max-w-2xl">
+              Applying clean code architecture, modular component patterns, secure token authentication, and continuous algorithmic problem solving.
+            </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-slate-900/30 border border-white/5 flex items-start gap-3.5">
-            <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 shrink-0">
-              <Bot className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold text-white font-mono">AI &amp; Vector Search (RAG)</h4>
-              <p className="text-xs text-slate-400 mt-1 leading-relaxed">
-                Dense code vectorization, ChromaDB storage, semantic retrieval, and prompt augmentation with Groq LLM APIs.
-              </p>
-            </div>
-          </div>
-
-          <div className="p-5 rounded-2xl bg-slate-900/30 border border-white/5 flex items-start gap-3.5">
-            <div className="p-2 rounded-lg bg-indigo-500/10 text-indigo-400 shrink-0">
-              <Cpu className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold text-white font-mono">Algorithms &amp; Core Systems</h4>
-              <p className="text-xs text-slate-400 mt-1 leading-relaxed">
-                Solid foundation in Java Data Structures, DBMS, Object-Oriented Principles, Operating Systems, and Computer Networks.
-              </p>
-            </div>
+          <div className="flex items-center gap-3 shrink-0">
+            <a
+              href="#featured-project"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-950 bg-gradient-to-r from-cyan-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 shadow-md font-mono transition-all"
+            >
+              <span>See in Action</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
           </div>
         </div>
 

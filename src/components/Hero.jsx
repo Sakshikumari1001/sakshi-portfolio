@@ -1,6 +1,6 @@
 import React from 'react';
-import { ArrowDown, Github, Mail, ExternalLink, Code2, GitCommit, Flame, GraduationCap, CheckCircle2 } from 'lucide-react';
-import { personalInfo, heroTechBadges, heroStatsPills } from '../data/portfolioData';
+import { ArrowDown, Github, Mail, ExternalLink, Code2, GitCommit, Flame, GraduationCap, CheckCircle2, Sparkles, MapPin } from 'lucide-react';
+import { personalInfo, heroTechBadges, heroStatsPills, aboutNarrative } from '../data/portfolioData';
 import Terminal from './Terminal';
 
 const Hero = () => {
@@ -35,39 +35,40 @@ const Hero = () => {
           {/* Left Hero Content */}
           <div className="lg:col-span-7 space-y-6 text-left">
             
-            {/* Intro Status Pill with User Photo */}
-            <div className="inline-flex items-center gap-3.5 p-1.5 pr-4 rounded-full bg-slate-900/80 border border-white/10 shadow-inner backdrop-blur-md">
-              <div className="relative shrink-0">
-                <img
-                  src="/profile.png"
-                  alt="Sakshi Kumari"
-                  className="w-10 h-10 rounded-full object-cover border-2 border-cyan-400/50 shadow-md shadow-cyan-500/20"
-                />
-                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-slate-950"></span>
-              </div>
-              <div className="text-left">
-                <div className="text-xs font-semibold text-white">Hi, I'm Sakshi Kumari</div>
-                <div className="text-[11px] font-mono text-cyan-400 flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  Open to Full-Stack &amp; Engineering Roles
-                </div>
-              </div>
+            {/* User Requested Top Headline Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-xs font-mono text-cyan-300 shadow-inner backdrop-blur-md">
+              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+              <span className="font-semibold uppercase tracking-wider">{personalInfo.headline}</span>
             </div>
 
             {/* Main Greeting & Headings */}
             <div className="space-y-2">
-              <div className="text-sm sm:text-base font-mono text-cyan-400 font-semibold tracking-wide">
-                Aspiring Full Stack Developer
+              <div className="text-sm sm:text-base font-mono text-slate-300 font-semibold flex items-center gap-2">
+                <span>Hi, I'm</span>
+                <span className="text-white font-bold text-lg sm:text-xl">{personalInfo.name}</span>
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
                 Building Practical <span className="text-gradient">Full-Stack Systems</span>
               </h1>
             </div>
 
-            {/* Bio quote / description */}
+            {/* Exact Bio Quote requested by user */}
             <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal">
               "{personalInfo.subTagline}"
             </p>
+
+            {/* Core Focus Pillars Pill List */}
+            <div className="flex flex-wrap gap-2 pt-1">
+              {personalInfo.corePillars.map((pillar) => (
+                <span
+                  key={pillar}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-medium bg-slate-900/90 text-cyan-300 border border-cyan-500/20 shadow-sm"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                  {pillar}
+                </span>
+              ))}
+            </div>
 
             {/* Verified Stat Badges / Pills (Reference Website Style) */}
             <div className="flex flex-wrap gap-2.5 pt-2">
@@ -82,10 +83,10 @@ const Hero = () => {
               ))}
             </div>
 
-            {/* Tech Badges List */}
+            {/* Core Tech Stack Badges */}
             <div className="space-y-2 pt-2">
               <div className="text-xs font-mono uppercase tracking-wider text-slate-400">
-                Core Stack:
+                Primary Technologies:
               </div>
               <div className="flex flex-wrap gap-2 pt-0.5">
                 {heroTechBadges.map((tech) => (
@@ -132,8 +133,39 @@ const Hero = () => {
 
           </div>
 
-          {/* Right Hero Visual: Terminal Card */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
+          {/* Right Hero Visual: Profile Photo Card & Interactive Terminal */}
+          <div className="lg:col-span-5 flex flex-col items-center lg:items-end w-full space-y-4">
+            
+            {/* Prominent Hero Profile Quick Card */}
+            <div className="w-full max-w-lg p-4 rounded-2xl bg-slate-900/80 border border-white/10 shadow-xl backdrop-blur-md flex items-center gap-4">
+              <div className="relative shrink-0">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-cyan-400 to-emerald-400 p-[2px] shadow-lg shadow-cyan-500/20 overflow-hidden">
+                  <img
+                    src="/profile.png"
+                    alt="Sakshi Kumari"
+                    className="w-full h-full rounded-[14px] object-cover object-top"
+                  />
+                </div>
+                <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-slate-950 rounded-full" title="Active & Available"></span>
+              </div>
+              <div className="space-y-1">
+                <div className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+                  <span>{personalInfo.name}</span>
+                  <span className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                    Full Stack
+                  </span>
+                </div>
+                <div className="text-xs text-slate-300 font-mono">
+                  B.Tech CSE @ Lovely Professional University
+                </div>
+                <div className="text-[11px] text-emerald-400 font-mono flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  CGPA: 7.40 • 200+ LeetCode • 500+ GitHub
+                </div>
+              </div>
+            </div>
+
+            {/* Interactive Terminal */}
             <Terminal />
           </div>
 
