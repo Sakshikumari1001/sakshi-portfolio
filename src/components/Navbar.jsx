@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, ArrowUpRight } from 'lucide-react';
+import { Menu, X, Sun, Moon, ArrowUpRight, Download } from 'lucide-react';
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -103,6 +103,17 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             >
               {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
+
+            <a
+              href="/Sakshi_Kumari_Resume.pdf"
+              download="Sakshi_Kumari_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-xl text-cyan-300 bg-cyan-950/40 border border-cyan-500/30 hover:bg-cyan-900/40 font-mono transition-all transform hover:-translate-y-0.5 whitespace-nowrap"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Resume</span>
+            </a>
 
             <a
               href="#contact"

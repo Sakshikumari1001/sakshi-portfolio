@@ -17,6 +17,7 @@ export const personalInfo = {
   location: "Phagwara, Punjab, India",
   github: "https://github.com/sakshikumari01",
   linkedin: "https://linkedin.com/in/sakshi",
+  resumeUrl: "/Sakshi_Kumari_Resume.pdf",
   openToWork: true,
   status: "Open to Full-Stack & Engineering Roles"
 };
@@ -332,139 +333,101 @@ export const skillsData = {
 export const featuredProjectData = {
   number: "01",
   title: "GitHub RAG Assistant",
+  badgeTop: "FLAGSHIP HERO PROJECT • GENERATIVE AI + FULL-STACK",
   tag: "AI / Full Stack",
-  timeline: "Jul 2026 – Aug 2026",
+  timeline: "Aug 2026 – Present",
+  subtitle: "Full-Stack Context-Aware Codebase Intelligence",
   description:
-    "Built a full-stack Retrieval-Augmented Generation application that allows users to index GitHub repositories and ask natural-language questions about their codebase. The application uses semantic search and vector embeddings to retrieve relevant code context before generating answers using an LLM.",
+    "Built an AI-based assistant that enables developers to understand and query complex GitHub repositories through Retrieval-Augmented Generation (RAG). Fetches source code, documentation, and directory structures to deliver precise, context-grounded explanations.",
+  keyBullets: [
+    "Engineered an end-to-end RAG pipeline processing natural-language queries against indexed repositories with syntax-aware document chunking.",
+    "Generated dense vector embeddings stored in ChromaDB vector database for ultra-low latency cosine semantic retrieval.",
+    "Constructed the user interface with Next.js & TypeScript, coupled with FastAPI backend and Groq LLM API; deployed on Render."
+  ],
   techStack: [
+    "Next.js",
+    "TypeScript",
     "Python",
     "FastAPI",
-    "React",
     "ChromaDB",
     "Groq LLM API",
-    "Vector Embeddings"
+    "Vector Embeddings",
+    "Render"
   ],
   liveUrl: "https://github-rag-assistant-three.vercel.app",
   githubUrl: "https://github.com/sakshikumari01",
-  problem:
-    "Software developers frequently spend countless hours reading through unfamiliar codebases, deciphering undocumented architectures, and searching through hundreds of source files to understand implementation specifics.",
-  solution:
-    "A self-serve RAG pipeline that connects directly to any public GitHub repository, splits source files into syntax-aware chunks, embeds them into vector space, and generates grounded, context-aware answers using Groq's high-speed inference.",
-  howItWorks:
-    "The repository is cloned and parsed. Code documents are split into manageable semantic chunks. Dense embeddings are generated and persisted into ChromaDB. When a user asks a question, ChromaDB executes a cosine-similarity search to pull the top matching code snippets, which are synthesized by the Groq LLM API into a concise, contextual answer.",
-  keyFeatures: [
-    "GitHub repository indexing with automated directory traversal",
-    "Natural-language codebase questions and semantic explanation",
-    "Semantic search over functions, classes, and markdown docs",
-    "Dense vector embeddings for code and comments",
-    "Context-aware answers grounded in real repository files",
-    "FastAPI high-throughput asynchronous backend",
-    "React responsive interactive UI with query history",
-    "ChromaDB local vector database persistence",
-    "Groq LLM API integration for lightning-fast token generation"
-  ],
-  challenges:
-    "Large repositories may take longer to ingest on free-tier deployment infrastructure, and cold starts can increase initial response time. Optimization was implemented with selective chunk filtering and streaming status updates.",
   architectureStages: [
     {
       step: 1,
       name: "GitHub Repository",
-      short: "Repo Ingest",
       role: "Source Ingestion",
-      tech: "GitHub API / Git Clone",
-      input: "Public Repository URL",
-      output: "Raw source files, AST & docs",
-      description: "Fetches source files, directory tree structure, READMEs, and implementation files from the target GitHub repo."
+      tech: "FastAPI / GitHub API",
+      input: "Raw GitHub Repo / Files",
+      output: "Clean Document Text Stream",
+      description: "Ingests raw source files, commit history, and directory trees from target GitHub repositories for indexing."
     },
     {
       step: 2,
-      name: "Repository Data",
-      short: "Extract Data",
-      role: "Metadata Extractor",
-      tech: "Python File Walk",
-      input: "Raw repository directories",
-      output: "Normalized file catalog",
-      description: "Filters out binaries and dependency caches (.git, node_modules, build artifacts) to isolate pure code and documentation."
+      name: "Document Processing",
+      role: "Syntax & AST Extraction",
+      tech: "Tree-Sitter / Language Parsers",
+      input: "Raw Source Code (.py, .js, .java, .md)",
+      output: "Parsed Code Structure & AST Nodes",
+      description: "Parses syntactic blocks, function definitions, docstrings, and class signatures while stripping binary dependencies."
     },
     {
       step: 3,
-      name: "Text / Code Processing",
-      short: "Code Cleaning",
-      role: "Sanitization & Normalization",
-      tech: "Regex & Language Parsers",
-      input: "File buffers with comments",
-      output: "Sanitized code blocks with metadata",
-      description: "Cleans syntax formatting, extracts docstrings, file paths, and function headers to maintain contextual metadata."
+      name: "Chunking",
+      role: "Contextual Segmentation",
+      tech: "Recursive Character Splitter",
+      input: "Normalized Code Streams",
+      output: "500-Token Chunks with Sliding Overlap",
+      description: "Splits large implementation files into semantically bounded token chunks with sliding overlap to preserve scope."
     },
     {
       step: 4,
-      name: "Chunking",
-      short: "Doc Chunking",
-      role: "Document Segmentation",
-      tech: "Recursive Character Splitter",
-      input: "Continuous text streams",
-      output: "500-1000 token chunk segments with overlap",
-      description: "Splits large code files into semantically coherent chunks with overlap to prevent context fragmentation across boundaries."
+      name: "Vector Embeddings",
+      role: "Dense Mathematical Vectors",
+      tech: "Sentence-Transformers / Embeddings API",
+      input: "Code & Comment Chunks",
+      output: "768-Dim Dense Embedding Vectors",
+      description: "Converts syntax tokens and docstrings into high-dimensional vector representations capturing semantic and logic intent."
     },
     {
       step: 5,
-      name: "Vector Embeddings",
-      short: "Embeddings",
-      role: "Mathematical Representation",
-      tech: "Sentence Transformers / Embedding API",
-      input: "Text & code chunk tokens",
-      output: "High-dimensional float vectors",
-      description: "Converts each code snippet into dense mathematical vector representations capturing semantic meaning and syntactic intent."
+      name: "ChromaDB",
+      role: "Persistent Vector Database",
+      tech: "ChromaDB / HNSW Indexing",
+      input: "Dense Vectors + File Metadata",
+      output: "Indexed Multidimensional Collection",
+      description: "Persists vector embeddings alongside file path and line number coordinates for sub-10ms nearest-neighbor retrieval."
     },
     {
       step: 6,
-      name: "ChromaDB",
-      short: "ChromaDB",
-      role: "Persistent Vector Store",
-      tech: "ChromaDB Embedded Engine",
-      input: "Vector arrays + metadata tags",
-      output: "Indexed multidimensional collection",
-      description: "Stores embeddings alongside file path and line number metadata for instant cosine similarity queries."
+      name: "Semantic Retrieval",
+      role: "Cosine Similarity Matching",
+      tech: "HNSW Cosine Distance Engine",
+      input: "User Query Vector",
+      output: "Top-K Relevant Code Passages",
+      description: "Embeds natural language developer questions in real-time and matches them against indexed repository vectors."
     },
     {
       step: 7,
-      name: "Semantic Search",
-      short: "Search Query",
-      role: "Vector Retrieval",
-      tech: "HNSW Cosine Similarity",
-      input: "User natural language query",
-      output: "Ranked list of top-k nearest code chunks",
-      description: "Embeds user questions in real-time and retrieves the most relevant code chunks based on mathematical closeness."
+      name: "Groq LLM",
+      role: "High-Throughput Synthesis",
+      tech: "Groq LPU Inference (Llama 3 / Mixtral)",
+      input: "Augmented Context Prompt + Code Snippets",
+      output: "Low-Latency Token Stream",
+      description: "Injects grounded code context into the model prompt and generates precise architectural answers with minimal latency."
     },
     {
       step: 8,
-      name: "Relevant Context",
-      short: "Context Build",
-      role: "Prompt Augmentation",
-      tech: "Prompt Engineering Engine",
-      input: "Top-k chunks + original user question",
-      output: "Structured RAG context prompt",
-      description: "Packages retrieved source snippets into an augmented system prompt instructing the model to answer strictly using provided code."
-    },
-    {
-      step: 9,
-      name: "Groq LLM",
-      short: "Groq LLM",
-      role: "Language Synthesis",
-      tech: "Groq Llama-3 / Mixtral API",
-      input: "Augmented contextual prompt",
-      output: "Fast token stream",
-      description: "Executes ultra-low latency token generation leveraging Groq's Tensor Processing Unit architecture."
-    },
-    {
-      step: 10,
-      name: "Natural Language Answer",
-      short: "Answer",
-      role: "Client Presentation",
-      tech: "React Markdown Renderer",
-      input: "LLM output text stream",
-      output: "Formatted answer with file references",
-      description: "Displays structured explanation with code blocks, file citations, and line references directly to the user."
+      name: "Context-Aware Response",
+      role: "Formatted UI Presentation",
+      tech: "Next.js / Markdown Syntax Highlighting",
+      input: "Synthesized Output Stream",
+      output: "Interactive Answer with File Citations",
+      description: "Renders markdown formatted responses with file links, line references, and highlighted code blocks."
     }
   ]
 };
@@ -613,39 +576,77 @@ export const trackRecordData = [
 
 export const certificationsData = [
   {
-    name: "Oracle Data Platform Foundations Associate",
-    provider: "Oracle",
+    name: "Oracle Data Platform 2025 Certified Foundations Associate",
+    provider: "Oracle University",
     year: "2026",
-    skills: "DBMS, Cloud Data Systems, SQL Architecture",
-    type: "Database & Cloud"
+    issueDate: "May 26, 2026",
+    validUntil: "May 26, 2028",
+    certId: "102473290OCI25DCFA",
+    skills: "DBMS, Cloud Data Systems, SQL Architecture, Autonomous Database",
+    type: "Database & Cloud",
+    image: "/certificates/oracle_data_platform.png",
+    pdf: "/certificates/oracle_data_platform.pdf"
   },
   {
-    name: "Oracle Certified – Artificial Intelligence (AI)",
-    provider: "Oracle",
+    name: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+    provider: "Oracle University",
     year: "2026",
-    skills: "AI Foundations, Machine Learning Principles",
-    type: "AI & Cloud"
+    issueDate: "May 26, 2026",
+    validUntil: "May 26, 2028",
+    certId: "102473290OCI25AICFA",
+    skills: "Artificial Intelligence, Machine Learning, OCI AI Services, Generative AI",
+    type: "AI & Cloud",
+    image: "/certificates/oracle_ai_foundations.png",
+    pdf: "/certificates/oracle_ai_foundations.pdf"
   },
   {
-    name: "DBMS Part 1",
+    name: "Programming Using C++",
+    provider: "Infosys Springboard",
+    year: "2025",
+    issueDate: "August 13, 2025",
+    verifyUrl: "https://verify.onwingspan.com",
+    skills: "C++ Syntax, OOP, Memory Management, Problem Solving",
+    type: "Programming Language",
+    image: "/certificates/infosys_cpp.png",
+    pdf: "/certificates/infosys_cpp.pdf"
+  },
+  {
+    name: "Database Management System Part - 2",
     provider: "Infosys Springboard",
     year: "2026",
-    skills: "Relational Modeling, Normalization, SQL Queries",
-    type: "Database"
+    issueDate: "June 18, 2026",
+    verifyUrl: "https://verify.onwingspan.com",
+    skills: "Advanced SQL, Normalization, Transactions, Concurrency Control, Indexing",
+    type: "Database Systems",
+    image: "/certificates/infosys_dbms.png",
+    pdf: "/certificates/infosys_dbms.pdf"
+  },
+  {
+    name: "LeetCode 50-Day Streak & 200+ Problems Solved",
+    provider: "LeetCode",
+    year: "2026",
+    issueDate: "Active Daily Streak",
+    skills: "Data Structures, Algorithms, Arrays, Trees, Dynamic Programming in Java",
+    type: "Problem Solving Badge",
+    badge: "50-Day Streak & 200+ Solved"
   },
   {
     name: "Social Summer of Code Season 5 Contributor",
     provider: "SSoC Open Source Program",
     year: "2026",
+    issueDate: "Season 5 (Jul 2026 – Present)",
     skills: "Open Source, Git & GitHub, Pull Requests, Code Reviews",
-    type: "Open Source"
+    type: "Open Source Badge",
+    badge: "500+ GitHub Contributions"
   },
   {
     name: "Advanced Backend Development with Node.js, Express & MongoDB",
     provider: "Centre for Professional Enhancement, LPU",
     year: "2026",
+    issueDate: "2026",
     skills: "Node.js, Express.js, MongoDB, JWT Authentication, RESTful APIs (Grade A)",
-    type: "Backend & Full Stack"
+    type: "Backend & Full Stack Distinction",
+    badge: "Grade A Distinction"
   }
 ];
 

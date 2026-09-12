@@ -220,3 +220,73 @@ export const ProctorEdMockup = () => {
     </div>
   );
 };
+
+export const RagAssistantMockup = () => {
+  return (
+    <div className="w-full rounded-2xl bg-[#080d19] border border-slate-800 p-4 font-sans text-xs text-slate-300 shadow-2xl overflow-hidden">
+      {/* Browser Bar */}
+      <div className="flex items-center justify-between pb-3 border-b border-slate-800 font-mono text-[11px]">
+        <div className="flex items-center gap-1.5">
+          <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+          <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+          <span className="ml-2 text-slate-400">rag-assistant.dev/workspace/react</span>
+        </div>
+        <span className="px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 text-[10px] font-mono">
+          Groq LPU Active • 14ms
+        </span>
+      </div>
+
+      {/* Repository Context Bar */}
+      <div className="mt-3 p-2.5 rounded-xl bg-slate-900/90 border border-slate-800 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono">
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span className="text-white font-semibold">Indexed Repo:</span>
+          <span className="text-cyan-400">github.com/facebook/react</span>
+        </div>
+        <div className="flex items-center gap-2 text-[10px] text-slate-400">
+          <span>1,482 Files</span>
+          <span>•</span>
+          <span>5,928 Vector Chunks</span>
+          <span>•</span>
+          <span className="text-indigo-300">ChromaDB Ready</span>
+        </div>
+      </div>
+
+      {/* Chat Messages Stream */}
+      <div className="mt-3 space-y-2.5 font-sans">
+        {/* User Query Bubble */}
+        <div className="p-3 rounded-xl bg-indigo-950/40 border border-indigo-500/30 text-slate-200">
+          <span className="text-[10px] font-mono text-indigo-400 font-bold block mb-1">DEVELOPER QUERY:</span>
+          <p className="text-xs">
+            How does the React Fiber reconciler prioritize concurrent lane updates over background transitions?
+          </p>
+        </div>
+
+        {/* Vector Context Match Pill */}
+        <div className="p-2 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center justify-between text-[10px] font-mono">
+          <div className="flex items-center gap-1.5 text-cyan-300">
+            <Sparkles className="w-3 h-3 text-cyan-400 shrink-0" />
+            <span className="truncate">Retrieved 4 chunks from ReactFiberWorkLoop.js</span>
+          </div>
+          <span className="text-emerald-400 font-bold shrink-0">Similarity: 0.91</span>
+        </div>
+
+        {/* LLM Response */}
+        <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 space-y-2">
+          <span className="text-[10px] font-mono text-emerald-400 font-bold flex items-center gap-1">
+            <span>GROQ LLM SYNTHESIS</span>
+            <span className="text-slate-500">• 480 tokens/sec</span>
+          </span>
+          <p className="text-xs text-slate-300 leading-relaxed">
+            React's reconciler utilizes bitmask <strong>Lanes</strong> (e.g. <code className="text-cyan-300 bg-slate-950 px-1 py-0.5 rounded">SyncLane</code>, <code className="text-cyan-300 bg-slate-950 px-1 py-0.5 rounded">InputContinuousLane</code>, and <code className="text-cyan-300 bg-slate-950 px-1 py-0.5 rounded">TransitionLanes</code>) in the work loop:
+          </p>
+          <div className="p-2 rounded-lg bg-slate-950 border border-slate-800 font-mono text-[10px] text-indigo-300">
+            const nextLanes = getNextLanes(root, return_lanes);<br/>
+            if (includesSomeLane(nextLanes, SyncLane)) &#123; performSyncWorkOnRoot(root); &#125;
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

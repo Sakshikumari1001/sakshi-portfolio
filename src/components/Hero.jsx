@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Github, Mail, ExternalLink, Code2, GitCommit, Flame, GraduationCap, CheckCircle2, Sparkles, MapPin } from 'lucide-react';
+import { ArrowDown, Github, Mail, ExternalLink, Code2, GitCommit, Flame, GraduationCap, CheckCircle2, Sparkles, MapPin, Download } from 'lucide-react';
 import { personalInfo, heroTechBadges, heroStatsPills, aboutNarrative } from '../data/portfolioData';
 import Terminal from './Terminal';
 
@@ -109,6 +109,17 @@ const Hero = () => {
               >
                 <span>View Projects</span>
                 <ArrowDown className="w-4 h-4" />
+              </a>
+
+              <a
+                href={personalInfo.resumeUrl}
+                download="Sakshi_Kumari_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-cyan-300 bg-cyan-950/40 hover:bg-cyan-900/50 border border-cyan-500/30 hover:border-cyan-400 shadow-md font-mono transition-all transform hover:-translate-y-0.5"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download CV</span>
               </a>
 
               <a
