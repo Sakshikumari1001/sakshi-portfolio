@@ -133,40 +133,63 @@ const Hero = () => {
 
           </div>
 
-          {/* Right Hero Visual: Profile Photo Card & Interactive Terminal */}
+          {/* Right Hero Visual: Large Photo Showcase Card & Terminal */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end w-full space-y-4">
             
-            {/* Prominent Hero Profile Quick Card */}
-            <div className="w-full max-w-lg p-4 rounded-2xl bg-slate-900/80 border border-white/10 shadow-xl backdrop-blur-md flex items-center gap-4">
-              <div className="relative shrink-0">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-cyan-400 to-emerald-400 p-[2px] shadow-lg shadow-cyan-500/20 overflow-hidden">
+            {/* Prominent Large Photo Hero Card */}
+            <div className="w-full max-w-md p-6 sm:p-7 rounded-3xl bg-slate-900/90 border border-white/10 shadow-2xl backdrop-blur-xl flex flex-col items-center text-center relative overflow-hidden group">
+              {/* Background ambient glow */}
+              <div className="absolute top-0 right-0 w-48 h-48 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+              {/* Large Photo Frame ("bada sa photo") */}
+              <div className="relative mb-5">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl bg-gradient-to-tr from-cyan-400 via-indigo-500 to-emerald-400 p-[3px] shadow-2xl shadow-cyan-500/25 overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-300">
                   <img
                     src="/profile.png"
                     alt="Sakshi Kumari"
-                    className="w-full h-full rounded-[14px] object-cover object-top"
+                    className="w-full h-full rounded-[21px] object-cover object-top"
                   />
                 </div>
-                <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-slate-950 rounded-full" title="Active & Available"></span>
+                {/* Active Availability Badge */}
+                <span className="absolute bottom-2 right-2 px-2.5 py-1 bg-slate-950/90 border border-emerald-500/50 rounded-full text-[10px] font-mono text-emerald-400 flex items-center gap-1.5 shadow-lg backdrop-blur-md">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Ready to Build
+                </span>
               </div>
-              <div className="space-y-1">
-                <div className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
-                  <span>{personalInfo.name}</span>
-                  <span className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
-                    Full Stack
-                  </span>
+
+              {/* Profile Details */}
+              <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
+                {personalInfo.name}
+              </h3>
+              <div className="text-xs sm:text-sm text-cyan-400 font-mono font-semibold mt-1">
+                {personalInfo.role}
+              </div>
+              <div className="text-xs text-slate-400 font-mono mt-1 flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Lovely Professional University (2024–2028)</span>
+              </div>
+
+              {/* Quick Metrics Pills */}
+              <div className="grid grid-cols-3 gap-2 w-full mt-4 pt-4 border-t border-white/10 font-mono text-xs">
+                <div className="p-2 rounded-xl bg-slate-950/70 border border-white/5">
+                  <div className="text-cyan-400 font-bold">7.40</div>
+                  <div className="text-[10px] text-slate-400">CGPA</div>
                 </div>
-                <div className="text-xs text-slate-300 font-mono">
-                  B.Tech CSE @ Lovely Professional University
+                <div className="p-2 rounded-xl bg-slate-950/70 border border-white/5">
+                  <div className="text-amber-400 font-bold">200+</div>
+                  <div className="text-[10px] text-slate-400">LeetCode</div>
                 </div>
-                <div className="text-[11px] text-emerald-400 font-mono flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  CGPA: 7.40 • 200+ LeetCode • 500+ GitHub
+                <div className="p-2 rounded-xl bg-slate-950/70 border border-white/5">
+                  <div className="text-purple-400 font-bold">500+</div>
+                  <div className="text-[10px] text-slate-400">Commits</div>
                 </div>
               </div>
             </div>
 
-            {/* Interactive Terminal */}
-            <Terminal />
+            {/* Interactive Terminal Below Photo */}
+            <div className="w-full max-w-md">
+              <Terminal />
+            </div>
           </div>
 
         </div>
