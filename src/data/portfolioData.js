@@ -529,7 +529,7 @@ export const regularProjectsData = [
       frontend: "Vercel",
       backend: "Spring Boot"
     },
-    liveUrl: "https://github.com/sakshikumari01",
+    liveUrl: "https://byod-umber.vercel.app",
     githubUrl: "https://github.com/sakshikumari01",
     mockupType: "byod_management"
   }
