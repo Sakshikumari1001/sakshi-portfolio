@@ -16,7 +16,7 @@ export const personalInfo = {
   phone: "+91-7992470771",
   location: "Phagwara, Punjab, India",
   github: "https://github.com/sakshikumari01",
-  linkedin: "https://linkedin.com/in/sakshi",
+  linkedin: "https://www.linkedin.com/in/sakshikumari1001",
   resumeUrl: "/Sakshi_Kumari_Resume.pdf",
   openToWork: true,
   status: "Open to Full-Stack & Engineering Roles"
@@ -123,9 +123,9 @@ export const codingProfiles = [
   },
   {
     name: "LinkedIn",
-    handle: "in/sakshi",
+    handle: "sakshikumari1001",
     metric: "Professional Network & Updates",
-    url: "https://linkedin.com/in/sakshi",
+    url: "https://www.linkedin.com/in/sakshikumari1001",
     icon: "linkedin",
     accent: "from-blue-500/20 to-cyan-500/10",
     border: "group-hover:border-blue-500/50",
