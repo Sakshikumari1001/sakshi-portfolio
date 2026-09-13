@@ -42,6 +42,19 @@ const ProjectCard = ({ project }) => {
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0b101b]/70 via-transparent to-transparent opacity-60 pointer-events-none"></div>
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 flex items-center justify-center bg-slate-950/40 opacity-0 group-hover/mockup:opacity-100 transition-opacity backdrop-blur-[2px]"
+              >
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-cyan-400 text-slate-950 text-xs font-mono font-bold shadow-xl">
+                  <span>Open Live Demo</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </span>
+              </a>
+            )}
           </div>
         ) : (
           /* Fallback Developer Visual Mockup */
