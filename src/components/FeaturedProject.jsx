@@ -162,7 +162,15 @@ const FeaturedProject = () => {
           {viewMode === 'preview' ? (
             /* Live UI Interface Screenshot / Mockup */
             <div className="space-y-3 animate-in fade-in duration-200">
-              <RagAssistantMockup />
+              <div className="rounded-2xl overflow-hidden border border-slate-800 bg-slate-950/90 shadow-2xl relative aspect-[16/10] group/feat">
+                <img 
+                  src="/projects/github_rag_mockup.png" 
+                  alt="GitHub RAG Assistant Interface" 
+                  className="w-full h-full object-cover object-top group-hover/feat:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+              </div>
             </div>
           ) : (
             /* Vertical Stepper & Inspector matching media_1789199226018.png */

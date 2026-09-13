@@ -51,7 +51,8 @@ const Skills = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Categorized <span className="text-gradient">Skill Domains</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+          <div className="w-12 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mt-3 rounded-full"></div>
+          <p className="text-slate-400 text-sm sm:text-base leading-relaxed pt-1">
             Organized by domain: Frontend client interfaces, backend microservices, vector search &amp; generative AI, databases, and core computer science fundamentals.
           </p>
         </div>

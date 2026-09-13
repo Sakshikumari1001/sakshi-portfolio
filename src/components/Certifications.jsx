@@ -31,7 +31,8 @@ const Certifications = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Accredited <span className="text-gradient">Certificates &amp; Badges</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+          <div className="w-12 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mt-3 rounded-full"></div>
+          <p className="text-slate-400 text-sm sm:text-base leading-relaxed pt-1">
             Verified professional credentials from Oracle University, Infosys Springboard, LeetCode, and SSoC Open Source.
           </p>
         </div>
@@ -47,18 +48,23 @@ const Certifications = () => {
                 {/* Certificate Visual Image Preview if available */}
                 {cert.image ? (
                   <div 
-                    className="relative aspect-[16/10] bg-slate-950 overflow-hidden cursor-pointer group/img border-b border-slate-800/80"
+                    className="relative aspect-[16/10] bg-slate-950/90 overflow-hidden cursor-pointer group/img border-b border-slate-800/80 flex items-center justify-center"
                     onClick={() => setActiveModalImg(cert)}
                   >
                     <img
                       src={cert.image}
                       alt={cert.name}
-                      className="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-300"
+                      className={`w-full h-full ${cert.fit === 'contain' ? 'object-contain p-2' : 'object-cover object-center'} group-hover/img:scale-105 transition-transform duration-300`}
                     />
-                    <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-2 backdrop-blur-[2px]">
+                    {cert.badge && (
+                      <span className="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-slate-900/90 text-cyan-300 border border-cyan-500/30 backdrop-blur-sm shadow-md">
+                        {cert.badge}
+                      </span>
+                    )}
+                    <div className="absolute inset-0 bg-slate-950/50 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-2 backdrop-blur-[2px]">
                       <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-cyan-500 text-slate-950 text-xs font-mono font-bold shadow-lg">
                         <Eye className="w-3.5 h-3.5" />
-                        <span>View Full Certificate</span>
+                        <span>View Credential</span>
                       </span>
                     </div>
                   </div>

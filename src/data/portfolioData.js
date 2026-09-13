@@ -34,20 +34,20 @@ export const heroTechBadges = [
 export const heroStatsPills = [
   {
     icon: "Code2",
-    label: "200+ DSA Problems Solved",
-    sub: "Java & LeetCode",
+    label: "300+ DSA Problems Solved",
+    sub: "LeetCode & GeeksforGeeks",
     accent: "text-amber-400"
   },
   {
     icon: "GitCommit",
-    label: "500+ GitHub Contributions",
-    sub: "Active Repositories",
+    label: "1,500+ GitHub Contributions",
+    sub: "Active Open-Source Activity",
     accent: "text-purple-400"
   },
   {
     icon: "Flame",
-    label: "50-Day LeetCode Streak",
-    sub: "Daily Discipline",
+    label: "100 Days & 50-Day Badges",
+    sub: "LeetCode & SQL Badges",
     accent: "text-emerald-400"
   },
   {
@@ -114,12 +114,12 @@ export const codingProfiles = [
   {
     name: "GitHub",
     handle: "sakshikumari01",
-    metric: "500+ Contributions • Repositories",
+    metric: "1,500+ Contributions • Open-Source Repositories",
     url: "https://github.com/sakshikumari01",
     icon: "github",
     accent: "from-purple-500/20 to-indigo-500/10",
     border: "group-hover:border-purple-500/50",
-    badge: "500+ Contributions"
+    badge: "1,500+ Commits"
   },
   {
     name: "LinkedIn",
@@ -133,13 +133,13 @@ export const codingProfiles = [
   },
   {
     name: "LeetCode",
-    handle: "Problem Solving Practice",
-    metric: "200+ Solved • 50-Day Streak",
-    url: "https://leetcode.com/",
+    handle: "Sakshi-kumari24",
+    metric: "300+ Solved • 100 Days & 50-Day Badges",
+    url: "https://leetcode.com/u/Sakshi-kumari24/",
     icon: "code2",
     accent: "from-amber-500/20 to-orange-500/10",
     border: "group-hover:border-amber-500/50",
-    badge: "200+ Solved"
+    badge: "100 & 50 Days Badge"
   },
   {
     name: "GeeksforGeeks",
@@ -337,6 +337,7 @@ export const featuredProjectData = {
   tag: "AI / Full Stack",
   timeline: "Aug 2026 – Present",
   subtitle: "Full-Stack Context-Aware Codebase Intelligence",
+  image: "/projects/github_rag_mockup.png",
   description:
     "Built an AI-based assistant that enables developers to understand and query complex GitHub repositories through Retrieval-Augmented Generation (RAG). Fetches source code, documentation, and directory structures to deliver precise, context-grounded explanations.",
   keyBullets: [
@@ -436,40 +437,28 @@ export const regularProjectsData = [
   {
     number: "02",
     title: "RentRide",
-    badge: "Full Stack Web Application",
-    tag: "MERN • Cloud Services • Payments",
+    badge: "Vehicle Rental Platform",
+    tag: "MERN • Razorpay • Cloudinary",
+    timeline: "Jun' 26 – Jul' 26",
     description:
-      "Developed a full-stack vehicle rental platform that allows users to search vehicles, view details, make bookings and manage their rental experience. The platform also includes authentication, payments, wishlist, reviews and an admin dashboard.",
+      "Developed a full-stack vehicle rental platform allowing users to search vehicles, view real-time fleet specs, make bookings and complete Razorpay payments with automated invoices and WhatsApp alerts.",
+    image: "/projects/rentride_mockup.png",
     techStack: [
       "React",
-      "Vite",
-      "Tailwind CSS",
       "Node.js",
       "Express.js",
       "MongoDB",
-      "Mongoose",
       "JWT",
-      "Axios",
-      "Cloudinary",
-      "Nodemailer",
-      "Twilio WhatsApp API",
       "Razorpay",
-      "Railway"
+      "Cloudinary",
+      "Tailwind CSS"
     ],
     features: [
-      "Vehicle search with dynamic query filters",
-      "Vehicle filtering by category, price, and fuel type",
-      "Comprehensive vehicle details and specifications",
-      "Secure user authentication with JWT & hashed passwords",
-      "Vehicle booking management with date ranges",
-      "Pickup and return schedule management",
-      "Online payment integration with Razorpay",
-      "Automated booking receipts and invoice download",
-      "Email notifications sent via Nodemailer",
-      "WhatsApp notifications via Twilio API",
-      "Personal wishlist saving favorite cars",
-      "Community rating and verified review system",
-      "Promotional discount coupon redemption",
+      "Vehicle search with dynamic filters for category, price, and fuel",
+      "Secure user authentication with JWT & hashed password security",
+      "Online payment integration with Razorpay checkout & receipts",
+      "Automated booking receipts & invoice generation via Nodemailer",
+      "Real-time WhatsApp notifications via Twilio API",
       "Comprehensive Admin dashboard for fleet & booking control"
     ],
     liveUrl: "https://rent-ride-eta.vercel.app",
@@ -479,87 +468,116 @@ export const regularProjectsData = [
   {
     number: "03",
     title: "ProctorEd",
-    badge: "AI-Proctored Online Exam Platform",
-    tag: "Full Stack • Computer Vision • Integrity",
+    badge: "AI-Proctored Exam Platform",
+    tag: "Computer Vision • OCR • Full-Stack",
+    timeline: "May' 26 – Jul' 26",
     description:
-      "Built an online examination platform with separate Admin, Teacher and Student roles. The platform supports secure authentication, exam management, automated evaluation and AI-assisted monitoring features.",
+      "Engineered an online examination platform with Admin, Teacher and Student roles, automated scoring, candidate ID verification via OCR, and live AI face-detection anti-cheating modules.",
+    image: "/projects/proctored_mockup.png",
     techStack: [
       "React.js",
       "Node.js",
       "Express.js",
       "MongoDB",
       "JWT",
-      "REST API"
+      "OCR",
+      "Face Detection"
     ],
     features: [
       "Multi-tier authorization: Admin, Teacher, and Student roles",
-      "Secure authentication with session token validation",
-      "OCR-based ID verification before exam room entry",
+      "OCR-based candidate ID verification prior to exam entrance",
       "Live AI face detection monitoring for multiple faces or absence",
-      "Enforced full-screen exam mode to prevent cheating",
-      "Active tab-switch monitoring and strike warnings",
-      "Automated scoring engine for instant evaluation",
-      "Configurable negative marking parameters",
-      "Automated result dispatch delivered to student email",
-      "Teacher dashboard for exam creation & question banks",
-      "Admin monitoring panel for system-wide metrics",
-      "Secure REST API backend deployed on Render"
+      "Enforced full-screen lockdown and active tab-switch warnings",
+      "Automated scoring engine for instant evaluation & report emails",
+      "Teacher dashboard for exam creation, question banks & metrics"
     ],
     deployment: {
       frontend: "Vercel",
-      backend: "Render",
-      database: "MongoDB Atlas",
-      email: "SendGrid"
+      backend: "Render"
     },
     liveUrl: "https://exam-platform-yj8s.vercel.app",
     githubUrl: "https://github.com/sakshikumari01/exam-platform",
     mockupType: "proctored_exam"
+  },
+  {
+    number: "04",
+    title: "BYOD — Classroom Management System",
+    badge: "Real-Time Classroom Platform",
+    tag: "React.js • Spring Boot • MySQL • Socket.IO",
+    timeline: "Apr' 26 – May' 26",
+    description:
+      "Developed a full-stack classroom management platform spanning classrooms, announcements, and activities. Shipped 4 real-time features including live announcements, focus tracking, and an interactive dashboard powered by Socket.IO, synchronizing device state across classrooms.",
+    image: "/projects/byod_mockup.png",
+    techStack: [
+      "React.js",
+      "Spring Boot",
+      "MySQL",
+      "Socket.IO",
+      "RESTful APIs",
+      "Tailwind CSS"
+    ],
+    features: [
+      "Full-stack classroom management spanning classrooms, announcements, and activities",
+      "Shipped 4 real-time features including live announcements and focus tracking",
+      "Interactive teacher dashboard with real-time student engagement analytics",
+      "Socket.IO bi-directional communication for instant notification delivery",
+      "Synchronized device state in real time across connected student screens",
+      "Spring Boot backend microservices exposing secured RESTful endpoints",
+      "MySQL relational database schema managing classrooms, activities, and audit logs"
+    ],
+    deployment: {
+      frontend: "Vercel",
+      backend: "Spring Boot"
+    },
+    liveUrl: "https://github.com/sakshikumari01",
+    githubUrl: "https://github.com/sakshikumari01",
+    mockupType: "byod_management"
   }
 ];
 
 export const trackRecordData = [
   {
-    title: "200+ DSA Problems Solved in Java",
+    title: "300+ DSA Problems Solved",
     category: "Algorithmic Problem Solving",
-    highlight: "LeetCode & Java Problem Solving",
+    highlight: "LeetCode & GeeksforGeeks",
     description:
-      "Solved 200+ Data Structures & Algorithms problems covering Arrays, Strings, Searching & Sorting, Linked Lists, Binary Trees, Stacks, Queues, and Dynamic Programming.",
+      "Solved 300+ Data Structures & Algorithms problems covering Arrays, Strings, Searching & Sorting, Linked Lists, Binary Trees, Stacks, Queues, and Dynamic Programming in Java.",
     icon: "Code2",
-    badge: "200+ Solved"
+    badge: "300+ Solved"
   },
   {
-    title: "50-Day LeetCode Streak Badge",
-    category: "Coding Discipline",
-    highlight: "Consecutive Problem-Solving Streak",
-    description:
-      "Earned the official LeetCode 50-Day Streak badge demonstrating strong coding discipline, analytical persistence, and consistent daily algorithmic practice.",
-    icon: "Flame",
-    badge: "50-Day Streak"
-  },
-  {
-    title: "500+ GitHub Contributions",
+    title: "1,500+ GitHub Contributions",
     category: "Open Source & Version Control",
-    highlight: "Active Open-Source Projects",
+    highlight: "Active Open-Source Activity",
     description:
-      "Achieved 500+ contributions across full-stack production repositories, collaborative open-source projects, issue tracking, and clean pull request workflows.",
+      "Maintained 1,500+ contributions across production repositories, collaborative open-source workflows, issue tracking, and clean pull requests.",
     icon: "GitPullRequest",
-    badge: "500+ Commits"
+    badge: "1,500+ Commits"
   },
   {
-    title: "Social Summer of Code Season 5 Contributor",
+    title: "LeetCode 100 Days & 50-Day Badges",
+    category: "Coding Discipline & Streaks",
+    highlight: "100 Days, 50-Day & SQL Badges",
+    description:
+      "Earned official LeetCode 100 Days Badge, 50-Day Streak Badge, and SQL Badge, validating persistent daily problem-solving discipline and database querying mastery.",
+    icon: "Flame",
+    badge: "Triple Badge Earner"
+  },
+  {
+    title: "Open Source Contributor | SSOC",
     category: "Open Source Initiative",
-    highlight: "SSoC Season 5 (Jul '26 – Present)",
+    highlight: "SSOC (Jul '26 – Present)",
     description:
-      "Selected open-source contributor in SSoC Season 5. Contributed to open-source codebases via Git/GitHub workflows, issue triage, pull requests, and peer reviews.",
+      "Contributed to open-source projects via Git/GitHub workflows, pull requests, and code reviews. Collaborated with developers to implement feature enhancements and led 10+ contributor meetings engaging 50+ students.",
     icon: "GitPullRequest",
-    badge: "SSoC Contributor"
+    badge: "SSOC Contributor"
   },
   {
-    title: "Oracle Data Platform Foundations Associate",
+    title: "Oracle Certified in DBMS & AI",
     category: "Cloud & Database Certification",
-    highlight: "Oracle Certified (May '26)",
+    highlight: "Oracle University Certified (May '26)",
     description:
-      "Certified in Oracle Data Platform Foundations & DBMS fundamentals, validating understanding of database architecture, cloud data services, and relational query design.",
+      "Dual Oracle certified in Database Management Systems Foundations (DBMS) and Artificial Intelligence (AI), validating core database architecture and AI service engineering.",
     icon: "Award",
     badge: "Oracle Certified"
   },
@@ -568,7 +586,7 @@ export const trackRecordData = [
     category: "University Training Distinction",
     highlight: "Centre for Professional Enhancement, LPU",
     description:
-      "Completed intensive backend training in Node.js, Express.js, MongoDB & RESTful API architecture, building a full-stack MERN capstone with Grade A distinction.",
+      "Completed intensive backend training in Node.js, Express.js, MongoDB & RESTful API architecture, building the full-stack MERN RentRide vehicle rental platform with Grade A distinction.",
     icon: "GraduationCap",
     badge: "Grade A Distinction"
   }
@@ -585,7 +603,8 @@ export const certificationsData = [
     skills: "DBMS, Cloud Data Systems, SQL Architecture, Autonomous Database",
     type: "Database & Cloud",
     image: "/certificates/oracle_data_platform.png",
-    pdf: "/certificates/oracle_data_platform.pdf"
+    pdf: "/certificates/oracle_data_platform.pdf",
+    badge: "Oracle Certified"
   },
   {
     name: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
@@ -597,18 +616,20 @@ export const certificationsData = [
     skills: "Artificial Intelligence, Machine Learning, OCI AI Services, Generative AI",
     type: "AI & Cloud",
     image: "/certificates/oracle_ai_foundations.png",
-    pdf: "/certificates/oracle_ai_foundations.pdf"
+    pdf: "/certificates/oracle_ai_foundations.pdf",
+    badge: "Oracle Certified"
   },
   {
-    name: "Programming Using C++",
+    name: "Database Management System Part - 1",
     provider: "Infosys Springboard",
-    year: "2025",
-    issueDate: "August 13, 2025",
+    year: "2026",
+    issueDate: "June 18, 2026",
     verifyUrl: "https://verify.onwingspan.com",
-    skills: "C++ Syntax, OOP, Memory Management, Problem Solving",
-    type: "Programming Language",
-    image: "/certificates/infosys_cpp.png",
-    pdf: "/certificates/infosys_cpp.pdf"
+    skills: "Relational Data Modeling, SQL DDL/DML Queries, Schema Design & Constraints",
+    type: "Database Systems",
+    image: "/certificates/infosys_dbms_part1.png",
+    pdf: "/certificates/infosys_dbms_part1.pdf",
+    badge: "Infosys Certified"
   },
   {
     name: "Database Management System Part - 2",
@@ -619,25 +640,42 @@ export const certificationsData = [
     skills: "Advanced SQL, Normalization, Transactions, Concurrency Control, Indexing",
     type: "Database Systems",
     image: "/certificates/infosys_dbms.png",
-    pdf: "/certificates/infosys_dbms.pdf"
+    pdf: "/certificates/infosys_dbms.pdf",
+    badge: "Infosys Certified"
   },
   {
-    name: "LeetCode 50-Day Streak & 200+ Problems Solved",
+    name: "Programming Using C++",
+    provider: "Infosys Springboard",
+    year: "2025",
+    issueDate: "August 13, 2025",
+    verifyUrl: "https://verify.onwingspan.com",
+    skills: "C++ Syntax, OOP, Memory Management, Problem Solving",
+    type: "Programming Language",
+    image: "/certificates/infosys_cpp.png",
+    pdf: "/certificates/infosys_cpp.pdf",
+    badge: "Infosys Certified"
+  },
+  {
+    name: "LeetCode 50 Days Badge 2026",
     provider: "LeetCode",
     year: "2026",
-    issueDate: "Active Daily Streak",
-    skills: "Data Structures, Algorithms, Arrays, Trees, Dynamic Programming in Java",
-    type: "Problem Solving Badge",
-    badge: "50-Day Streak & 200+ Solved"
+    issueDate: "50+ Days in 2026",
+    verifyUrl: "https://leetcode.com/u/Sakshi-kumari24/",
+    skills: "200+ Solved in Java DSA, Daily Problem Solving, Algorithmic Consistency",
+    type: "Competitive Coding",
+    image: "/certificates/leetcode_50days_badge.png",
+    fit: "contain",
+    badge: "50-Day Streak"
   },
   {
     name: "Social Summer of Code Season 5 Contributor",
     provider: "SSoC Open Source Program",
     year: "2026",
     issueDate: "Season 5 (Jul 2026 – Present)",
-    skills: "Open Source, Git & GitHub, Pull Requests, Code Reviews",
+    verifyUrl: "https://github.com/sakshikumari01",
+    skills: "Open Source, Git & GitHub, Pull Requests, Collaborative Code Reviews",
     type: "Open Source Badge",
-    badge: "500+ GitHub Contributions"
+    badge: "500+ Contributions"
   },
   {
     name: "Advanced Backend Development with Node.js, Express & MongoDB",
@@ -645,7 +683,7 @@ export const certificationsData = [
     year: "2026",
     issueDate: "2026",
     skills: "Node.js, Express.js, MongoDB, JWT Authentication, RESTful APIs (Grade A)",
-    type: "Backend & Full Stack Distinction",
+    type: "Full Stack Distinction",
     badge: "Grade A Distinction"
   }
 ];

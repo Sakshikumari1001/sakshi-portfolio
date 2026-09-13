@@ -1,195 +1,268 @@
 import React from 'react';
 import { 
-  Award, 
-  BookOpen, 
-  CheckCircle, 
-  Code, 
-  Cpu, 
-  GraduationCap, 
-  MapPin, 
   Sparkles, 
-  UserCheck, 
-  Terminal, 
-  GitCommit, 
-  Flame, 
+  Layers, 
+  Server, 
+  Code2, 
+  ArrowRight, 
+  Mail, 
+  GraduationCap, 
+  FolderGit2, 
+  Cpu, 
   CheckCircle2,
-  ExternalLink,
-  Download,
-  ArrowRight,
   Brain,
-  Layers,
-  Bot
+  Terminal,
+  Flame,
+  ExternalLink
 } from 'lucide-react';
-import { personalInfo, aboutNarrative } from '../data/portfolioData';
+import { personalInfo } from '../data/portfolioData';
 
 const About = () => {
+  const techPills = [
+    { name: 'React.js', icon: '⚛️' },
+    { name: 'Next.js', icon: '▲' },
+    { name: 'Node.js', icon: '🟢' },
+    { name: 'Express.js', icon: '⚡' },
+    { name: 'MongoDB', icon: '🍃' },
+    { name: 'Python', icon: '🐍' },
+    { name: 'Java', icon: '☕' },
+    { name: 'Git / GitHub', icon: '🐙' }
+  ];
+
+  const whatIDoCards = [
+    {
+      title: 'Full Stack Development',
+      subtitle: 'Modern Web Applications',
+      description:
+        'Architecting end-to-end web applications with React.js, Next.js, and Tailwind CSS on the frontend, paired with robust backend services, secure JWT authentication, and responsive modern design systems.',
+      icon: Layers,
+      border: 'hover:border-cyan-500/40',
+      iconColor: 'text-cyan-400',
+      iconBg: 'bg-cyan-500/10 border-cyan-500/20'
+    },
+    {
+      title: 'Backend & API Engineering',
+      subtitle: 'Scalable Microservices & Databases',
+      description:
+        'Designing high-performance RESTful APIs and real-time Socket.IO communication with Node.js, Express.js, and Spring Boot, coupled with optimized schema architectures across MongoDB and MySQL.',
+      icon: Server,
+      border: 'hover:border-purple-500/40',
+      iconColor: 'text-purple-400',
+      iconBg: 'bg-purple-500/10 border-purple-500/20'
+    },
+    {
+      title: 'Problem Solving & DSA',
+      subtitle: 'Algorithmic Optimization in Java',
+      description:
+        'Solved 300+ Data Structures & Algorithms problems across LeetCode and GeeksforGeeks. Earned official LeetCode 100 Days Badge, 50-Day Streak Badge, and SQL Badge with disciplined daily problem solving.',
+      icon: Code2,
+      border: 'hover:border-amber-500/40',
+      iconColor: 'text-amber-400',
+      iconBg: 'bg-amber-500/10 border-amber-500/20'
+    }
+  ];
+
   return (
-    <section id="about" className="py-24 bg-slate-950/40 relative border-t border-slate-900 overflow-hidden">
-      {/* Ambient background glows */}
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <section id="about" className="py-24 bg-[#090d16] relative border-t border-slate-900/80 overflow-hidden">
+      {/* Background ambient lighting */}
+      <div className="absolute top-1/4 -left-32 w-[32rem] h-[32rem] bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-1/4 -right-32 w-[32rem] h-[32rem] bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono font-medium text-cyan-400 mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
+        {/* Section Pill Badge */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs font-mono font-medium text-purple-300 mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-purple-400" />
             <span>GET TO KNOW ME</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             About <span className="text-gradient">Sakshi Kumari</span>
           </h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mt-4 rounded-full"></div>
+          <div className="w-12 h-1 bg-gradient-to-r from-purple-500 via-indigo-400 to-cyan-400 mx-auto mt-3 rounded-full"></div>
         </div>
 
-        {/* 2-Column Grid matching portfolio-fawn-seven-87 */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-16 max-w-6xl mx-auto text-left">
+        {/* 2-Column Desktop Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           
-          {/* Left Column: Stylized Aspect-[4/5] Portrait Card */}
+          {/* Left Column: Big Clean Profile Photo Card with Purple Glow & Floating Badges */}
           <div className="lg:col-span-5 flex justify-center w-full">
-            <div className="relative group w-full max-w-sm">
+            <div className="relative w-full max-w-md">
               
-              {/* Outer glowing blur ring */}
-              <div className="absolute -inset-1.5 rounded-3xl bg-gradient-to-tr from-cyan-500/30 via-indigo-500/20 to-purple-500/30 blur-xl opacity-75 group-hover:opacity-100 transition-opacity -z-10"></div>
+              {/* Subtle Purple / Indigo Gradient Ambient Glow behind photo */}
+              <div className="absolute -inset-2 rounded-[2.5rem] bg-gradient-to-tr from-purple-600/35 via-indigo-600/25 to-cyan-500/20 blur-2xl opacity-80 -z-10 animate-pulse duration-1000"></div>
 
-              {/* Portrait Container */}
-              <div className="relative rounded-3xl overflow-hidden border border-slate-700/80 group-hover:border-cyan-500/50 shadow-2xl bg-[#0b111e] transition-all">
-                
-                {/* 4:5 Aspect Ratio Photo Container */}
-                <div className="aspect-[4/5] w-full overflow-hidden bg-slate-900 relative">
+              {/* Clean Modern Rounded Card containing ONLY the photo */}
+              <div className="relative rounded-[2rem] overflow-hidden border border-purple-500/25 shadow-2xl bg-[#0b111e]/90 backdrop-blur-xl group p-2">
+                <div className="relative rounded-[1.6rem] overflow-hidden aspect-[4/5] bg-slate-950">
                   <img
                     src="/profile.png"
-                    alt="Sakshi Kumari — Aspiring Full Stack Developer"
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    alt="Sakshi Kumari"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b111e] via-transparent to-transparent opacity-60"></div>
+                  {/* Subtle inner bottom vignette */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#090d16]/70 via-transparent to-transparent pointer-events-none"></div>
                 </div>
-
-                {/* Bottom Information Strip */}
-                <div className="p-5 bg-gradient-to-b from-slate-900/95 to-[#0b111e] border-t border-slate-800">
-                  <div className="flex items-center justify-between gap-2">
-                    <div>
-                      <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
-                        {personalInfo.name}
-                      </h3>
-                      <p className="text-xs font-mono text-cyan-400 mt-0.5">
-                        {personalInfo.role}
-                      </p>
-                    </div>
-
-                    <span className="px-2.5 py-1 rounded-full text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 whitespace-nowrap flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                      Available for Roles
-                    </span>
-                  </div>
-
-                  <div className="mt-3 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
-                    <span className="flex items-center gap-1">
-                      <MapPin className="w-3.5 h-3.5 text-cyan-400" />
-                      LPU (2024–2028)
-                    </span>
-                    <span className="text-cyan-300 font-bold">
-                      CGPA: 7.40
-                    </span>
-                  </div>
-
-                  {/* Verified stats row */}
-                  <div className="mt-3 pt-2.5 border-t border-slate-800/60 grid grid-cols-2 gap-2 text-center font-mono text-[11px]">
-                    <div className="p-1.5 rounded-lg bg-slate-950/70 border border-white/5">
-                      <span className="text-amber-400 font-bold">200+</span> LeetCode
-                    </div>
-                    <div className="p-1.5 rounded-lg bg-slate-950/70 border border-white/5">
-                      <span className="text-purple-400 font-bold">500+</span> Commits
-                    </div>
-                  </div>
-                </div>
-
               </div>
+
+              {/* Floating Badge 1: Top-Right — B.Tech CSE */}
+              <div className="absolute -top-3 -right-3 sm:-right-4 px-3.5 py-1.5 rounded-2xl bg-[#0b1222]/95 border border-purple-500/40 shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-mono font-semibold text-purple-200 hover:scale-105 transition-transform">
+                <span className="w-2 h-2 rounded-full bg-purple-400 animate-ping"></span>
+                <span>🎓 B.Tech CSE</span>
+              </div>
+
+              {/* Floating Badge 2: Bottom-Left — Full Stack Developer */}
+              <div className="absolute -bottom-3 -left-3 sm:-left-4 px-3.5 py-1.5 rounded-2xl bg-[#0b1222]/95 border border-cyan-500/40 shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-mono font-semibold text-cyan-200 hover:scale-105 transition-transform">
+                <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+                <span>⚡ Full Stack Developer</span>
+              </div>
+
+              {/* Floating Badge 3: Mid-Right — Problem Solver */}
+              <div className="hidden sm:flex absolute bottom-12 -right-5 px-3 py-1.5 rounded-2xl bg-[#0b1222]/95 border border-amber-500/40 shadow-xl backdrop-blur-md items-center gap-2 text-xs font-mono font-semibold text-amber-200 hover:scale-105 transition-transform">
+                <span className="text-amber-400">💡</span>
+                <span>Problem Solver</span>
+              </div>
+
             </div>
           </div>
 
-          {/* Right Column: Narrative, Core Pillars & Download CV Action */}
-          <div className="lg:col-span-7 space-y-6">
+          {/* Right Column: Heading, Recruiter-Friendly Intro, Stats, Tech Row, Buttons */}
+          <div className="lg:col-span-7 space-y-6 text-left">
             
-            {/* Header Badge */}
-            <div className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-bold">
-              {aboutNarrative.headline}
+            <div className="space-y-2">
+              <span className="text-xs font-mono uppercase tracking-wider text-purple-400 font-semibold block">
+                Software Developer &amp; Problem Solver
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                Crafting scalable web systems &amp; practical AI solutions
+              </h3>
             </div>
 
-            {/* Lead Narrative Quote */}
-            <p className="text-base sm:text-lg font-semibold text-slate-100 leading-relaxed border-l-4 border-cyan-400 pl-4 py-1">
-              "{aboutNarrative.lead}"
-            </p>
-
-            {/* Narrative Body */}
-            <div className="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
-              {aboutNarrative.paragraphs.map((p, idx) => (
-                <p key={idx}>
-                  {p}
-                </p>
-              ))}
+            {/* Recruiter-friendly concise introduction */}
+            <div className="space-y-3.5 text-slate-300 text-sm sm:text-base leading-relaxed">
+              <p>
+                I’m <strong className="text-white font-semibold">Sakshi Kumari</strong>, a Computer Science and Engineering student at <strong className="text-white font-semibold">Lovely Professional University (CGPA 7.40)</strong> with a strong passion for building practical, production-ready software.
+              </p>
+              <p>
+                I work across the modern stack with <strong className="text-cyan-300 font-medium">React, Next.js, Node.js, Express, MongoDB, Python, and Java</strong>. My hands-on experience spans developing context-aware AI retrieval systems (RAG), real-time collaborative classroom tools with WebSockets, and secure full-stack web platforms.
+              </p>
+              <p>
+                Dedicated to continuous improvement, I have solved <strong className="text-purple-300 font-medium">300+ DSA problems</strong> across LeetCode and GeeksforGeeks, earned the LeetCode 100 Days and 50-Day Streak badges, and actively contribute to open-source software via <strong className="text-white font-medium">SSoC</strong>.
+              </p>
             </div>
 
-            {/* Core Pillars Pills */}
-            <div className="pt-2">
-              <span className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold block mb-2.5">
-                Core Focus Disciplines:
+            {/* 3 Small Stats matching requirement */}
+            <div className="grid grid-cols-3 gap-3 pt-2">
+              <div className="p-3.5 rounded-2xl bg-[#0b1222]/80 border border-slate-800/80 text-center">
+                <div className="text-xl sm:text-2xl font-extrabold text-cyan-400 font-mono">4+</div>
+                <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider mt-0.5">Projects</div>
+              </div>
+              <div className="p-3.5 rounded-2xl bg-[#0b1222]/80 border border-slate-800/80 text-center">
+                <div className="text-xl sm:text-2xl font-extrabold text-purple-400 font-mono">Full Stack</div>
+                <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider mt-0.5">Focus Area</div>
+              </div>
+              <div className="p-3.5 rounded-2xl bg-[#0b1222]/80 border border-slate-800/80 text-center">
+                <div className="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">B.Tech CSE</div>
+                <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider mt-0.5">LPU (2024–28)</div>
+              </div>
+            </div>
+
+            {/* Small Technology / Skills Row */}
+            <div className="space-y-2 pt-1">
+              <span className="text-xs font-mono uppercase tracking-wider text-slate-400 block">
+                Core Technologies:
               </span>
               <div className="flex flex-wrap gap-2">
-                {aboutNarrative.corePillars.map((pillar) => (
+                {techPills.map((tech) => (
                   <span
-                    key={pillar}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-medium bg-slate-900/90 text-cyan-300 border border-cyan-500/20 shadow-sm"
+                    key={tech.name}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-medium bg-slate-900/80 text-slate-200 border border-slate-800/80 hover:border-purple-500/40 hover:text-white transition-colors"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-                    {pillar}
+                    <span>{tech.icon}</span>
+                    <span>{tech.name}</span>
                   </span>
                 ))}
               </div>
             </div>
 
-            {/* Structured Highlights */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-              {aboutNarrative.highlights.slice(0, 2).map((item, idx) => (
-                <div
-                  key={idx}
-                  className="p-3.5 rounded-xl bg-slate-900/60 border border-white/5 text-xs text-slate-300 space-y-1"
-                >
-                  <div className="font-semibold text-white font-mono flex items-center gap-1.5">
-                    <CheckCircle className="w-3.5 h-3.5 text-cyan-400" />
-                    {item.title}
-                  </div>
-                  <p className="text-slate-400 text-[11px] leading-normal">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* Action Buttons: Download CV + Let's Connect */}
-            <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-800">
+            {/* Two Action Buttons: View My Projects & Let's Connect */}
+            <div className="flex flex-wrap items-center gap-4 pt-3">
               <a
-                href={personalInfo.resumeUrl}
-                download="Sakshi_Kumari_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-950 bg-gradient-to-r from-cyan-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 shadow-lg shadow-cyan-500/20 font-mono transition-all transform hover:-translate-y-0.5"
+                href="#projects"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 shadow-lg shadow-purple-500/20 transition-all transform hover:-translate-y-0.5"
               >
-                <Download className="w-4 h-4" />
-                <span>Download CV / Resume</span>
+                <span>View My Projects</span>
+                <ArrowRight className="w-4 h-4" />
               </a>
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-200 bg-slate-900 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-600 font-mono transition-all transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono text-slate-200 bg-slate-900 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-600 shadow-md transition-all transform hover:-translate-y-0.5"
               >
+                <Mail className="w-4 h-4 text-cyan-400" />
                 <span>Let's Connect</span>
-                <ArrowRight className="w-4 h-4 text-cyan-400" />
               </a>
             </div>
 
           </div>
 
+        </div>
+
+        {/* What I Do Section: 3 Modern Glassmorphism Cards */}
+        <div className="mt-24 pt-16 border-t border-slate-900/80">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-xs font-mono uppercase tracking-wider text-purple-400 font-semibold block mb-2">
+              Areas of Expertise
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              What I Do
+            </h3>
+            <p className="text-slate-400 text-xs sm:text-sm mt-2">
+              Combining engineering fundamentals with modern frameworks to deliver scalable, reliable software.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {whatIDoCards.map((card, idx) => {
+              const IconComponent = card.icon;
+              return (
+                <div
+                  key={idx}
+                  className={`p-6 sm:p-7 rounded-3xl bg-[#0b101b]/90 border border-slate-800/80 ${card.border} transition-all duration-300 shadow-xl hover:-translate-y-1 backdrop-blur-md flex flex-col justify-between group`}
+                >
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className={`w-12 h-12 rounded-2xl ${card.iconBg} border flex items-center justify-center ${card.iconColor} shadow-inner`}>
+                        <IconComponent className="w-6 h-6" />
+                      </div>
+                      <span className="text-xs font-mono font-bold text-slate-600 group-hover:text-slate-400 transition-colors">
+                        0{idx + 1}
+                      </span>
+                    </div>
+
+                    <div className="space-y-1">
+                      <h4 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">
+                        {card.title}
+                      </h4>
+                      <p className="text-xs font-mono text-purple-400/90">
+                        {card.subtitle}
+                      </p>
+                    </div>
+
+                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                      {card.description}
+                    </p>
+                  </div>
+
+                  <div className="pt-5 mt-5 border-t border-slate-800/60 flex items-center gap-2 text-xs font-mono text-slate-400 group-hover:text-slate-200 transition-colors">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span>Production Grade Best Practices</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
       </div>
