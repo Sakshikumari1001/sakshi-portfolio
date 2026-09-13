@@ -5,6 +5,7 @@ import Profiles from './components/Profiles';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Experience from './components/Experience';
 import TrackRecord from './components/TrackRecord';
 import Certifications from './components/Certifications';
 import Education from './components/Education';
@@ -36,6 +37,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Experience />
         <TrackRecord />
         <Certifications />
         <Education />

@@ -678,13 +678,17 @@ export const certificationsData = [
     badge: "500+ Contributions"
   },
   {
-    name: "Advanced Backend Development with Node.js, Express & MongoDB",
-    provider: "Centre for Professional Enhancement, LPU",
+    name: "Summer Training: Advanced Backend Development with Node.js, Express & MongoDB",
+    provider: "Centre for Professional Enhancement, Lovely Professional University",
     year: "2026",
-    issueDate: "2026",
-    skills: "Node.js, Express.js, MongoDB, JWT Authentication, RESTful APIs (Grade A)",
-    type: "Full Stack Distinction",
-    badge: "Grade A Distinction"
+    issueDate: "August 13, 2026 (Duration: 12-06-2026 to 27-07-2026)",
+    certId: "Certificate No. 491186",
+    grade: "Grade A (75% to less than 90%)",
+    skills: "Node.js, Express.js, MongoDB & Mongoose, RESTful API Architecture, JWT Authentication, Capstone Project",
+    type: "Summer Training & Internship",
+    image: "/certificates/lpu_summer_training.png",
+    pdf: "/certificates/lpu_summer_training.pdf",
+    badge: "Grade A Merit"
   }
 ];
 
@@ -746,5 +750,53 @@ export const learningRoadmap = [
     desc: "Load balancers, caching strategies, horizontal scaling, and fault-tolerant architectures.",
     status: "Learning",
     progress: 60
+  }
+];
+
+export const experienceData = [
+  {
+    id: "summer-training",
+    title: "Summer Training — Advanced Backend Development",
+    role: "Backend Developer Trainee",
+    organization: "Centre for Professional Enhancement, Lovely Professional University",
+    location: "Phagwara, Punjab, India",
+    period: "Jun' 26 – Jul' 26",
+    issueDate: "August 13, 2026",
+    certNo: "491186",
+    grade: "Grade A",
+    gradeDetail: "75% to less than 90%",
+    status: "Completed with Distinction",
+    badge: "Grade A Merit",
+    type: "Summer Training",
+    certificateImage: "/certificates/lpu_summer_training.png",
+    certificatePdf: "/certificates/lpu_summer_training.pdf",
+    description:
+      "Underwent intensive summer training in advanced backend engineering, building robust microservices, database schemas, and authenticated RESTful API architectures.",
+    bullets: [
+      "Completed structured backend training covering JavaScript (ES6+), Node.js, Express.js, MongoDB & Mongoose, RESTful API design, and JWT-based authentication.",
+      "Engineered full-stack MERN vehicle rental application (RentRide) as the capstone project, achieving Grade A merit distinction.",
+      "Implemented secure role-based access control (RBAC), password hashing with bcrypt, input sanitization, and error handling middleware.",
+      "Integrated third-party cloud services including Cloudinary for media storage, Razorpay for payments, and Twilio/Nodemailer for notifications."
+    ],
+    techStack: ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "RESTful APIs", "Postman", "Git"]
+  },
+  {
+    id: "ssoc",
+    title: "Open Source Contributor",
+    role: "Open Source Developer",
+    organization: "Social Summer of Code (SSOC)",
+    location: "Remote",
+    period: "Jul' 26 – Present",
+    status: "Active Contributor",
+    badge: "Open Source",
+    type: "Community Experience",
+    description:
+      "Actively contributing to open-source codebases, leading contributor discussions, and building software collaboratively across global developer teams.",
+    bullets: [
+      "Contributed to open-source projects through Git/GitHub workflows, issue tracking, pull requests, and code reviews.",
+      "Collaborated with 2 developers to implement feature enhancements, resolve bugs, and improve project functionality following standard software development practices.",
+      "Led 10+ contributor meetings and engaged 50+ students through technical discussions and outreach, strengthening contributor communication and participation."
+    ],
+    techStack: ["Git", "GitHub", "React.js", "JavaScript", "Code Review", "Issue Tracking"]
   }
 ];

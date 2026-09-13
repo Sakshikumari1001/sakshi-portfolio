@@ -10,7 +10,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      const sections = ['hero', 'about', 'profiles', 'skills', 'projects', 'achievements', 'certifications', 'education', 'contact'];
+      const sections = ['hero', 'about', 'profiles', 'skills', 'projects', 'experience', 'achievements', 'certifications', 'education', 'contact'];
       const scrollPos = window.scrollY + 120;
 
       for (const section of sections) {
@@ -35,6 +35,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     { name: 'Profiles', href: '#profiles' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Achievements', href: '#achievements' },
     { name: 'Certifications', href: '#certifications' },
     { name: 'Education', href: '#education' },
