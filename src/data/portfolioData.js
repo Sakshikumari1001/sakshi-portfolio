@@ -34,20 +34,20 @@ export const heroTechBadges = [
 export const heroStatsPills = [
   {
     icon: "Code2",
-    label: "300+ DSA Problems Solved",
+    label: "100+ DSA Problems Solved",
     sub: "LeetCode & GeeksforGeeks",
     accent: "text-amber-400"
   },
   {
     icon: "GitCommit",
-    label: "1,500+ GitHub Contributions",
+    label: "400+ GitHub Contributions",
     sub: "Active Open-Source Activity",
     accent: "text-purple-400"
   },
   {
     icon: "Flame",
-    label: "100 Days & 50-Day Badges",
-    sub: "LeetCode & SQL Badges",
+    label: "50-Day LeetCode Streak",
+    sub: "Official 2026 Badge",
     accent: "text-emerald-400"
   },
   {
@@ -66,8 +66,8 @@ export const terminalData = {
     { label: "Education", value: "B.Tech CSE @ LPU (CGPA: 7.40)", color: "text-slate-200" },
     { label: "Focus", value: "Full-Stack Development & AI RAG", color: "text-indigo-400" },
     { label: "Current Stack", value: "React + Node + Java", color: "text-amber-400" },
-    { label: "LeetCode Solved", value: "200+ Problems (50-Day Streak)", color: "text-amber-300" },
-    { label: "GitHub Commits", value: "500+ Contributions", color: "text-purple-300" },
+    { label: "LeetCode Solved", value: "100+ Problems (50-Day Streak)", color: "text-amber-300" },
+    { label: "GitHub Commits", value: "400+ Contributions", color: "text-purple-300" },
     { label: "Status", value: "Building & Learning", color: "text-emerald-400" }
   ],
   curlSnippet: "curl -s https://api.sakshi.dev/profile | jq .",
@@ -95,16 +95,16 @@ export const aboutNarrative = {
     },
     {
       title: "Algorithmic Problem Solving",
-      desc: "Consistent Java DSA practitioner with 200+ problems solved on LeetCode and an active 50-day streak badge."
+      desc: "Consistent Java DSA practitioner with 100+ problems solved on LeetCode and an active 50-day streak badge."
     },
     {
       title: "Open Source Collaboration",
-      desc: "Contributor in Social Summer of Code (SSoC) Season 5, contributing through Git/GitHub workflows, pull requests, and peer reviews with 500+ contributions."
+      desc: "Contributor in Social Summer of Code (SSoC) Season 5, contributing through Git/GitHub workflows, pull requests, and peer reviews with 400+ contributions."
     }
   ],
   quickStats: [
-    { label: "LeetCode Solved", value: "200+", note: "DSA Problems" },
-    { label: "GitHub Activity", value: "500+", note: "Contributions" },
+    { label: "LeetCode Solved", value: "100+", note: "DSA Problems" },
+    { label: "GitHub Activity", value: "400+", note: "Contributions" },
     { label: "Daily Streak", value: "50-Day", note: "LeetCode Badge" },
     { label: "Academic CGPA", value: "7.40", note: "LPU B.Tech CSE" }
   ]
@@ -114,12 +114,12 @@ export const codingProfiles = [
   {
     name: "GitHub",
     handle: "sakshikumari01",
-    metric: "1,500+ Contributions • Open-Source Repositories",
+    metric: "400+ Contributions • Open-Source Repositories",
     url: "https://github.com/sakshikumari01",
     icon: "github",
     accent: "from-purple-500/20 to-indigo-500/10",
     border: "group-hover:border-purple-500/50",
-    badge: "1,500+ Commits"
+    badge: "400+ Commits"
   },
   {
     name: "LinkedIn",
@@ -134,12 +134,12 @@ export const codingProfiles = [
   {
     name: "LeetCode",
     handle: "Sakshi-kumari24",
-    metric: "300+ Solved • 100 Days & 50-Day Badges",
+    metric: "100+ Solved • 50-Day Streak Badge",
     url: "https://leetcode.com/u/Sakshi-kumari24/",
     icon: "code2",
     accent: "from-amber-500/20 to-orange-500/10",
     border: "group-hover:border-amber-500/50",
-    badge: "100 & 50 Days Badge"
+    badge: "50-Day Streak"
   },
   {
     name: "GeeksforGeeks",
@@ -237,7 +237,7 @@ export const skillBoxesData = [
     borderColor: "border-purple-500/30",
     badgeColor: "bg-purple-500/10 text-purple-300 border-purple-500/20",
     skills: [
-      { name: "Java", level: "200+ LeetCode DSA Problems", highlight: true },
+      { name: "Java", level: "100+ LeetCode DSA Problems", highlight: true },
       { name: "Python", level: "FastAPI, AI & Automation", highlight: true },
       { name: "C++", level: "Algorithmic Problem Solving" },
       { name: "Data Structures & Algorithms", level: "Arrays, Trees, Graphs, DP", highlight: true },
@@ -257,7 +257,7 @@ export const skillBoxesData = [
     borderColor: "border-sky-500/30",
     badgeColor: "bg-sky-500/10 text-sky-300 border-sky-500/20",
     skills: [
-      { name: "Git & GitHub", level: "500+ Contributions & PRs", highlight: true },
+      { name: "Git & GitHub", level: "400+ Contributions & PRs", highlight: true },
       { name: "VS Code", level: "Primary Development IDE" },
       { name: "Postman", level: "API Testing & Validation" },
       { name: "Vercel", level: "Frontend CI/CD Deployment", highlight: true },
@@ -537,38 +537,38 @@ export const regularProjectsData = [
 
 export const trackRecordData = [
   {
-    title: "300+ DSA Problems Solved",
+    title: "100+ DSA Problems Solved",
     category: "Algorithmic Problem Solving",
     highlight: "LeetCode & GeeksforGeeks",
     description:
-      "Solved 300+ Data Structures & Algorithms problems covering Arrays, Strings, Searching & Sorting, Linked Lists, Binary Trees, Stacks, Queues, and Dynamic Programming in Java.",
+      "Solved 100+ Data Structures & Algorithms problems across LeetCode and GeeksforGeeks in Java, strengthening algorithmic logic and analytical problem-solving skills.",
     icon: "Code2",
-    badge: "300+ Solved"
+    badge: "100+ Solved"
   },
   {
-    title: "1,500+ GitHub Contributions",
+    title: "400+ GitHub Contributions",
     category: "Open Source & Version Control",
     highlight: "Active Open-Source Activity",
     description:
-      "Maintained 1,500+ contributions across production repositories, collaborative open-source workflows, issue tracking, and clean pull requests.",
+      "Maintained 400+ contributions across production repositories, collaborative open-source workflows, issue tracking, and clean pull requests.",
     icon: "GitPullRequest",
-    badge: "1,500+ Commits"
+    badge: "400+ Commits"
   },
   {
-    title: "LeetCode 100 Days & 50-Day Badges",
+    title: "Official LeetCode 50-Day Streak Badge",
     category: "Coding Discipline & Streaks",
-    highlight: "100 Days, 50-Day & SQL Badges",
+    highlight: "50+ Days in 2026",
     description:
-      "Earned official LeetCode 100 Days Badge, 50-Day Streak Badge, and SQL Badge, validating persistent daily problem-solving discipline and database querying mastery.",
+      "Earned the official LeetCode 50-Day Streak Badge 2026 reflecting consistent daily problem-solving practice and algorithmic discipline.",
     icon: "Flame",
-    badge: "Triple Badge Earner"
+    badge: "50-Day Badge"
   },
   {
     title: "Open Source Contributor | SSOC",
     category: "Open Source Initiative",
-    highlight: "SSOC (Jul '26 – Present)",
+    highlight: "SSOC Season 5 (Jul '26 – Present)",
     description:
-      "Contributed to open-source projects via Git/GitHub workflows, pull requests, and code reviews. Collaborated with developers to implement feature enhancements and led 10+ contributor meetings engaging 50+ students.",
+      "Verified contributor in Social Summer of Code (SSOC). Contributed to open-source codebases, led 10+ contributor meetings, and engaged 50+ students.",
     icon: "GitPullRequest",
     badge: "SSOC Contributor"
   },
@@ -582,11 +582,11 @@ export const trackRecordData = [
     badge: "Oracle Certified"
   },
   {
-    title: "Advanced Backend Development (Grade A)",
+    title: "Summer Training Distinction (Grade A)",
     category: "University Training Distinction",
     highlight: "Centre for Professional Enhancement, LPU",
     description:
-      "Completed intensive backend training in Node.js, Express.js, MongoDB & RESTful API architecture, building the full-stack MERN RentRide vehicle rental platform with Grade A distinction.",
+      "Completed intensive backend training in Node.js, Express.js, MongoDB & RESTful API architecture, building the full-stack MERN RentRide vehicle rental platform with Grade A distinction (Cert No: 491186).",
     icon: "GraduationCap",
     badge: "Grade A Distinction"
   }
@@ -661,7 +661,7 @@ export const certificationsData = [
     year: "2026",
     issueDate: "50+ Days in 2026",
     verifyUrl: "https://leetcode.com/u/Sakshi-kumari24/",
-    skills: "200+ Solved in Java DSA, Daily Problem Solving, Algorithmic Consistency",
+    skills: "100+ Solved in Java DSA, Daily Problem Solving, 50-Day Algorithmic Streak",
     type: "Competitive Coding",
     image: "/certificates/leetcode_50days_badge.png",
     fit: "contain",
@@ -675,7 +675,9 @@ export const certificationsData = [
     verifyUrl: "https://github.com/sakshikumari01",
     skills: "Open Source, Git & GitHub, Pull Requests, Collaborative Code Reviews",
     type: "Open Source Badge",
-    badge: "500+ Contributions"
+    image: "/certificates/ssoc_contributor.png",
+    fit: "contain",
+    badge: "Verified Contributor"
   },
   {
     name: "Summer Training: Advanced Backend Development with Node.js, Express & MongoDB",
@@ -704,7 +706,7 @@ export const educationData = [
     highlights: [
       "Rigorous Core Curriculum: Data Structures & Algorithms, Object-Oriented Programming (Java/C++), Database Management Systems (DBMS), Operating Systems, and Computer Networks.",
       "Distinction in Advanced Backend Development with Node.js, Express, MongoDB, and RESTful API Design (Grade A by CPE, LPU).",
-      "Active participant in competitive algorithmic coding (200+ LeetCode problems solved) and open-source contributions (SSoC Season 5).",
+      "Active participant in competitive algorithmic coding (100+ LeetCode problems solved) and open-source contributions (SSoC Season 5).",
       "Qualified and experienced in designing end-to-end full-stack architectures, vector database RAG pipelines, and responsive modern web applications."
     ]
   }
@@ -790,6 +792,7 @@ export const experienceData = [
     status: "Active Contributor",
     badge: "Open Source",
     type: "Community Experience",
+    certificateImage: "/certificates/ssoc_contributor.png",
     description:
       "Actively contributing to open-source codebases, leading contributor discussions, and building software collaboratively across global developer teams.",
     bullets: [

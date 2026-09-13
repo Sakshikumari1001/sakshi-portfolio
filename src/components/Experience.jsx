@@ -182,6 +182,27 @@ const Experience = () => {
                   {experienceData[1].description}
                 </p>
 
+                {/* SSoC Contributor Badge Image Preview */}
+                {experienceData[1].certificateImage && (
+                  <div className="mt-5 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950/90 group/ssoc relative aspect-[16/10] shadow-xl">
+                    <img
+                      src={experienceData[1].certificateImage}
+                      alt="SSoC Verified Contributor Badge"
+                      className="w-full h-full object-contain p-2 group-hover/ssoc:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover/ssoc:opacity-100 transition-opacity flex items-center justify-center gap-3 backdrop-blur-[2px]">
+                      <button
+                        onClick={() => setActiveModalCert(experienceData[1])}
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-mono font-bold shadow-lg transition-colors"
+                      >
+                        <Eye className="w-3.5 h-3.5" />
+                        <span>View Contributor Badge</span>
+                      </button>
+                    </div>
+                  </div>
+                )}
+
                 {/* Bullets */}
                 <div className="mt-6 space-y-3">
                   {experienceData[1].bullets.map((bullet, idx) => (

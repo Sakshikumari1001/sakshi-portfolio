@@ -187,11 +187,11 @@ const Hero = () => {
                   <div className="text-[10px] text-slate-400">CGPA</div>
                 </div>
                 <div className="p-2 rounded-xl bg-slate-950/70 border border-white/5">
-                  <div className="text-amber-400 font-bold">200+</div>
+                  <div className="text-amber-400 font-bold">100+</div>
                   <div className="text-[10px] text-slate-400">LeetCode</div>
                 </div>
                 <div className="p-2 rounded-xl bg-slate-950/70 border border-white/5">
-                  <div className="text-purple-400 font-bold">500+</div>
+                  <div className="text-purple-400 font-bold">400+</div>
                   <div className="text-[10px] text-slate-400">Commits</div>
                 </div>
               </div>

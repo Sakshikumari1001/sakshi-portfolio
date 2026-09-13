@@ -54,7 +54,7 @@ const About = () => {
       title: 'Problem Solving & DSA',
       subtitle: 'Algorithmic Optimization in Java',
       description:
-        'Solved 300+ Data Structures & Algorithms problems across LeetCode and GeeksforGeeks. Earned official LeetCode 100 Days Badge, 50-Day Streak Badge, and SQL Badge with disciplined daily problem solving.',
+        'Solved 100+ Data Structures & Algorithms problems across LeetCode and GeeksforGeeks. Earned the official LeetCode 50-Day Streak Badge with disciplined daily problem solving in Java.',
       icon: Code2,
       border: 'hover:border-amber-500/40',
       iconColor: 'text-amber-400',
@@ -148,7 +148,7 @@ const About = () => {
                 I work across the modern stack with <strong className="text-cyan-300 font-medium">React, Next.js, Node.js, Express, MongoDB, Python, and Java</strong>. My hands-on experience spans developing context-aware AI retrieval systems (RAG), real-time collaborative classroom tools with WebSockets, and secure full-stack web platforms.
               </p>
               <p>
-                Dedicated to continuous improvement, I have solved <strong className="text-purple-300 font-medium">300+ DSA problems</strong> across LeetCode and GeeksforGeeks, earned the LeetCode 100 Days and 50-Day Streak badges, and actively contribute to open-source software via <strong className="text-white font-medium">SSoC</strong>.
+                Dedicated to continuous improvement, I have solved <strong className="text-purple-300 font-medium">100+ DSA problems</strong> across LeetCode and GeeksforGeeks, earned the official LeetCode 50-Day Streak Badge, and actively contribute to open-source software via <strong className="text-white font-medium">SSoC</strong>.
               </p>
             </div>
 
