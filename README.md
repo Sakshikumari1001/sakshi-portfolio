@@ -5,7 +5,7 @@
 **Aspiring Software Developer & Full-Stack Builder**  
 *B.Tech in Computer Science & Engineering · Lovely Professional University (2024–2028)*
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://sakshi-portfolio.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://sakshi-portfolio-rho-vert.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sakshikumari1001-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/sakshikumari1001)
 [![GitHub](https://img.shields.io/badge/GitHub-sakshikumari01-181717?style=for-the-badge&logo=github)](https://github.com/sakshikumari01)
 [![LeetCode](https://img.shields.io/badge/LeetCode-50--Day%20Streak-FFA116?style=for-the-badge&logo=leetcode)](https://leetcode.com/u/Sakshi-kumari24/)
