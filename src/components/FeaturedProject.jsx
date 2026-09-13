@@ -16,7 +16,7 @@ import { RagAssistantMockup } from './ProjectMockups';
 
 const FeaturedProject = () => {
   const [activeStep, setActiveStep] = useState(0);
-  const [viewMode, setViewMode] = useState('flow'); // 'flow' | 'preview'
+  const [viewMode, setViewMode] = useState('preview'); // 'preview' | 'flow'
   const stages = featuredProjectData.architectureStages;
   const currentStage = stages[activeStep];
 

@@ -5,7 +5,7 @@
 **Aspiring Software Developer & Full-Stack Builder**  
 *B.Tech in Computer Science & Engineering · Lovely Professional University (2024–2028)*
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://byod-umber.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://sakshi-portfolio.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sakshikumari1001-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/sakshikumari1001)
 [![GitHub](https://img.shields.io/badge/GitHub-sakshikumari01-181717?style=for-the-badge&logo=github)](https://github.com/sakshikumari01)
 [![LeetCode](https://img.shields.io/badge/LeetCode-50--Day%20Streak-FFA116?style=for-the-badge&logo=leetcode)](https://leetcode.com/u/Sakshi-kumari24/)
@@ -51,20 +51,36 @@
 - Context-aware codebase intelligence platform enabling natural-language queries over public repositories.
 - End-to-end RAG pipeline with syntax-aware document chunking, dense vector embeddings, and ChromaDB vector search.
 
+<p align="center">
+  <img src="public/projects/github_rag_mockup.png" alt="GitHub RAG Assistant Mockup" width="100%" />
+</p>
+
 ### 02. [RentRide](https://rent-ride-eta.vercel.app)
 > **Full-Stack Vehicle Rental Platform** · MERN Stack · Razorpay · Cloudinary · Twilio
 - Dynamic fleet filtering, booking schedule management, and instant Razorpay payment checkout.
 - Automated invoice downloads via Nodemailer and real-time WhatsApp booking alerts via Twilio API.
+
+<p align="center">
+  <img src="public/projects/rentride_mockup.png" alt="RentRide Vehicle Rental Mockup" width="100%" />
+</p>
 
 ### 03. [ProctorEd](https://exam-platform-yj8s.vercel.app)
 > **AI-Proctored Online Exam Platform** · React · Node.js · Express · MongoDB · OCR · Face Detection
 - Automated exam monitoring with candidate ID verification via OCR, live AI face detection, and tab-switch warning locks.
 - Role-based authorization across Admin, Teacher, and Student portals with instant evaluation.
 
+<p align="center">
+  <img src="public/projects/proctored_mockup.png" alt="ProctorEd Exam Platform Mockup" width="100%" />
+</p>
+
 ### 04. [BYOD — Classroom Management System](https://byod-umber.vercel.app)
 > **Real-Time Classroom Management Platform** · React.js · Spring Boot · MySQL · Socket.IO
 - Real-time classroom oversight spanning classrooms, announcements, and interactive activities.
 - Shipped 4 real-time features including live broadcast announcements, focus tracking, and synchronized device states.
+
+<p align="center">
+  <img src="public/projects/byod_mockup.png" alt="BYOD Classroom Management Mockup" width="100%" />
+</p>
 
 ---
 
