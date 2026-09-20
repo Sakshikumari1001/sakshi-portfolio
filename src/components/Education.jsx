@@ -6,12 +6,12 @@ const Education = () => {
   const edu = educationData[0]; // Lovely Professional University exclusively
 
   return (
-    <section id="education" className="py-24 bg-slate-900/40 relative">
+    <section id="education" className="py-24 bg-[#0e0a20]/50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-medium text-cyan-400 bg-cyan-950/50 border border-cyan-500/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-medium text-rose-400 bg-rose-950/40 border border-rose-500/30">
             <GraduationCap className="w-4 h-4" />
             <span>Academic Background</span>
           </div>
@@ -25,27 +25,27 @@ const Education = () => {
 
         {/* Flagship University Card */}
         <div className="max-w-4xl mx-auto">
-          <div className="p-8 sm:p-10 rounded-3xl bg-slate-900/90 border border-white/10 hover:border-cyan-500/30 transition-all duration-300 shadow-2xl backdrop-blur-xl relative overflow-hidden group">
+          <div className="p-8 sm:p-10 rounded-3xl bg-[#0e0a20]/90 border border-white/10 hover:border-rose-400/40 hover:shadow-[0_0_30px_-5px_rgba(244,63,94,0.2)] transition-all duration-300 shadow-2xl backdrop-blur-xl relative overflow-hidden group">
             
             {/* Ambient background glow */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-80 h-80 bg-rose-500/12 rounded-full blur-3xl pointer-events-none"></div>
 
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-6 pb-6 border-b border-white/10">
               <div className="space-y-2">
                 <div className="flex items-center gap-2.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-cyan-400 transition-colors">
+                  <span className="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-rose-400 transition-colors">
                     {edu.institution}
                   </h3>
                 </div>
 
-                <div className="text-base sm:text-lg font-bold text-cyan-300 font-mono">
+                <div className="text-base sm:text-lg font-bold text-rose-300 font-mono">
                   {edu.degree}
                 </div>
 
                 <div className="flex flex-wrap items-center gap-5 text-xs font-mono text-slate-400 pt-1">
                   <span className="flex items-center gap-1.5">
-                    <MapPin className="w-4 h-4 text-cyan-400" />
+                    <MapPin className="w-4 h-4 text-rose-400" />
                     {edu.location}
                   </span>
                   <span className="flex items-center gap-1.5">
@@ -56,8 +56,8 @@ const Education = () => {
               </div>
 
               {/* Verified CGPA Badge */}
-              <div className="p-4 rounded-2xl bg-slate-950 border border-cyan-500/30 text-center font-mono shrink-0 sm:min-w-[140px] shadow-lg shadow-cyan-950/30">
-                <div className="text-2xl sm:text-3xl font-black text-cyan-400">{edu.score}</div>
+              <div className="p-4 rounded-2xl bg-[#07050f] border border-rose-500/30 text-center font-mono shrink-0 sm:min-w-[140px] shadow-lg shadow-purple-950/40">
+                <div className="text-2xl sm:text-3xl font-black text-rose-400">{edu.score}</div>
                 <div className="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">
                   Cumulative CGPA
                 </div>
@@ -68,7 +68,7 @@ const Education = () => {
             {/* Core CS Coursework Matrix */}
             <div className="mt-6 pt-2 space-y-4">
               <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-cyan-400" />
+                <BookOpen className="w-4 h-4 text-rose-400" />
                 Academic Highlights &amp; Computer Science Foundations:
               </h4>
 
@@ -76,7 +76,7 @@ const Education = () => {
                 {edu.highlights.map((item, idx) => (
                   <div
                     key={idx}
-                    className="p-4 rounded-2xl bg-slate-950/70 border border-white/5 flex items-start gap-3"
+                    className="p-4 rounded-2xl bg-[#07050f]/70 border border-white/5 flex items-start gap-3"
                   >
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span className="text-xs text-slate-300 leading-relaxed">{item}</span>
@@ -86,7 +86,7 @@ const Education = () => {
             </div>
 
             {/* University Training Distinction Pill */}
-            <div className="mt-6 p-4 rounded-2xl bg-gradient-to-r from-cyan-950/40 via-indigo-950/30 to-purple-950/40 border border-cyan-500/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono">
+            <div className="mt-6 p-4 rounded-2xl bg-gradient-to-r from-rose-950/40 via-purple-950/30 to-amber-950/30 border border-rose-500/25 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono">
               <div className="flex items-center gap-2 text-slate-200">
                 <Award className="w-5 h-5 text-amber-400 shrink-0" />
                 <span>

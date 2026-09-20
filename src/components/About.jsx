@@ -36,9 +36,9 @@ const About = () => {
       description:
         'Architecting end-to-end web applications with React.js, Next.js, and Tailwind CSS on the frontend, paired with robust backend services, secure JWT authentication, and responsive modern design systems.',
       icon: Layers,
-      border: 'hover:border-cyan-500/40',
-      iconColor: 'text-cyan-400',
-      iconBg: 'bg-cyan-500/10 border-cyan-500/20'
+      border: 'hover:border-rose-400/40 hover:shadow-[0_0_30px_-5px_rgba(244,63,94,0.25)]',
+      iconColor: 'text-rose-400',
+      iconBg: 'bg-rose-500/12 border-rose-500/25'
     },
     {
       title: 'Backend & API Engineering',
@@ -63,7 +63,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-[#090d16] relative border-t border-slate-900/80 overflow-hidden">
+    <section id="about" className="py-24 bg-[#07050f] relative border-t border-purple-500/15 overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/4 -left-32 w-[32rem] h-[32rem] bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-1/4 -right-32 w-[32rem] h-[32rem] bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -79,7 +79,7 @@ const About = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             About <span className="text-gradient">Sakshi Kumari</span>
           </h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-purple-500 via-indigo-400 to-cyan-400 mx-auto mt-3 rounded-full"></div>
+          <div className="w-12 h-1 bg-gradient-to-r from-rose-500 via-purple-500 to-amber-400 mx-auto mt-3 rounded-full"></div>
         </div>
 
         {/* 2-Column Desktop Layout */}
@@ -90,11 +90,11 @@ const About = () => {
             <div className="relative w-full max-w-md">
               
               {/* Subtle Purple / Indigo Gradient Ambient Glow behind photo */}
-              <div className="absolute -inset-2 rounded-[2.5rem] bg-gradient-to-tr from-purple-600/35 via-indigo-600/25 to-cyan-500/20 blur-2xl opacity-80 -z-10 animate-pulse duration-1000"></div>
+              <div className="absolute -inset-2 rounded-[2.5rem] bg-gradient-to-tr from-purple-600/35 via-indigo-600/25 to-rose-500/20 blur-2xl opacity-80 -z-10 animate-pulse duration-1000"></div>
 
               {/* Clean Modern Rounded Card containing ONLY the photo */}
               <div className="relative rounded-[2rem] overflow-hidden border border-purple-500/25 shadow-2xl bg-[#0b111e]/90 backdrop-blur-xl group p-2">
-                <div className="relative rounded-[1.6rem] overflow-hidden aspect-[4/5] bg-slate-950">
+                <div className="relative rounded-[1.6rem] overflow-hidden aspect-[4/5] bg-[#07050f]">
                   <img
                     src="/profile.png"
                     alt="Sakshi Kumari"
@@ -107,19 +107,19 @@ const About = () => {
               </div>
 
               {/* Floating Badge 1: Top-Right — B.Tech CSE */}
-              <div className="absolute -top-3 -right-3 sm:-right-4 px-3.5 py-1.5 rounded-2xl bg-[#0b1222]/95 border border-purple-500/40 shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-mono font-semibold text-purple-200 hover:scale-105 transition-transform">
+              <div className="absolute -top-3 -right-3 sm:-right-4 px-3.5 py-1.5 rounded-2xl bg-[#0d091d]/95 border border-purple-500/40 shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-mono font-semibold text-purple-200 hover:scale-105 transition-transform">
                 <span className="w-2 h-2 rounded-full bg-purple-400 animate-ping"></span>
                 <span>🎓 B.Tech CSE</span>
               </div>
 
               {/* Floating Badge 2: Bottom-Left — Full Stack Developer */}
-              <div className="absolute -bottom-3 -left-3 sm:-left-4 px-3.5 py-1.5 rounded-2xl bg-[#0b1222]/95 border border-cyan-500/40 shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-mono font-semibold text-cyan-200 hover:scale-105 transition-transform">
-                <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <div className="absolute -bottom-3 -left-3 sm:-left-4 px-3.5 py-1.5 rounded-2xl bg-[#0d091d]/95 border border-rose-500/40 shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-mono font-semibold text-rose-200 hover:scale-105 transition-transform">
+                <span className="w-2 h-2 rounded-full bg-rose-400"></span>
                 <span>⚡ Full Stack Developer</span>
               </div>
 
               {/* Floating Badge 3: Mid-Right — Problem Solver */}
-              <div className="hidden sm:flex absolute bottom-12 -right-5 px-3 py-1.5 rounded-2xl bg-[#0b1222]/95 border border-amber-500/40 shadow-xl backdrop-blur-md items-center gap-2 text-xs font-mono font-semibold text-amber-200 hover:scale-105 transition-transform">
+              <div className="hidden sm:flex absolute bottom-12 -right-5 px-3 py-1.5 rounded-2xl bg-[#0d091d]/95 border border-amber-500/40 shadow-xl backdrop-blur-md items-center gap-2 text-xs font-mono font-semibold text-amber-200 hover:scale-105 transition-transform">
                 <span className="text-amber-400">💡</span>
                 <span>Problem Solver</span>
               </div>
@@ -145,7 +145,7 @@ const About = () => {
                 I’m <strong className="text-white font-semibold">Sakshi Kumari</strong>, a Computer Science and Engineering student at <strong className="text-white font-semibold">Lovely Professional University (CGPA 7.40)</strong> with a strong passion for building practical, production-ready software.
               </p>
               <p>
-                I work across the modern stack with <strong className="text-cyan-300 font-medium">React, Next.js, Node.js, Express, MongoDB, Python, and Java</strong>. My hands-on experience spans developing context-aware AI retrieval systems (RAG), real-time collaborative classroom tools with WebSockets, and secure full-stack web platforms.
+                I work across the modern stack with <strong className="text-rose-300 font-medium">React, Next.js, Node.js, Express, MongoDB, Python, and Java</strong>. My hands-on experience spans developing context-aware AI retrieval systems (RAG), real-time collaborative classroom tools with WebSockets, and secure full-stack web platforms.
               </p>
               <p>
                 Dedicated to continuous improvement, I have solved <strong className="text-purple-300 font-medium">100+ DSA problems</strong> across LeetCode and GeeksforGeeks, earned the official LeetCode 50-Day Streak Badge, and actively contribute to open-source software via <strong className="text-white font-medium">SSoC</strong>.
@@ -154,15 +154,15 @@ const About = () => {
 
             {/* 3 Small Stats matching requirement */}
             <div className="grid grid-cols-3 gap-3 pt-2">
-              <div className="p-3.5 rounded-2xl bg-[#0b1222]/80 border border-slate-800/80 text-center">
-                <div className="text-xl sm:text-2xl font-extrabold text-cyan-400 font-mono">4+</div>
+              <div className="p-3.5 rounded-2xl bg-[#0d091d]/85 border border-purple-500/20 text-center">
+                <div className="text-xl sm:text-2xl font-extrabold text-rose-400 font-mono">4+</div>
                 <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider mt-0.5">Projects</div>
               </div>
-              <div className="p-3.5 rounded-2xl bg-[#0b1222]/80 border border-slate-800/80 text-center">
+              <div className="p-3.5 rounded-2xl bg-[#0d091d]/85 border border-purple-500/20 text-center">
                 <div className="text-xl sm:text-2xl font-extrabold text-purple-400 font-mono">Full Stack</div>
                 <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider mt-0.5">Focus Area</div>
               </div>
-              <div className="p-3.5 rounded-2xl bg-[#0b1222]/80 border border-slate-800/80 text-center">
+              <div className="p-3.5 rounded-2xl bg-[#0d091d]/85 border border-purple-500/20 text-center">
                 <div className="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">B.Tech CSE</div>
                 <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider mt-0.5">LPU (2024–28)</div>
               </div>
@@ -177,7 +177,7 @@ const About = () => {
                 {techPills.map((tech) => (
                   <span
                     key={tech.name}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-medium bg-slate-900/80 text-slate-200 border border-slate-800/80 hover:border-purple-500/40 hover:text-white transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-medium bg-[#0e0a20]/85 text-slate-200 border border-purple-500/20 hover:border-purple-500/40 hover:text-white transition-colors"
                   >
                     <span>{tech.icon}</span>
                     <span>{tech.name}</span>
@@ -190,7 +190,7 @@ const About = () => {
             <div className="flex flex-wrap items-center gap-4 pt-3">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 shadow-lg shadow-purple-500/20 transition-all transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono text-white bg-gradient-to-r from-rose-500 via-purple-600 to-amber-500 hover:from-rose-400 hover:to-amber-400 text-white shadow-lg shadow-purple-500/20 transition-all transform hover:-translate-y-0.5"
               >
                 <span>View My Projects</span>
                 <ArrowRight className="w-4 h-4" />
@@ -198,9 +198,9 @@ const About = () => {
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono text-slate-200 bg-slate-900 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-600 shadow-md transition-all transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold font-mono text-slate-200 bg-[#0e0a20] hover:bg-[#1a1435] border border-purple-500/30 hover:border-slate-600 shadow-md transition-all transform hover:-translate-y-0.5"
               >
-                <Mail className="w-4 h-4 text-cyan-400" />
+                <Mail className="w-4 h-4 text-rose-400" />
                 <span>Let's Connect</span>
               </a>
             </div>
@@ -210,7 +210,7 @@ const About = () => {
         </div>
 
         {/* What I Do Section: 3 Modern Glassmorphism Cards */}
-        <div className="mt-24 pt-16 border-t border-slate-900/80">
+        <div className="mt-24 pt-16 border-t border-purple-500/15">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-mono uppercase tracking-wider text-purple-400 font-semibold block mb-2">
               Areas of Expertise
@@ -229,7 +229,7 @@ const About = () => {
               return (
                 <div
                   key={idx}
-                  className={`p-6 sm:p-7 rounded-3xl bg-[#0b101b]/90 border border-slate-800/80 ${card.border} transition-all duration-300 shadow-xl hover:-translate-y-1 backdrop-blur-md flex flex-col justify-between group`}
+                  className={`p-6 sm:p-7 rounded-3xl bg-[#0d091d]/90 border border-purple-500/20 ${card.border} transition-all duration-300 shadow-xl hover:-translate-y-1 backdrop-blur-md flex flex-col justify-between group`}
                 >
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
@@ -242,7 +242,7 @@ const About = () => {
                     </div>
 
                     <div className="space-y-1">
-                      <h4 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">
+                      <h4 className="text-lg font-bold text-white group-hover:text-rose-300 transition-colors">
                         {card.title}
                       </h4>
                       <p className="text-xs font-mono text-purple-400/90">
@@ -255,7 +255,7 @@ const About = () => {
                     </p>
                   </div>
 
-                  <div className="pt-5 mt-5 border-t border-slate-800/60 flex items-center gap-2 text-xs font-mono text-slate-400 group-hover:text-slate-200 transition-colors">
+                  <div className="pt-5 mt-5 border-t border-purple-500/20 flex items-center gap-2 text-xs font-mono text-slate-400 group-hover:text-slate-200 transition-colors">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                     <span>Production Grade Best Practices</span>
                   </div>

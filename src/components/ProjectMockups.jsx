@@ -18,7 +18,7 @@ import {
 
 export const RentRideMockup = () => {
   return (
-    <div className="w-full rounded-2xl bg-slate-950/90 border border-white/10 p-4 font-sans text-xs text-slate-300 shadow-2xl overflow-hidden">
+    <div className="w-full rounded-2xl bg-[#07050f]/90 border border-white/10 p-4 font-sans text-xs text-slate-300 shadow-2xl overflow-hidden">
       {/* Mockup Browser/App Window Header */}
       <div className="flex items-center justify-between pb-3 border-b border-white/5 font-mono text-[11px]">
         <div className="flex items-center gap-1.5">
@@ -33,17 +33,17 @@ export const RentRideMockup = () => {
       </div>
 
       {/* Search & Filter Bar */}
-      <div className="mt-3 p-2.5 rounded-xl bg-slate-900/90 border border-white/5 grid grid-cols-1 sm:grid-cols-3 gap-2 text-[11px] font-mono">
+      <div className="mt-3 p-2.5 rounded-xl bg-[#0e0a20]/90 border border-white/5 grid grid-cols-1 sm:grid-cols-3 gap-2 text-[11px] font-mono">
         <div className="flex items-center gap-1.5 text-slate-400">
-          <Search className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+          <Search className="w-3.5 h-3.5 text-rose-400 shrink-0" />
           <span className="text-white truncate">All SUVs &amp; Sedans</span>
         </div>
         <div className="flex items-center gap-1.5 text-slate-400">
-          <MapPin className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+          <MapPin className="w-3.5 h-3.5 text-rose-400 shrink-0" />
           <span className="text-white truncate">Phagwara / Jalandhar</span>
         </div>
         <div className="flex items-center gap-1.5 text-slate-400">
-          <Calendar className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+          <Calendar className="w-3.5 h-3.5 text-rose-400 shrink-0" />
           <span className="text-white truncate">Jul 15 – Jul 18</span>
         </div>
       </div>
@@ -52,10 +52,10 @@ export const RentRideMockup = () => {
       <div className="mt-3 grid grid-cols-1 md:grid-cols-12 gap-3">
         
         {/* Featured Vehicle Card */}
-        <div className="sm:col-span-7 p-3 rounded-xl bg-slate-900/60 border border-cyan-500/20 space-y-2">
+        <div className="sm:col-span-7 p-3 rounded-xl bg-[#0e0a20]/70 border border-rose-500/25 space-y-2">
           <div className="flex items-start justify-between">
             <div>
-              <span className="text-[10px] font-mono text-cyan-400 font-medium">Premium SUV</span>
+              <span className="text-[10px] font-mono text-rose-400 font-medium">Premium SUV</span>
               <h5 className="text-sm font-bold text-white">Mahindra Thar 4x4 Hardtop</h5>
             </div>
             <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-mono font-medium flex items-center gap-1">
@@ -66,7 +66,7 @@ export const RentRideMockup = () => {
 
           {/* Vehicle Visual Spec Box */}
           <div className="h-24 rounded-lg bg-gradient-to-br from-slate-950 to-slate-900 border border-white/5 flex flex-col items-center justify-center p-2 text-center relative overflow-hidden">
-            <Car className="w-10 h-10 text-cyan-400/70" />
+            <Car className="w-10 h-10 text-rose-400/70" />
             <div className="mt-1 flex items-center gap-2 font-mono text-[10px] text-slate-400">
               <span>Automatic</span>
               <span>•</span>
@@ -81,7 +81,7 @@ export const RentRideMockup = () => {
               <span className="text-base font-bold text-white">₹3,499</span>
               <span className="text-[10px] text-slate-400"> / day</span>
             </div>
-            <button className="px-3 py-1 rounded-lg bg-cyan-400 text-slate-950 font-mono font-bold text-[11px]">
+            <button className="px-3 py-1 rounded-lg bg-rose-400 text-slate-950 font-mono font-bold text-[11px]">
               Book Now
             </button>
           </div>
@@ -89,7 +89,7 @@ export const RentRideMockup = () => {
 
         {/* Right Info: Payment & Integration Widgets */}
         <div className="sm:col-span-5 space-y-2 text-[11px] font-mono">
-          <div className="p-2.5 rounded-xl bg-slate-900/60 border border-white/5 space-y-1.5">
+          <div className="p-2.5 rounded-xl bg-[#0e0a20]/70 border border-white/5 space-y-1.5">
             <div className="text-slate-400 text-[10px] uppercase font-bold">Booking Details</div>
             <div className="flex justify-between text-slate-300">
               <span>Duration:</span>
@@ -101,12 +101,12 @@ export const RentRideMockup = () => {
             </div>
             <div className="flex justify-between text-slate-300 pt-1 border-t border-white/5">
               <span>Total:</span>
-              <span className="text-cyan-400 font-bold">₹9,447</span>
+              <span className="text-rose-400 font-bold">₹9,447</span>
             </div>
           </div>
 
-          <div className="p-2.5 rounded-xl bg-slate-900/60 border border-white/5 flex items-center gap-2">
-            <CreditCard className="w-4 h-4 text-cyan-400 shrink-0" />
+          <div className="p-2.5 rounded-xl bg-[#0e0a20]/70 border border-white/5 flex items-center gap-2">
+            <CreditCard className="w-4 h-4 text-rose-400 shrink-0" />
             <div>
               <div className="text-slate-200 font-semibold text-[10px]">Razorpay Payment Gateway</div>
               <div className="text-slate-500 text-[9px]">Instant receipt &amp; WhatsApp alert</div>
@@ -121,7 +121,7 @@ export const RentRideMockup = () => {
 
 export const ProctorEdMockup = () => {
   return (
-    <div className="w-full rounded-2xl bg-slate-950/90 border border-white/10 p-4 font-sans text-xs text-slate-300 shadow-2xl overflow-hidden">
+    <div className="w-full rounded-2xl bg-[#07050f]/90 border border-white/10 p-4 font-sans text-xs text-slate-300 shadow-2xl overflow-hidden">
       {/* Mockup Browser/App Window Header */}
       <div className="flex items-center justify-between pb-3 border-b border-white/5 font-mono text-[11px]">
         <div className="flex items-center gap-1.5">
@@ -139,7 +139,7 @@ export const ProctorEdMockup = () => {
       </div>
 
       {/* Exam Status Bar */}
-      <div className="mt-3 p-2.5 rounded-xl bg-slate-900/90 border border-white/5 flex items-center justify-between text-[11px] font-mono">
+      <div className="mt-3 p-2.5 rounded-xl bg-[#0e0a20]/90 border border-white/5 flex items-center justify-between text-[11px] font-mono">
         <div>
           <span className="text-slate-400">Exam: </span>
           <span className="text-white font-bold">Database Management Systems</span>
@@ -154,10 +154,10 @@ export const ProctorEdMockup = () => {
       <div className="mt-3 grid grid-cols-1 md:grid-cols-12 gap-3">
         
         {/* Left: Question Sheet */}
-        <div className="sm:col-span-7 p-3 rounded-xl bg-slate-900/60 border border-white/5 space-y-2">
+        <div className="sm:col-span-7 p-3 rounded-xl bg-[#0e0a20]/70 border border-white/5 space-y-2">
           <div className="flex items-center justify-between text-[10px] font-mono text-slate-400">
             <span>Question 14 of 40</span>
-            <span className="text-cyan-400">Marks: +4 / -1</span>
+            <span className="text-rose-400">Marks: +4 / -1</span>
           </div>
 
           <p className="text-xs text-white font-medium">
@@ -165,14 +165,14 @@ export const ProctorEdMockup = () => {
           </p>
 
           <div className="space-y-1.5 pt-1 text-[11px] font-mono">
-            <div className="p-2 rounded bg-slate-950/70 border border-cyan-500/30 text-cyan-300 flex items-center justify-between">
+            <div className="p-2 rounded bg-[#07050f]/70 border border-rose-500/30 text-rose-300 flex items-center justify-between">
               <span>B+ Tree Index</span>
-              <span className="text-[10px] text-cyan-400 font-bold">Selected ✓</span>
+              <span className="text-[10px] text-rose-400 font-bold">Selected ✓</span>
             </div>
-            <div className="p-2 rounded bg-slate-950/40 border border-white/5 text-slate-400">
+            <div className="p-2 rounded bg-[#07050f]/40 border border-white/5 text-slate-400">
               <span>Hash Index</span>
             </div>
-            <div className="p-2 rounded bg-slate-950/40 border border-white/5 text-slate-400">
+            <div className="p-2 rounded bg-[#07050f]/40 border border-white/5 text-slate-400">
               <span>Linear Scan</span>
             </div>
           </div>
@@ -181,7 +181,7 @@ export const ProctorEdMockup = () => {
         {/* Right: AI Proctoring Webcam & Integrity Monitor */}
         <div className="sm:col-span-5 space-y-2 text-[11px] font-mono">
           {/* Webcam Box with Face Detection Overlay */}
-          <div className="h-28 rounded-xl bg-slate-950 border border-emerald-500/30 relative flex items-center justify-center overflow-hidden">
+          <div className="h-28 rounded-xl bg-[#07050f] border border-emerald-500/30 relative flex items-center justify-center overflow-hidden">
             <div className="absolute top-2 left-2 flex items-center gap-1 text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-mono">
               <Camera className="w-3 h-3" />
               <span>AI Face Detection: Active</span>
@@ -199,7 +199,7 @@ export const ProctorEdMockup = () => {
           </div>
 
           {/* Integrity Monitoring Metrics */}
-          <div className="p-2.5 rounded-xl bg-slate-900/60 border border-white/5 space-y-1 text-[10px]">
+          <div className="p-2.5 rounded-xl bg-[#0e0a20]/70 border border-white/5 space-y-1 text-[10px]">
             <div className="flex justify-between text-slate-300">
               <span>OCR ID Verification:</span>
               <span className="text-emerald-400 font-bold">Passed ✓</span>
@@ -223,26 +223,26 @@ export const ProctorEdMockup = () => {
 
 export const RagAssistantMockup = () => {
   return (
-    <div className="w-full rounded-2xl bg-[#080d19] border border-slate-800 p-4 font-sans text-xs text-slate-300 shadow-2xl overflow-hidden">
+    <div className="w-full rounded-2xl bg-[#080d19] border border-purple-500/20 p-4 font-sans text-xs text-slate-300 shadow-2xl overflow-hidden">
       {/* Browser Bar */}
-      <div className="flex items-center justify-between pb-3 border-b border-slate-800 font-mono text-[11px]">
+      <div className="flex items-center justify-between pb-3 border-b border-purple-500/20 font-mono text-[11px]">
         <div className="flex items-center gap-1.5">
           <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
           <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
           <span className="ml-2 text-slate-400">rag-assistant.dev/workspace/react</span>
         </div>
-        <span className="px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 text-[10px] font-mono">
+        <span className="px-2 py-0.5 rounded bg-rose-500/12 text-rose-300 border border-rose-500/25 text-[10px] font-mono">
           Groq LPU Active • 14ms
         </span>
       </div>
 
       {/* Repository Context Bar */}
-      <div className="mt-3 p-2.5 rounded-xl bg-slate-900/90 border border-slate-800 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono">
+      <div className="mt-3 p-2.5 rounded-xl bg-[#0e0a20]/90 border border-purple-500/20 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span className="text-white font-semibold">Indexed Repo:</span>
-          <span className="text-cyan-400">github.com/facebook/react</span>
+          <span className="text-rose-400">github.com/facebook/react</span>
         </div>
         <div className="flex items-center gap-2 text-[10px] text-slate-400">
           <span>1,482 Files</span>
@@ -264,24 +264,24 @@ export const RagAssistantMockup = () => {
         </div>
 
         {/* Vector Context Match Pill */}
-        <div className="p-2 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center justify-between text-[10px] font-mono">
-          <div className="flex items-center gap-1.5 text-cyan-300">
-            <Sparkles className="w-3 h-3 text-cyan-400 shrink-0" />
+        <div className="p-2 rounded-lg bg-[#0e0a20]/85 border border-purple-500/20 flex items-center justify-between text-[10px] font-mono">
+          <div className="flex items-center gap-1.5 text-rose-300">
+            <Sparkles className="w-3 h-3 text-rose-400 shrink-0" />
             <span className="truncate">Retrieved 4 chunks from ReactFiberWorkLoop.js</span>
           </div>
           <span className="text-emerald-400 font-bold shrink-0">Similarity: 0.91</span>
         </div>
 
         {/* LLM Response */}
-        <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 space-y-2">
+        <div className="p-3 rounded-xl bg-[#0e0a20]/90 border border-purple-500/20 space-y-2">
           <span className="text-[10px] font-mono text-emerald-400 font-bold flex items-center gap-1">
             <span>GROQ LLM SYNTHESIS</span>
             <span className="text-slate-500">• 480 tokens/sec</span>
           </span>
           <p className="text-xs text-slate-300 leading-relaxed">
-            React's reconciler utilizes bitmask <strong>Lanes</strong> (e.g. <code className="text-cyan-300 bg-slate-950 px-1 py-0.5 rounded">SyncLane</code>, <code className="text-cyan-300 bg-slate-950 px-1 py-0.5 rounded">InputContinuousLane</code>, and <code className="text-cyan-300 bg-slate-950 px-1 py-0.5 rounded">TransitionLanes</code>) in the work loop:
+            React's reconciler utilizes bitmask <strong>Lanes</strong> (e.g. <code className="text-rose-300 bg-[#07050f] px-1 py-0.5 rounded">SyncLane</code>, <code className="text-rose-300 bg-[#07050f] px-1 py-0.5 rounded">InputContinuousLane</code>, and <code className="text-rose-300 bg-[#07050f] px-1 py-0.5 rounded">TransitionLanes</code>) in the work loop:
           </p>
-          <div className="p-2 rounded-lg bg-slate-950 border border-slate-800 font-mono text-[10px] text-indigo-300">
+          <div className="p-2 rounded-lg bg-[#07050f] border border-purple-500/20 font-mono text-[10px] text-indigo-300">
             const nextLanes = getNextLanes(root, return_lanes);<br/>
             if (includesSomeLane(nextLanes, SyncLane)) &#123; performSyncWorkOnRoot(root); &#125;
           </div>

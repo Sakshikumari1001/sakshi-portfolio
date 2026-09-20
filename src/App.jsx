@@ -28,7 +28,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500/20 selection:text-cyan-300 font-sans">
+    <div className="min-h-screen bg-[#07050f] text-slate-100 selection:bg-fuchsia-500/25 selection:text-rose-200 font-sans">
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       
       <main id="main-content">
