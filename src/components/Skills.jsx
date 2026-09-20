@@ -20,13 +20,13 @@ const Skills = () => {
 
   const getCategoryIcon = (iconName) => {
     switch (iconName) {
-      case 'Layers': return <Layers className="w-5 h-5 text-rose-400" />;
+      case 'Layers': return <Layers className="w-5 h-5 text-indigo-400" />;
       case 'Server': return <Server className="w-5 h-5 text-emerald-400" />;
       case 'Database': return <Database className="w-5 h-5 text-amber-400" />;
       case 'Bot': return <Bot className="w-5 h-5 text-indigo-400" />;
       case 'Cpu': return <Cpu className="w-5 h-5 text-purple-400" />;
       case 'Wrench': return <Wrench className="w-5 h-5 text-sky-400" />;
-      default: return <Sparkles className="w-5 h-5 text-rose-400" />;
+      default: return <Sparkles className="w-5 h-5 text-indigo-400" />;
     }
   };
 
@@ -35,23 +35,23 @@ const Skills = () => {
     : skillBoxesData.filter(box => box.id === activeCategory);
 
   return (
-    <section id="skills" className="py-24 bg-[#07050f] relative overflow-hidden">
+    <section id="skills" className="py-24 bg-[#08090e] relative overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/3 left-10 w-96 h-96 bg-rose-500/8 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-1/3 left-10 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-medium text-rose-400 bg-rose-950/40 border border-rose-500/30">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-medium text-indigo-400 bg-indigo-950/40 border border-indigo-500/30">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Technical Proficiencies</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Categorized <span className="text-gradient">Skill Domains</span>
           </h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-rose-500 via-purple-500 to-amber-400 mx-auto mt-3 rounded-full"></div>
+          <div className="w-12 h-1 bg-gradient-to-r from-indigo-500 via-violet-500 to-sky-400 mx-auto mt-3 rounded-full"></div>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed pt-1">
             Organized by domain: Frontend client interfaces, backend microservices, vector search &amp; generative AI, databases, and core computer science fundamentals.
           </p>
@@ -63,13 +63,13 @@ const Skills = () => {
             onClick={() => setActiveCategory('all')}
             className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-semibold transition-all duration-200 border ${
               activeCategory === 'all'
-                ? 'bg-rose-500/20 text-rose-200 border-rose-400 shadow-md shadow-rose-500/25'
-                : 'bg-[#0e0a20]/85 text-slate-400 border-white/10 hover:text-white hover:border-white/20'
+                ? 'bg-indigo-600/20 text-indigo-200 border-indigo-400 shadow-md shadow-indigo-500/30'
+                : 'bg-[#111324]/85 text-slate-400 border-white/10 hover:text-white hover:border-white/20'
             }`}
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>All Domains</span>
-            <span className="px-1.5 py-0.5 rounded-md text-[10px] bg-[#16102f] text-slate-300">
+            <span className="px-1.5 py-0.5 rounded-md text-[10px] bg-[#16192e] text-slate-300">
               {skillBoxesData.length} Boxes
             </span>
           </button>
@@ -82,8 +82,8 @@ const Skills = () => {
                 onClick={() => setActiveCategory(box.id)}
                 className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-medium transition-all duration-200 border ${
                   isActive
-                    ? 'bg-rose-500/20 text-rose-200 border-rose-400 shadow-md shadow-rose-500/25'
-                    : 'bg-[#0e0a20]/70 text-slate-400 border-white/5 hover:text-white hover:border-white/15'
+                    ? 'bg-indigo-600/20 text-indigo-200 border-indigo-400 shadow-md shadow-indigo-500/30'
+                    : 'bg-[#111324]/70 text-slate-400 border-white/5 hover:text-white hover:border-white/15'
                 }`}
               >
                 <span>{box.title.split(' ')[0]}</span>
@@ -100,7 +100,7 @@ const Skills = () => {
           {filteredBoxes.map((box) => (
             <div
               key={box.id}
-              className={`rounded-3xl bg-[#0e0a20]/85 border ${box.borderColor} p-6 sm:p-7 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between backdrop-blur-xl relative overflow-hidden group hover:-translate-y-1`}
+              className={`rounded-3xl bg-[#111324]/85 border ${box.borderColor} p-6 sm:p-7 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between backdrop-blur-xl relative overflow-hidden group hover:-translate-y-1`}
             >
               {/* Subtle box top glow */}
               <div className={`absolute top-0 right-0 w-48 h-48 bg-gradient-to-br ${box.accent} rounded-full blur-2xl pointer-events-none group-hover:scale-110 transition-transform duration-500`}></div>
@@ -109,11 +109,11 @@ const Skills = () => {
                 {/* Box Header */}
                 <div className="flex items-start justify-between gap-3 pb-4 border-b border-white/10">
                   <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-2xl bg-[#07050f] border border-white/10 shadow-inner">
+                    <div className="p-2.5 rounded-2xl bg-[#08090e] border border-white/10 shadow-inner">
                       {getCategoryIcon(box.icon)}
                     </div>
                     <div>
-                      <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-rose-300 transition-colors">
+                      <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">
                         {box.title}
                       </h3>
                       <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1 font-mono">
@@ -122,7 +122,7 @@ const Skills = () => {
                     </div>
                   </div>
 
-                  <span className="text-[11px] font-mono font-semibold px-2 py-1 rounded-lg bg-[#07050f] text-slate-300 border border-white/10 shrink-0">
+                  <span className="text-[11px] font-mono font-semibold px-2 py-1 rounded-lg bg-[#08090e] text-slate-300 border border-white/10 shrink-0">
                     {box.skills.length} items
                   </span>
                 </div>
@@ -134,12 +134,12 @@ const Skills = () => {
                       key={skill.name}
                       className={`inline-flex flex-col px-3 py-2 rounded-xl transition-all duration-200 border ${
                         skill.highlight
-                          ? `${box.badgeColor} hover:bg-[#1a1435]`
-                          : 'bg-[#07050f]/70 text-slate-300 border-white/5 hover:border-white/20'
+                          ? `${box.badgeColor} hover:bg-[#1a1d33]`
+                          : 'bg-[#08090e]/70 text-slate-300 border-white/5 hover:border-white/20'
                       }`}
                     >
                       <div className="flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
                         <span className="text-xs font-semibold text-slate-100 font-mono">
                           {skill.name}
                         </span>
@@ -168,10 +168,10 @@ const Skills = () => {
         </div>
 
         {/* Global Architecture Integration Banner */}
-        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900 border border-rose-500/25 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900 border border-indigo-500/25 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
-            <div className="inline-flex items-center gap-1.5 text-xs font-mono text-rose-400 font-semibold">
-              <Zap className="w-4 h-4 text-rose-400" />
+            <div className="inline-flex items-center gap-1.5 text-xs font-mono text-indigo-400 font-semibold">
+              <Zap className="w-4 h-4 text-indigo-400" />
               INTEGRATED FULL-STACK EXECUTION
             </div>
             <h4 className="text-lg font-bold text-white">
@@ -185,7 +185,7 @@ const Skills = () => {
           <div className="flex items-center gap-3 shrink-0">
             <a
               href="#featured-project"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-950 bg-gradient-to-r from-rose-500 via-purple-600 to-amber-500 hover:from-rose-400 hover:to-amber-400 text-white shadow-md shadow-rose-500/25 font-mono transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-950 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white shadow-md shadow-indigo-600/30 font-mono transition-all"
             >
               <span>See in Action</span>
               <ArrowRight className="w-3.5 h-3.5" />

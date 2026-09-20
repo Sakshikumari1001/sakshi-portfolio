@@ -4,12 +4,12 @@ import { RentRideMockup, ProctorEdMockup } from './ProjectMockups';
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="rounded-3xl bg-[#0d091d]/95 border border-purple-500/20 p-6 sm:p-7 shadow-xl hover:border-rose-400/40 hover:shadow-[0_0_30px_-5px_rgba(244,63,94,0.25)] transition-all duration-300 backdrop-blur-md flex flex-col justify-between group hover:-translate-y-1">
+    <div className="rounded-3xl bg-[#0f111f]/95 border border-indigo-500/20 p-6 sm:p-7 shadow-xl hover:border-indigo-400/50 hover:shadow-[0_0_30px_-5px_rgba(99,102,241,0.25)] transition-all duration-300 backdrop-blur-md flex flex-col justify-between group hover:-translate-y-1">
       <div>
         {/* Card Header: Number & Tag */}
-        <div className="flex items-center justify-between pb-4 border-b border-purple-500/20">
+        <div className="flex items-center justify-between pb-4 border-b border-indigo-500/20">
           <div className="flex items-center gap-2.5">
-            <span className="px-2.5 py-0.5 rounded-md bg-rose-500/12 text-rose-400 border border-rose-500/25 text-xs font-mono font-bold">
+            <span className="px-2.5 py-0.5 rounded-md bg-indigo-600/15 text-indigo-400 border border-indigo-500/25 text-xs font-mono font-bold">
               Project {project.number}
             </span>
             <span className="text-xs font-mono text-slate-400">
@@ -24,7 +24,7 @@ const ProjectCard = ({ project }) => {
 
         {/* Title & Description */}
         <div className="mt-5 space-y-2.5">
-          <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-rose-400 transition-colors">
+          <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors">
             {project.title}
           </h3>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed line-clamp-3">
@@ -34,7 +34,7 @@ const ProjectCard = ({ project }) => {
 
         {/* Visual Project Screenshot Mockup */}
         {project.image ? (
-          <div className="mt-5 rounded-2xl overflow-hidden border border-purple-500/20 bg-[#07050f]/90 group/mockup relative aspect-[16/10] shadow-lg">
+          <div className="mt-5 rounded-2xl overflow-hidden border border-indigo-500/20 bg-[#08090e]/90 group/mockup relative aspect-[16/10] shadow-lg">
             <img 
               src={project.image} 
               alt={project.title} 
@@ -47,9 +47,9 @@ const ProjectCard = ({ project }) => {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute inset-0 flex items-center justify-center bg-[#07050f]/40 opacity-0 group-hover/mockup:opacity-100 transition-opacity backdrop-blur-[2px]"
+                className="absolute inset-0 flex items-center justify-center bg-[#08090e]/40 opacity-0 group-hover/mockup:opacity-100 transition-opacity backdrop-blur-[2px]"
               >
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-rose-400 text-slate-950 text-xs font-mono font-bold shadow-xl">
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-indigo-500 text-slate-950 text-xs font-mono font-bold shadow-xl">
                   <span>Open Live Demo</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </span>
@@ -72,7 +72,7 @@ const ProjectCard = ({ project }) => {
           <div className="space-y-1.5">
             {project.features.slice(0, 5).map((feature, idx) => (
               <div key={idx} className="flex items-start gap-2 text-xs text-slate-300">
-                <CheckCircle2 className="w-3.5 h-3.5 text-rose-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400 shrink-0 mt-0.5" />
                 <span className="leading-snug">{feature}</span>
               </div>
             ))}
@@ -86,10 +86,10 @@ const ProjectCard = ({ project }) => {
 
         {/* Deployment Metadata if available */}
         {project.deployment && (
-          <div className="mt-4 p-2.5 rounded-xl bg-[#07050f]/60 border border-purple-500/20 grid grid-cols-2 gap-2 text-[11px] font-mono">
+          <div className="mt-4 p-2.5 rounded-xl bg-[#08090e]/60 border border-indigo-500/20 grid grid-cols-2 gap-2 text-[11px] font-mono">
             <div>
               <span className="text-slate-500 block text-[10px]">Frontend:</span>
-              <span className="text-rose-400">{project.deployment.frontend}</span>
+              <span className="text-indigo-400">{project.deployment.frontend}</span>
             </div>
             <div>
               <span className="text-slate-500 block text-[10px]">Backend:</span>
@@ -107,7 +107,7 @@ const ProjectCard = ({ project }) => {
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="px-2.5 py-1 rounded-lg text-xs font-mono bg-[#07050f]/90 text-slate-300 border border-purple-500/20"
+                className="px-2.5 py-1 rounded-lg text-xs font-mono bg-[#08090e]/90 text-slate-300 border border-indigo-500/20"
               >
                 {tech}
               </span>
@@ -117,13 +117,13 @@ const ProjectCard = ({ project }) => {
       </div>
 
       {/* Card Footer CTAs */}
-      <div className="mt-6 pt-4 border-t border-purple-500/20 flex flex-wrap items-center gap-3">
+      <div className="mt-6 pt-4 border-t border-indigo-500/20 flex flex-wrap items-center gap-3">
         {project.liveUrl && (
           <a
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-950 bg-gradient-to-r from-rose-500 via-purple-600 to-amber-500 hover:from-rose-400 hover:to-amber-400 text-white shadow-md shadow-rose-500/25 font-mono transition-all transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-950 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white shadow-md shadow-indigo-600/30 font-mono transition-all transform hover:-translate-y-0.5"
           >
             <span>Live Demo</span>
             <ExternalLink className="w-3.5 h-3.5" />
@@ -135,7 +135,7 @@ const ProjectCard = ({ project }) => {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-300 bg-[#0e0a20] hover:bg-[#1a1435] border border-purple-500/30 hover:border-slate-600 font-mono transition-all transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-300 bg-[#111324] hover:bg-[#1a1d33] border border-indigo-500/30 hover:border-slate-600 font-mono transition-all transform hover:-translate-y-0.5"
           >
             <Github className="w-3.5 h-3.5" />
             <span>GitHub</span>

@@ -9,18 +9,18 @@ export default {
     extend: {
       colors: {
         dark: {
-          bg: '#07050f',
-          surface: '#0c0919',
-          card: '#110d24',
-          border: 'rgba(244, 63, 94, 0.15)',
-          hover: '#1b1435'
+          bg: '#08090e',
+          surface: '#0e101a',
+          card: '#121422',
+          border: 'rgba(99, 102, 241, 0.15)',
+          hover: '#1a1d30'
         },
         accent: {
-          rose: '#f43f5e',
-          violet: '#a855f7',
-          fuchsia: '#d946ef',
-          amber: '#f59e0b',
+          indigo: '#6366f1',
+          violet: '#8b5cf6',
+          sky: '#38bdf8',
           emerald: '#10b981',
+          amber: '#f59e0b',
         }
       },
       fontFamily: {
@@ -28,9 +28,8 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       boxShadow: {
-        'glow-rose': '0 0 25px -5px rgba(244, 63, 94, 0.35)',
-        'glow-violet': '0 0 25px -5px rgba(168, 85, 247, 0.35)',
-        'glow-amber': '0 0 25px -5px rgba(245, 158, 11, 0.35)',
+        'glow-indigo': '0 0 25px -5px rgba(99, 102, 241, 0.35)',
+        'glow-violet': '0 0 25px -5px rgba(139, 92, 246, 0.35)',
         'glow-emerald': '0 0 25px -5px rgba(16, 185, 129, 0.35)',
       },
       animation: {

@@ -54,14 +54,14 @@ export const heroStatsPills = [
     icon: "GraduationCap",
     label: "CGPA: 7.40 / 10.0",
     sub: "Lovely Professional University",
-    accent: "text-rose-400"
+    accent: "text-indigo-400"
   }
 ];
 
 export const terminalData = {
   command: "sakshi@portfolio:~$ whoami",
   lines: [
-    { label: "Name", value: "Sakshi Kumari", color: "text-rose-400" },
+    { label: "Name", value: "Sakshi Kumari", color: "text-indigo-400" },
     { label: "Role", value: "Aspiring Full Stack Developer", color: "text-emerald-400" },
     { label: "Education", value: "B.Tech CSE @ LPU (CGPA: 7.40)", color: "text-slate-200" },
     { label: "Focus", value: "Full-Stack Development & AI RAG", color: "text-indigo-400" },
@@ -127,8 +127,8 @@ export const codingProfiles = [
     metric: "Professional Network & Updates",
     url: "https://www.linkedin.com/in/sakshikumari1001",
     icon: "linkedin",
-    accent: "from-rose-500/20 to-violet-500/10",
-    border: "group-hover:border-rose-500/50",
+    accent: "from-indigo-500/20 to-violet-500/10",
+    border: "group-hover:border-indigo-500/50",
     badge: "Open to Connect"
   },
   {
@@ -159,10 +159,10 @@ export const skillBoxesData = [
     title: "Frontend Development",
     subtitle: "Modern, responsive & interactive client-side interfaces",
     icon: "Layers",
-    color: "rose",
-    accent: "from-rose-500/20 via-purple-500/10 to-transparent",
-    borderColor: "border-rose-500/30",
-    badgeColor: "bg-rose-500/10 text-rose-300 border-rose-500/20",
+    color: "indigo",
+    accent: "from-indigo-500/20 via-violet-500/10 to-transparent",
+    borderColor: "border-indigo-500/30",
+    badgeColor: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20",
     skills: [
       { name: "React.js", level: "Hooks, Context & SPA", highlight: true },
       { name: "Next.js", level: "SSR & App Router", highlight: true },

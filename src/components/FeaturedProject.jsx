@@ -21,20 +21,20 @@ const FeaturedProject = () => {
   const currentStage = stages[activeStep];
 
   return (
-    <div className="relative rounded-3xl bg-[#0d091d]/95 border border-purple-500/20 p-6 sm:p-10 shadow-2xl overflow-hidden backdrop-blur-xl">
+    <div className="relative rounded-3xl bg-[#0f111f]/95 border border-indigo-500/20 p-6 sm:p-10 shadow-2xl overflow-hidden backdrop-blur-xl">
       
       {/* Top ambient lighting */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-rose-500/12 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600/15 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-violet-600/15 rounded-full blur-3xl pointer-events-none"></div>
 
       {/* Top Banner Tag & Timeline Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-purple-500/20">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-purple-500/20 via-rose-500/20 to-amber-500/20 border border-rose-500/30 text-xs font-mono font-semibold text-rose-300 shadow-sm">
-          <Sparkles className="w-3.5 h-3.5 text-rose-400" />
+      <div className="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-indigo-500/20">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-indigo-500/20 via-violet-500/20 to-sky-500/20 border border-indigo-500/30 text-xs font-mono font-semibold text-indigo-300 shadow-sm">
+          <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
           <span>{featuredProjectData.badgeTop}</span>
         </div>
 
-        <div className="text-xs font-mono text-slate-400 px-3 py-1 rounded-lg bg-[#0e0a20]/70 border border-purple-500/20">
+        <div className="text-xs font-mono text-slate-400 px-3 py-1 rounded-lg bg-[#111324]/70 border border-indigo-500/20">
           Timeline: <span className="text-slate-200">{featuredProjectData.timeline}</span>
         </div>
       </div>
@@ -82,7 +82,7 @@ const FeaturedProject = () => {
             {featuredProjectData.techStack.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1.5 rounded-xl text-xs font-mono font-medium bg-[#0e0a20]/90 text-slate-200 border border-purple-500/30 shadow-sm hover:border-rose-400/40 hover:shadow-[0_0_30px_-5px_rgba(244,63,94,0.25)] transition-colors"
+                className="px-3 py-1.5 rounded-xl text-xs font-mono font-medium bg-[#111324]/90 text-slate-200 border border-indigo-500/30 shadow-sm hover:border-indigo-400/50 hover:shadow-[0_0_30px_-5px_rgba(99,102,241,0.25)] transition-colors"
               >
                 {tech}
               </span>
@@ -95,7 +95,7 @@ const FeaturedProject = () => {
               href={featuredProjectData.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-rose-500 via-purple-600 to-amber-500 hover:from-rose-400 hover:to-amber-400 text-white shadow-lg shadow-rose-500/25 font-mono transition-all transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 via-indigo-500 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white shadow-lg shadow-indigo-500/30 font-mono transition-all transform hover:-translate-y-0.5"
             >
               <Github className="w-4 h-4" />
               <span>View on GitHub</span>
@@ -105,7 +105,7 @@ const FeaturedProject = () => {
               href={featuredProjectData.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-200 bg-[#0e0a20] hover:bg-[#1a1435] border border-purple-500/30 hover:border-slate-600 shadow-md font-mono transition-all transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-200 bg-[#111324] hover:bg-[#1a1d33] border border-indigo-500/30 hover:border-slate-600 shadow-md font-mono transition-all transform hover:-translate-y-0.5"
             >
               <span>Live Application</span>
               <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
@@ -126,16 +126,16 @@ const FeaturedProject = () => {
         <div className="lg:col-span-5 space-y-4">
           
           {/* Header with View Mode Switcher */}
-          <div className="p-3 sm:p-4 rounded-2xl bg-[#07050f]/80 border border-purple-500/20 flex flex-wrap items-center justify-between gap-2">
+          <div className="p-3 sm:p-4 rounded-2xl bg-[#08090e]/80 border border-indigo-500/20 flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center gap-2">
-              <Layers className="w-4 h-4 text-rose-400" />
+              <Layers className="w-4 h-4 text-indigo-400" />
               <h4 className="text-xs font-mono font-bold tracking-wider uppercase text-white">
                 {viewMode === 'flow' ? 'Architecture Flow' : 'Live UI Interface Preview'}
               </h4>
             </div>
 
             {/* View Mode Toggle Buttons */}
-            <div className="flex items-center gap-1 p-1 rounded-xl bg-[#0e0a20] border border-purple-500/20">
+            <div className="flex items-center gap-1 p-1 rounded-xl bg-[#111324] border border-indigo-500/20">
               <button
                 onClick={() => setViewMode('flow')}
                 className={`px-2.5 py-1 rounded-lg text-[11px] font-mono font-semibold transition-all ${
@@ -162,7 +162,7 @@ const FeaturedProject = () => {
           {viewMode === 'preview' ? (
             /* Live UI Interface Screenshot / Mockup */
             <div className="space-y-3 animate-in fade-in duration-200">
-              <div className="rounded-2xl overflow-hidden border border-purple-500/20 bg-[#07050f]/90 shadow-2xl relative aspect-[16/10] group/feat">
+              <div className="rounded-2xl overflow-hidden border border-indigo-500/20 bg-[#08090e]/90 shadow-2xl relative aspect-[16/10] group/feat">
                 <img 
                   src="/projects/github_rag_mockup.png" 
                   alt="GitHub RAG Assistant Interface" 
@@ -188,14 +188,14 @@ const FeaturedProject = () => {
                       className={`w-full flex items-center justify-between p-3 rounded-xl text-xs font-mono transition-all duration-200 border text-left ${
                         isSelected
                           ? 'bg-gradient-to-r from-indigo-950/80 to-slate-900 border-indigo-500/60 text-white shadow-lg shadow-indigo-950/40'
-                          : 'bg-[#07050f]/70 border-purple-500/20 text-slate-400 hover:bg-[#0e0a20]/90 hover:text-slate-200 hover:border-slate-700'
+                          : 'bg-[#08090e]/70 border-indigo-500/20 text-slate-400 hover:bg-[#111324]/90 hover:text-slate-200 hover:border-slate-700'
                       }`}
                     >
                       <div className="flex items-center gap-3">
                         <span className={`w-5 h-5 rounded-md flex items-center justify-center text-[10px] font-bold ${
                           isSelected
                             ? 'bg-indigo-500 text-white'
-                            : 'bg-[#16102f] text-slate-400'
+                            : 'bg-[#16192e] text-slate-400'
                         }`}>
                           {stage.step}
                         </span>
@@ -224,21 +224,21 @@ const FeaturedProject = () => {
                 </p>
 
                 <div className="flex flex-wrap gap-2 pt-1 font-mono text-[11px]">
-                  <span className="px-2.5 py-1 rounded-lg bg-[#0e0a20] text-rose-300 border border-purple-500/20">
+                  <span className="px-2.5 py-1 rounded-lg bg-[#111324] text-indigo-300 border border-indigo-500/20">
                     {currentStage.role}
                   </span>
-                  <span className="px-2.5 py-1 rounded-lg bg-[#0e0a20] text-indigo-300 border border-purple-500/20">
+                  <span className="px-2.5 py-1 rounded-lg bg-[#111324] text-indigo-300 border border-indigo-500/20">
                     {currentStage.tech}
                   </span>
                 </div>
 
                 <div className="grid grid-cols-1 gap-2 pt-1 font-mono text-[11px]">
-                  <div className="p-2.5 rounded-lg bg-[#0e0a20]/90 border border-white/5 flex items-center justify-between">
+                  <div className="p-2.5 rounded-lg bg-[#111324]/90 border border-white/5 flex items-center justify-between">
                     <span className="text-slate-400 text-[10px] uppercase font-bold">Input:</span>
                     <span className="text-slate-200 text-right truncate pl-2">{currentStage.input}</span>
                   </div>
 
-                  <div className="p-2.5 rounded-lg bg-[#0e0a20]/90 border border-white/5 flex items-center justify-between">
+                  <div className="p-2.5 rounded-lg bg-[#111324]/90 border border-white/5 flex items-center justify-between">
                     <span className="text-emerald-400 text-[10px] uppercase font-bold">Output:</span>
                     <span className="text-emerald-300 text-right truncate pl-2">{currentStage.output}</span>
                   </div>

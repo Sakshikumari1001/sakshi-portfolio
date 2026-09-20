@@ -34,12 +34,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#0e0a20]/50 relative">
+    <section id="contact" className="py-20 bg-[#111324]/50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-rose-400 bg-rose-950/40 border border-rose-500/30">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-indigo-400 bg-indigo-950/40 border border-indigo-500/30">
             <MessageSquare className="w-3.5 h-3.5" />
             <span>Get In Touch</span>
           </div>
@@ -57,10 +57,10 @@ const Contact = () => {
           <div className="lg:col-span-5 space-y-6">
             
             {/* Quick Profile Card */}
-            <div className="p-6 rounded-2xl bg-[#0e0a20]/85 border border-white/10 shadow-xl space-y-4">
+            <div className="p-6 rounded-2xl bg-[#111324]/85 border border-white/10 shadow-xl space-y-4">
               <div className="flex items-center gap-4">
                 <div className="relative shrink-0">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-500 via-purple-600 to-amber-500 p-[2px] shadow-lg shadow-rose-500/25 overflow-hidden">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 via-violet-500 to-sky-400 p-[2px] shadow-lg shadow-indigo-500/30 overflow-hidden">
                     <img
                       src="/profile.png"
                       alt="Sakshi Kumari"
@@ -71,7 +71,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white">{personalInfo.name}</h3>
-                  <div className="text-xs text-rose-400 font-mono">{personalInfo.role}</div>
+                  <div className="text-xs text-indigo-400 font-mono">{personalInfo.role}</div>
                   <div className="text-xs text-slate-400 flex items-center gap-1.5 mt-1 font-mono">
                     <MapPin className="w-3.5 h-3.5 text-slate-400" />
                     {personalInfo.location}
@@ -85,9 +85,9 @@ const Contact = () => {
             </div>
 
             {/* Email Contact Card */}
-            <div className="p-4 rounded-xl bg-[#0e0a20]/70 border border-white/5 hover:border-rose-400/40 hover:shadow-[0_0_30px_-5px_rgba(244,63,94,0.2)] transition-all flex items-center justify-between group">
+            <div className="p-4 rounded-xl bg-[#111324]/70 border border-white/5 hover:border-indigo-400/40 hover:shadow-[0_0_30px_-5px_rgba(99,102,241,0.2)] transition-all flex items-center justify-between group">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-rose-500/12 text-rose-400 border border-rose-500/25 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-indigo-600/15 text-indigo-400 border border-indigo-500/25 flex items-center justify-center">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -96,7 +96,7 @@ const Contact = () => {
                   </span>
                   <a
                     href={`mailto:${personalInfo.email}`}
-                    className="text-sm font-semibold text-slate-100 hover:text-rose-400 transition-colors"
+                    className="text-sm font-semibold text-slate-100 hover:text-indigo-400 transition-colors"
                   >
                     {personalInfo.email}
                   </a>
@@ -105,7 +105,7 @@ const Contact = () => {
 
               <button
                 onClick={copyEmail}
-                className="p-2 rounded-lg bg-white/5 text-slate-400 hover:text-rose-400 hover:bg-white/10 transition-colors"
+                className="p-2 rounded-lg bg-white/5 text-slate-400 hover:text-indigo-400 hover:bg-white/10 transition-colors"
                 title="Copy email to clipboard"
                 aria-label="Copy email"
               >
@@ -114,7 +114,7 @@ const Contact = () => {
             </div>
 
             {/* Phone Contact Card */}
-            <div className="p-4 rounded-xl bg-[#0e0a20]/70 border border-white/5 hover:border-rose-400/40 hover:shadow-[0_0_30px_-5px_rgba(244,63,94,0.2)] transition-all flex items-center justify-between group">
+            <div className="p-4 rounded-xl bg-[#111324]/70 border border-white/5 hover:border-indigo-400/40 hover:shadow-[0_0_30px_-5px_rgba(99,102,241,0.2)] transition-all flex items-center justify-between group">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center">
                   <Phone className="w-5 h-5" />
@@ -148,7 +148,7 @@ const Contact = () => {
                 href={personalInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3.5 rounded-xl bg-[#0e0a20]/70 border border-white/5 hover:border-purple-500/30 flex items-center justify-center gap-2 text-xs font-mono font-semibold text-slate-200 hover:text-purple-300 transition-colors"
+                className="p-3.5 rounded-xl bg-[#111324]/70 border border-white/5 hover:border-indigo-500/30 flex items-center justify-center gap-2 text-xs font-mono font-semibold text-slate-200 hover:text-purple-300 transition-colors"
               >
                 <Github className="w-4 h-4" />
                 <span>GitHub Profile</span>
@@ -159,7 +159,7 @@ const Contact = () => {
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3.5 rounded-xl bg-[#0e0a20]/70 border border-white/5 hover:border-blue-500/30 flex items-center justify-center gap-2 text-xs font-mono font-semibold text-slate-200 hover:text-blue-300 transition-colors"
+                className="p-3.5 rounded-xl bg-[#111324]/70 border border-white/5 hover:border-blue-500/30 flex items-center justify-center gap-2 text-xs font-mono font-semibold text-slate-200 hover:text-blue-300 transition-colors"
               >
                 <Linkedin className="w-4 h-4" />
                 <span>LinkedIn Profile</span>
@@ -171,7 +171,7 @@ const Contact = () => {
 
           {/* Right: Message Form */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 rounded-2xl bg-[#0e0a20]/85 border border-white/10 shadow-2xl space-y-6">
+            <div className="p-6 sm:p-8 rounded-2xl bg-[#111324]/85 border border-white/10 shadow-2xl space-y-6">
               <div>
                 <h3 className="text-xl font-bold text-white tracking-tight">
                   Send a Direct Message
@@ -199,7 +199,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Alex Morgan"
-                    className="w-full px-4 py-3 rounded-xl bg-[#07050f]/80 border border-white/10 text-white text-sm focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 font-sans transition-all placeholder:text-slate-600"
+                    className="w-full px-4 py-3 rounded-xl bg-[#08090e]/80 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 font-sans transition-all placeholder:text-slate-600"
                   />
                 </div>
 
@@ -213,7 +213,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="alex@example.com"
-                    className="w-full px-4 py-3 rounded-xl bg-[#07050f]/80 border border-white/10 text-white text-sm focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 font-sans transition-all placeholder:text-slate-600"
+                    className="w-full px-4 py-3 rounded-xl bg-[#08090e]/80 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 font-sans transition-all placeholder:text-slate-600"
                   />
                 </div>
 
@@ -227,13 +227,13 @@ const Contact = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Hi Sakshi, I came across your portfolio and would like to connect regarding an internship / opportunity..."
-                    className="w-full px-4 py-3 rounded-xl bg-[#07050f]/80 border border-white/10 text-white text-sm focus:outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 font-sans transition-all placeholder:text-slate-600 resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-[#08090e]/80 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 font-sans transition-all placeholder:text-slate-600 resize-none"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-xl font-mono text-xs font-bold text-white bg-gradient-to-r from-rose-500 via-purple-600 to-amber-500 hover:from-rose-400 hover:to-amber-400 shadow-lg shadow-rose-500/25 flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5"
+                  className="w-full py-3.5 rounded-xl font-mono text-xs font-bold text-white bg-gradient-to-r from-indigo-600 via-indigo-500 to-violet-600 hover:from-indigo-500 hover:to-violet-500 shadow-lg shadow-indigo-500/30 flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5"
                 >
                   <span>Send Message via Email</span>
                   <Send className="w-4 h-4" />
