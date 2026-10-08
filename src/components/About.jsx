@@ -142,7 +142,7 @@ const About = () => {
             {/* Recruiter-friendly concise introduction */}
             <div className="space-y-3.5 text-slate-300 text-sm sm:text-base leading-relaxed">
               <p>
-                I’m <strong className="text-white font-semibold">Sakshi Kumari</strong>, a Computer Science and Engineering student at <strong className="text-white font-semibold">Lovely Professional University (CGPA 7.08)</strong> with a strong passion for building practical, production-ready software.
+                I’m <strong className="text-white font-semibold">Sakshi Kumari</strong>, a Computer Science and Engineering student at <strong className="text-white font-semibold">Lovely Professional University (CGPA 7.40)</strong> with a strong passion for building practical, production-ready software.
               </p>
               <p>
                 I work across the modern stack with <strong className="text-indigo-300 font-medium">React, Next.js, Node.js, Express, MongoDB, Python, and Java</strong>. My hands-on experience spans developing context-aware AI retrieval systems (RAG), AI-proctored online examination platforms, and secure full-stack web platforms.
