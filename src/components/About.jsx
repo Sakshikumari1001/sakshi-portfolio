@@ -142,10 +142,10 @@ const About = () => {
             {/* Recruiter-friendly concise introduction */}
             <div className="space-y-3.5 text-slate-300 text-sm sm:text-base leading-relaxed">
               <p>
-                I’m <strong className="text-white font-semibold">Sakshi Kumari</strong>, a Computer Science and Engineering student at <strong className="text-white font-semibold">Lovely Professional University (CGPA 7.40)</strong> with a strong passion for building practical, production-ready software.
+                I’m <strong className="text-white font-semibold">Sakshi Kumari</strong>, a Computer Science and Engineering student at <strong className="text-white font-semibold">Lovely Professional University (CGPA 7.08)</strong> with a strong passion for building practical, production-ready software.
               </p>
               <p>
-                I work across the modern stack with <strong className="text-indigo-300 font-medium">React, Next.js, Node.js, Express, MongoDB, Python, and Java</strong>. My hands-on experience spans developing context-aware AI retrieval systems (RAG), real-time collaborative classroom tools with WebSockets, and secure full-stack web platforms.
+                I work across the modern stack with <strong className="text-indigo-300 font-medium">React, Next.js, Node.js, Express, MongoDB, Python, and Java</strong>. My hands-on experience spans developing context-aware AI retrieval systems (RAG), AI-proctored online examination platforms, and secure full-stack web platforms.
               </p>
               <p>
                 Dedicated to continuous improvement, I have solved <strong className="text-purple-300 font-medium">100+ DSA problems</strong> across LeetCode and GeeksforGeeks, earned the official LeetCode 50-Day Streak Badge, and actively contribute to open-source software via <strong className="text-white font-medium">SSoC</strong>.
@@ -155,7 +155,7 @@ const About = () => {
             {/* 3 Small Stats matching requirement */}
             <div className="grid grid-cols-3 gap-3 pt-2">
               <div className="p-3.5 rounded-2xl bg-[#0f111f]/85 border border-indigo-500/20 text-center">
-                <div className="text-xl sm:text-2xl font-extrabold text-indigo-400 font-mono">4+</div>
+                <div className="text-xl sm:text-2xl font-extrabold text-indigo-400 font-mono">3+</div>
                 <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider mt-0.5">Projects</div>
               </div>
               <div className="p-3.5 rounded-2xl bg-[#0f111f]/85 border border-indigo-500/20 text-center">

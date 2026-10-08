@@ -11,7 +11,7 @@ export const personalInfo = {
     "Continuous Learning"
   ],
   educationShort: "B.Tech CSE • Lovely Professional University (2024 – 2028)",
-  cgpa: "7.40",
+  cgpa: "7.08",
   email: "mishra0108sakshi@gmail.com",
   phone: "+91-7992470771",
   location: "Phagwara, Punjab, India",
@@ -52,7 +52,7 @@ export const heroStatsPills = [
   },
   {
     icon: "GraduationCap",
-    label: "CGPA: 7.40 / 10.0",
+    label: "CGPA: 7.08 / 10.0",
     sub: "Lovely Professional University",
     accent: "text-indigo-400"
   }
@@ -63,7 +63,7 @@ export const terminalData = {
   lines: [
     { label: "Name", value: "Sakshi Kumari", color: "text-indigo-400" },
     { label: "Role", value: "Aspiring Full Stack Developer", color: "text-emerald-400" },
-    { label: "Education", value: "B.Tech CSE @ LPU (CGPA: 7.40)", color: "text-slate-200" },
+    { label: "Education", value: "B.Tech CSE @ LPU (CGPA: 7.08)", color: "text-slate-200" },
     { label: "Focus", value: "Full-Stack Development & AI RAG", color: "text-indigo-400" },
     { label: "Current Stack", value: "React + Node + Java", color: "text-amber-400" },
     { label: "LeetCode Solved", value: "100+ Problems (50-Day Streak)", color: "text-amber-300" },
@@ -106,7 +106,7 @@ export const aboutNarrative = {
     { label: "LeetCode Solved", value: "100+", note: "DSA Problems" },
     { label: "GitHub Activity", value: "400+", note: "Contributions" },
     { label: "Daily Streak", value: "50-Day", note: "LeetCode Badge" },
-    { label: "Academic CGPA", value: "7.40", note: "LPU B.Tech CSE" }
+    { label: "Academic CGPA", value: "7.08", note: "LPU B.Tech CSE" }
   ]
 };
 
@@ -498,40 +498,6 @@ export const regularProjectsData = [
     liveUrl: "https://exam-platform-yj8s.vercel.app",
     githubUrl: "https://github.com/sakshikumari01/exam-platform",
     mockupType: "proctored_exam"
-  },
-  {
-    number: "04",
-    title: "BYOD — Classroom Management System",
-    badge: "Real-Time Classroom Platform",
-    tag: "React.js • Spring Boot • MySQL • Socket.IO",
-    timeline: "Apr' 26 – May' 26",
-    description:
-      "Developed a full-stack classroom management platform spanning classrooms, announcements, and activities. Shipped 4 real-time features including live announcements, focus tracking, and an interactive dashboard powered by Socket.IO, synchronizing device state across classrooms.",
-    image: "/projects/byod_mockup.png",
-    techStack: [
-      "React.js",
-      "Spring Boot",
-      "MySQL",
-      "Socket.IO",
-      "RESTful APIs",
-      "Tailwind CSS"
-    ],
-    features: [
-      "Full-stack classroom management spanning classrooms, announcements, and activities",
-      "Shipped 4 real-time features including live announcements and focus tracking",
-      "Interactive teacher dashboard with real-time student engagement analytics",
-      "Socket.IO bi-directional communication for instant notification delivery",
-      "Synchronized device state in real time across connected student screens",
-      "Spring Boot backend microservices exposing secured RESTful endpoints",
-      "MySQL relational database schema managing classrooms, activities, and audit logs"
-    ],
-    deployment: {
-      frontend: "Vercel",
-      backend: "Spring Boot"
-    },
-    liveUrl: "https://byod-umber.vercel.app",
-    githubUrl: "https://github.com/sakshikumari01",
-    mockupType: "byod_management"
   }
 ];
 
@@ -701,7 +667,7 @@ export const educationData = [
     location: "Phagwara, Punjab, India",
     degree: "Bachelor of Technology — Computer Science and Engineering",
     period: "2024 – 2028",
-    score: "7.40",
+    score: "7.08",
     scoreType: "CGPA",
     highlights: [
       "Rigorous Core Curriculum: Data Structures & Algorithms, Object-Oriented Programming (Java/C++), Database Management Systems (DBMS), Operating Systems, and Computer Networks.",

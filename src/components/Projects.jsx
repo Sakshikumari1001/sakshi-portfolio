@@ -29,8 +29,8 @@ const Projects = () => {
           <FeaturedProject />
         </div>
 
-        {/* 02, 03 & 04 — Regular Project Cards Grid (RentRide, ProctorEd, BYOD) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        {/* 02 & 03 — Regular Project Cards Grid (RentRide, ProctorEd) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {regularProjectsData.map((project) => (
             <ProjectCard key={project.number} project={project} />
           ))}

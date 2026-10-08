@@ -183,7 +183,7 @@ const Hero = () => {
               {/* Quick Metrics Pills */}
               <div className="grid grid-cols-3 gap-2 w-full mt-4 pt-4 border-t border-white/10 font-mono text-xs">
                 <div className="p-2 rounded-xl bg-[#08090e]/70 border border-white/5">
-                  <div className="text-indigo-400 font-bold">7.40</div>
+                  <div className="text-indigo-400 font-bold">7.08</div>
                   <div className="text-[10px] text-slate-400">CGPA</div>
                 </div>
                 <div className="p-2 rounded-xl bg-[#08090e]/70 border border-white/5">
