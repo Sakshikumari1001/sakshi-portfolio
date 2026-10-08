@@ -73,14 +73,6 @@
   <img src="public/projects/proctored_mockup.png" alt="ProctorEd Exam Platform Mockup" width="100%" />
 </p>
 
-### 04. [BYOD — Classroom Management System](https://byod-umber.vercel.app)
-> **Real-Time Classroom Management Platform** · React.js · Spring Boot · MySQL · Socket.IO
-- Real-time classroom oversight spanning classrooms, announcements, and interactive activities.
-- Shipped 4 real-time features including live broadcast announcements, focus tracking, and synchronized device states.
-
-<p align="center">
-  <img src="public/projects/byod_mockup.png" alt="BYOD Classroom Management Mockup" width="100%" />
-</p>
 
 ---
 
