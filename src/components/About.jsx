@@ -148,7 +148,7 @@ const About = () => {
                 I work across the modern stack with <strong className="text-indigo-300 font-medium">React, Next.js, Node.js, Express, MongoDB, Python, and Java</strong>. My hands-on experience spans developing context-aware AI retrieval systems (RAG), AI-proctored online examination platforms, and secure full-stack web platforms.
               </p>
               <p>
-                Dedicated to continuous improvement, I have solved <strong className="text-purple-300 font-medium">100+ DSA problems</strong> across LeetCode and GeeksforGeeks, earned the official LeetCode 50-Day Streak Badge, and actively contribute to open-source software via <strong className="text-white font-medium">SSoC</strong>.
+                Dedicated to continuous improvement, I have solved <strong className="text-purple-300 font-medium">100+ DSA problems</strong> across LeetCode and GeeksforGeeks with the official <strong className="text-amber-300 font-medium">LeetCode 100-Day Streak Badge 2026</strong>, and contribute to open source as a selected contributor in <strong className="text-sky-300 font-medium">SWOC Season 7</strong> and <strong className="text-white font-medium">SSoC Season 5</strong>.
               </p>
             </div>
 

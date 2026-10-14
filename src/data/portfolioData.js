@@ -39,16 +39,22 @@ export const heroStatsPills = [
     accent: "text-amber-400"
   },
   {
-    icon: "GitCommit",
-    label: "400+ GitHub Contributions",
-    sub: "Active Open-Source Activity",
-    accent: "text-purple-400"
+    icon: "Flame",
+    label: "LeetCode 100-Day Badge",
+    sub: "Official 2026 Badge",
+    accent: "text-amber-400"
   },
   {
-    icon: "Flame",
-    label: "50-Day LeetCode Streak",
-    sub: "Official 2026 Badge",
-    accent: "text-emerald-400"
+    icon: "Sparkles",
+    label: "SWOC Season 7 Contributor",
+    sub: "Open Source Contributor",
+    accent: "text-sky-400"
+  },
+  {
+    icon: "GitCommit",
+    label: "400+ GitHub Contributions",
+    sub: "Active Open Source",
+    accent: "text-purple-400"
   },
   {
     icon: "GraduationCap",
@@ -66,7 +72,8 @@ export const terminalData = {
     { label: "Education", value: "B.Tech CSE @ LPU (CGPA: 7.40)", color: "text-slate-200" },
     { label: "Focus", value: "Full-Stack Development & AI RAG", color: "text-indigo-400" },
     { label: "Current Stack", value: "React + Node + Java", color: "text-amber-400" },
-    { label: "LeetCode Solved", value: "100+ Problems (50-Day Streak)", color: "text-amber-300" },
+    { label: "LeetCode Badge", value: "100-Day Streak Badge 2026", color: "text-amber-300" },
+    { label: "Open Source", value: "SWOC Season 7 & SSOC Season 5", color: "text-sky-300" },
     { label: "GitHub Commits", value: "400+ Contributions", color: "text-purple-300" },
     { label: "Status", value: "Building & Learning", color: "text-emerald-400" }
   ],
@@ -95,17 +102,17 @@ export const aboutNarrative = {
     },
     {
       title: "Algorithmic Problem Solving",
-      desc: "Consistent Java DSA practitioner with 100+ problems solved on LeetCode and an active 50-day streak badge."
+      desc: "Consistent Java DSA practitioner with 100+ problems solved on LeetCode and the official LeetCode 100-Day Streak Badge 2026."
     },
     {
       title: "Open Source Collaboration",
-      desc: "Contributor in Social Summer of Code (SSoC) Season 5, contributing through Git/GitHub workflows, pull requests, and peer reviews with 400+ contributions."
+      desc: "Selected Contributor in Social Winter of Code (SWOC) Season 7 and Social Summer of Code (SSOC) Season 5, actively contributing via Git/GitHub pull requests with 400+ contributions."
     }
   ],
   quickStats: [
     { label: "LeetCode Solved", value: "100+", note: "DSA Problems" },
     { label: "GitHub Activity", value: "400+", note: "Contributions" },
-    { label: "Daily Streak", value: "50-Day", note: "LeetCode Badge" },
+    { label: "Daily Streak", value: "100-Day", note: "LeetCode Badge (2026)" },
     { label: "Academic CGPA", value: "7.40", note: "LPU B.Tech CSE" }
   ]
 };
@@ -134,12 +141,12 @@ export const codingProfiles = [
   {
     name: "LeetCode",
     handle: "Sakshi-kumari24",
-    metric: "100+ Solved • 50-Day Streak Badge",
+    metric: "100+ Solved • 100-Day Badge 2026",
     url: "https://leetcode.com/u/Sakshi-kumari24/",
     icon: "code2",
     accent: "from-amber-500/20 to-orange-500/10",
     border: "group-hover:border-amber-500/50",
-    badge: "50-Day Streak"
+    badge: "100-Day Badge"
   },
   {
     name: "GeeksforGeeks",
@@ -503,13 +510,40 @@ export const regularProjectsData = [
 
 export const trackRecordData = [
   {
-    title: "100+ DSA Problems Solved",
+    title: "Official LeetCode 100-Day Streak Badge 2026",
+    category: "Coding Discipline & Streaks",
+    highlight: "100+ Days Solved in 2026",
+    description:
+      "Awarded the official LeetCode 100-Day Streak Badge 2026 for consistent daily problem-solving practice and algorithmic dedication across 100+ days in 2026.",
+    icon: "Flame",
+    badge: "100-Day Badge"
+  },
+  {
+    title: "Social Winter of Code (SWOC) Season 7",
+    category: "Open Source Program",
+    highlight: "Selected Contributor (SWOC S7)",
+    description:
+      "Selected as an open-source contributor for Social Winter of Code (SWOC) Season 7 (@Sakshikumari01). Contributing to production open-source codebases through Git/GitHub pull requests.",
+    icon: "Sparkles",
+    badge: "SWOC S7 Contributor"
+  },
+  {
+    title: "100+ DSA Problems Solved in Java",
     category: "Algorithmic Problem Solving",
     highlight: "LeetCode & GeeksforGeeks",
     description:
       "Solved 100+ Data Structures & Algorithms problems across LeetCode and GeeksforGeeks in Java, strengthening algorithmic logic and analytical problem-solving skills.",
     icon: "Code2",
     badge: "100+ Solved"
+  },
+  {
+    title: "Social Summer of Code (SSOC) Season 5",
+    category: "Open Source Initiative",
+    highlight: "Verified SSOC Contributor",
+    description:
+      "Verified contributor in Social Summer of Code (SSOC). Contributed to open-source codebases, led 10+ contributor meetings, and engaged 50+ students.",
+    icon: "GitPullRequest",
+    badge: "SSOC Contributor"
   },
   {
     title: "400+ GitHub Contributions",
@@ -519,24 +553,6 @@ export const trackRecordData = [
       "Maintained 400+ contributions across production repositories, collaborative open-source workflows, issue tracking, and clean pull requests.",
     icon: "GitPullRequest",
     badge: "400+ Commits"
-  },
-  {
-    title: "Official LeetCode 50-Day Streak Badge",
-    category: "Coding Discipline & Streaks",
-    highlight: "50+ Days in 2026",
-    description:
-      "Earned the official LeetCode 50-Day Streak Badge 2026 reflecting consistent daily problem-solving practice and algorithmic discipline.",
-    icon: "Flame",
-    badge: "50-Day Badge"
-  },
-  {
-    title: "Open Source Contributor | SSOC",
-    category: "Open Source Initiative",
-    highlight: "SSOC Season 5 (Jul '26 – Present)",
-    description:
-      "Verified contributor in Social Summer of Code (SSOC). Contributed to open-source codebases, led 10+ contributor meetings, and engaged 50+ students.",
-    icon: "GitPullRequest",
-    badge: "SSOC Contributor"
   },
   {
     title: "Oracle Certified in DBMS & AI",
@@ -559,6 +575,30 @@ export const trackRecordData = [
 ];
 
 export const certificationsData = [
+  {
+    name: "LeetCode 100 Days Badge 2026",
+    provider: "LeetCode",
+    year: "2026",
+    issueDate: "100+ Days Solved in 2026",
+    verifyUrl: "https://leetcode.com/u/Sakshi-kumari24/",
+    skills: "100+ Days Coding Consistency, Java DSA, Problem-Solving Discipline, Algorithmic Logic",
+    type: "Coding Badge",
+    image: "/certificates/leetcode_100days_badge.png",
+    fit: "contain",
+    badge: "100-Day Streak"
+  },
+  {
+    name: "Social Winter of Code (SWOC) Season 7 Contributor",
+    provider: "SWOC Open Source Program",
+    year: "2026",
+    issueDate: "SWOC Season 7 (2026)",
+    verifyUrl: "https://github.com/sakshikumari01",
+    skills: "Open Source Software Development, Git & GitHub, Pull Requests, Collaborative Engineering",
+    type: "Open Source Badge",
+    image: "/certificates/swoc_season7_contributor.png",
+    fit: "contain",
+    badge: "SWOC Contributor"
+  },
   {
     name: "Oracle Data Platform 2025 Certified Foundations Associate",
     provider: "Oracle University",
@@ -631,7 +671,7 @@ export const certificationsData = [
     type: "Competitive Coding",
     image: "/certificates/leetcode_50days_badge.png",
     fit: "contain",
-    badge: "50-Day Streak"
+    badge: "100-Day Badge"
   },
   {
     name: "Social Summer of Code Season 5 Contributor",
@@ -749,14 +789,36 @@ export const experienceData = [
     techStack: ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "RESTful APIs", "Postman", "Git"]
   },
   {
+    id: "swoc",
+    shortTab: "SWOC Season 7",
+    title: "Open Source Contributor",
+    role: "Selected Open Source Contributor",
+    organization: "Social Winter of Code (SWOC) Season 7",
+    location: "Remote",
+    period: "Season 7 (2026)",
+    status: "Selected Contributor",
+    badge: "SWOC Season 7",
+    type: "Open Source Program",
+    certificateImage: "/certificates/swoc_season7_contributor.png",
+    description:
+      "Selected as an official Contributor for Social Winter of Code (SWOC) Season 7 under GitHub handle @Sakshikumari01, actively contributing to open-source software repositories.",
+    bullets: [
+      "Selected as an official Contributor in Social Winter of Code (SWOC) Season 7.",
+      "Collaborating on open-source codebases, implementing feature requests, and resolving issues via standard Git/GitHub pull request workflows.",
+      "Engaging with maintainers and peer contributors to improve code stability, accessibility, and documentation."
+    ],
+    techStack: ["Git", "GitHub", "React.js", "JavaScript", "Open Source", "Pull Requests"]
+  },
+  {
     id: "ssoc",
+    shortTab: "SSOC Season 5",
     title: "Open Source Contributor",
     role: "Open Source Developer",
     organization: "Social Summer of Code (SSOC)",
     location: "Remote",
     period: "Jul' 26 – Present",
     status: "Active Contributor",
-    badge: "Open Source",
+    badge: "SSOC Season 5",
     type: "Community Experience",
     certificateImage: "/certificates/ssoc_contributor.png",
     description:

@@ -11,7 +11,9 @@ const Hero = () => {
       case 'GitCommit':
         return <GitCommit className="w-4 h-4 text-purple-400 shrink-0" />;
       case 'Flame':
-        return <Flame className="w-4 h-4 text-emerald-400 shrink-0" />;
+        return <Flame className="w-4 h-4 text-amber-400 shrink-0" />;
+      case 'Sparkles':
+        return <Sparkles className="w-4 h-4 text-sky-400 shrink-0" />;
       case 'GraduationCap':
         return <GraduationCap className="w-4 h-4 text-indigo-400 shrink-0" />;
       default:
@@ -164,7 +166,7 @@ const Hero = () => {
                 {/* Active Availability Badge */}
                 <span className="absolute bottom-2 right-2 px-2.5 py-1 bg-[#08090e]/90 border border-emerald-500/50 rounded-full text-[10px] font-mono text-emerald-400 flex items-center gap-1.5 shadow-lg backdrop-blur-md">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                  Ready to Build
+                  SWOC S7 Contributor
                 </span>
               </div>
 
